@@ -1,0 +1,1914 @@
+ELMER SOLVER (v 9.0) STARTED AT: 2021/09/07 11:04:52
+ParCommInit:  Initialize #PEs:            1
+MAIN: 
+MAIN: =============================================================
+MAIN: ElmerSolver finite element software, Welcome!
+MAIN: This program is free software licensed under (L)GPL
+MAIN: Copyright 1st April 1995 - , CSC - IT Center for Science Ltd.
+MAIN: Webpage http://www.csc.fi/elmer, Email elmeradm@csc.fi
+MAIN: Version: 9.0 (Rev: b762e1b6, Compiled: 2021-06-21)
+MAIN:  Running one task without MPI parallelization.
+MAIN:  Running with just one thread per task.
+MAIN:  HYPRE library linked in.
+MAIN:  MUMPS library linked in.
+MAIN:  Lua interpreter linked in.
+MAIN: =============================================================
+LoadInputFile: Trying to read "Run Control" section only
+MAIN: 
+MAIN: 
+MAIN: -------------------------------------
+MAIN: Reading Model: S2.sif
+LoadInputFile: Scanning input file: S2.sif
+LoadInputFile: Scanning only size info
+LoadInputFile: First time visiting
+LoadInputFile: Reading base load of sif file
+LoadInputFile: Loading input file: S2.sif
+LoadInputFile: Reading base load of sif file
+CheckKeyword:  Unlisted keyword: [water density] in section: [constants]
+CheckKeyword:  Unlisted keyword: [buoyancy use basal melt] in section: [constants]
+CheckKeyword:  Unlisted keyword: [sea level] in section: [constants]
+CheckKeyword:  Unlisted keyword: [gamma 0] in section: [constants]
+CheckKeyword:  Unlisted keyword: [ice density] in section: [constants]
+CheckKeyword:  Unlisted keyword: [sw density] in section: [constants]
+CheckKeyword:  Unlisted keyword: [latent heat] in section: [constants]
+CheckKeyword:  Unlisted keyword: [sw cp] in section: [constants]
+CheckKeyword:  Unlisted keyword: [sea level] in section: [material 1]
+CheckKeyword:  Unlisted keyword: [top surface variable name] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [bottom surface variable name] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [correct surface] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [minimum height] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [toler] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [bedrock variable] in section: [solver 2]
+WARNING:: LoadInputFile: There are no BCs in the system!
+LoadInputFile: Number of Body Forces: 1
+WARNING:: LoadInputFile: Entry missing for: Body Force 1
+LoadInputFile: Number of Initial Conditions: 1
+WARNING:: LoadInputFile: Entry missing for: Initial Condition 1
+LoadInputFile: Number of Materials: 1
+LoadInputFile: Number of Equations: 1
+LoadInputFile: Number of Solvers: 4
+LoadInputFile: Number of Bodies: 1
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper_Init0]
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver_Init0]
+Loading user function library: [StructuredProjectToPlane]...[StructuredProjectToPlane_Init0]
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_Init0]
+LoadMesh: Starting
+ElmerAsciiMesh: Performing step: 1
+ElmerAsciiMesh: Base mesh name: ./../mesh/
+InitializeMesh: Number of nodes in mesh: 1688
+InitializeMesh: Number of bulk elements in mesh: 3170
+InitializeMesh: Number of boundary elements in mesh: 204
+ElmerAsciiMesh: Performing step: 2
+SetMeshDimension: Dimension of mesh is: 2
+SetMeshDimension: Max dimension of mesh is: 2
+ElmerAsciiMesh: Performing step: 3
+ElmerAsciiMesh: Performing step: 4
+PermuteNodeNumbering: Performing node mapping
+MapBodiesAndBCs: Remapping boundaries
+MapBodiesAndBCs: Minimum initial boundary index: 1
+MapBodiesAndBCs: Maximum initial boundary index: 4
+ElmerAsciiMesh: Performing step: 5
+ElmerAsciiMesh: Performing step: 6
+LoadMesh: Loading mesh done
+LoadMesh: Elapsed REAL time:     0.0067 (s)
+MeshStabParams: Computing stabilization parameters
+MeshStabParams: Elapsed REAL time:     0.0003 (s)
+UnitSegmentDivision: Creating functional division
+UnitSegmentDivision: Convergence obtained in 135 iterations
+UnitSegmentDivision: Mesh division ready
+UnitSegmentDivision: w(0) :   0.0000E+00
+UnitSegmentDivision: w(1) :   3.7444E-02
+UnitSegmentDivision: w(2) :   7.8392E-02
+UnitSegmentDivision: w(3) :   1.2317E-01
+UnitSegmentDivision: w(4) :   1.7215E-01
+UnitSegmentDivision: w(5) :   2.2571E-01
+UnitSegmentDivision: w(6) :   2.8428E-01
+UnitSegmentDivision: w(7) :   3.4833E-01
+UnitSegmentDivision: w(8) :   4.1838E-01
+UnitSegmentDivision: w(9) :   4.9499E-01
+UnitSegmentDivision: w(10) :   5.7877E-01
+UnitSegmentDivision: w(11) :   6.7039E-01
+UnitSegmentDivision: w(12) :   7.7059E-01
+UnitSegmentDivision: w(13) :   8.8017E-01
+UnitSegmentDivision: w(14) :   1.0000E+00
+MeshExtrude: First Extruded BC set to: 1
+MeshExtrude: Number of new BCs for layers: 1
+SetMeshDimension: Dimension of mesh is: 3
+SetMeshDimension: Max dimension of mesh is: 3
+NonNodalElements: Requested elements require creation of edges
+FindMeshEdges: Determining faces in 3D mesh
+FindMeshEdges: Determining edges in 3D mesh
+MAIN: -------------------------------------
+AddEquationBasics: Setting up solver: mapcoordinate_init
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper_Init]
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper_bulk]
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper]
+AddEquationBasics: Setting up solver: groundedmask
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver_Init]
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver_bulk]
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver]
+AddEquationBasics: Creating standard variable: groundedmask
+OptimizeBandwidth: ---------------------------------------------------------
+OptimizeBandwidth: Computing matrix structure for: groundedmask...done.
+OptimizeBandwidth: Half bandwidth without optimization: 3283
+OptimizeBandwidth: 
+OptimizeBandwidth: Bandwidth Optimization ...done.
+OptimizeBandwidth: Half bandwidth after optimization: 1416
+OptimizeBandwidth: ---------------------------------------------------------
+AddEquationBasics: Setting up solver: heightdepth
+Loading user function library: [StructuredProjectToPlane]...[StructuredProjectToPlane_Init]
+Loading user function library: [StructuredProjectToPlane]...[StructuredProjectToPlane_bulk]
+Loading user function library: [StructuredProjectToPlane]...[StructuredProjectToPlane]
+AddEquationBasics: Setting up solver: resultoutput
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_Init]
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_bulk]
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver]
+Restart: Perfoming global Restart for:
+LoadRestartFile: 
+LoadRestartFile: --------------------------------------------
+LoadRestartFile: Restart for mesh name:
+LoadRestartFile: Restart for number of nodes: 25320
+LoadRestartFile: Reading data from file: ../S1/readnc.result
+LoadRestartFile: ASCII 3
+LoadRestartFile: Reading ascii restart file version 3
+LoadRestartFile: Total number of dofs in restart file: 4
+LoadRestartFile: Creating variable: vx
+LoadRestartFile: Creating variable: vy
+LoadRestartFile: Creating variable: b
+LoadRestartFile: Creating variable: h
+LoadRestartFile: Reading time sequence:    1.000E-01
+LoadRestartFile: Reading variables on timestep: 1
+LoadRestartFile: Time spent for restart (s):      8.5487E-02
+LoadRestartFile: All done
+LoadRestartFile: --------------------------------------------
+ElmerSolver: Number of timesteps to be saved: 1
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: mapcoordinate_init
+StructuredMeshMapper: ---------------------------------------
+StructuredMeshMapper: Performing mapping on a structured mesh
+StructuredMeshMapper: ---------------------------------------
+StructuredMeshMapper: Defaulting "Recompute Stabilization" to True.
+DetectExtrudedStructure: Determining extruded structure
+DetectExtrudedStructure: Unit vector of direction:   0.000   0.000   1.000
+DetectExtrudedStructure: determine top and bottom pointers
+DetectExtrudedStructure: Layered structure detected in 14 cycles
+DetectExtrudedStructure:  Top and bottom pointer init time:    6.6800000000000193E-003
+DetectExtrudedStructure: Top and bottom pointer init rounds: 14
+DetectExtrudedStructure: Number of nodes at the top: 1688
+DetectExtrudedStructure: Number of nodes at the bottom: 1688
+StructuredMeshMapper: Adjusting upper surface to maintain minimum height to: 0.1100E+02
+StructuredMeshMapper: > Correct Surface < in case of intersecting upper and lower surface
+StructuredMeshMapper:  Active coordinate mapping time:    3.5099999999999021E-004
+MeshStabParams: Computing stabilization parameters
+MeshStabParams: Elapsed REAL time:     0.0061 (s)
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper_post]
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: groundedmask
+GroundedSolver: Computing grounded mask from geometry
+GroundedSolver: Memory allocation done.
+GroundedSolver: Bedrock Variable name found
+GroundedSolver: No front variable defined. Some basal frontal nodes may be left with GroundedMask=1
+ Grounding Line, (x,y)   554184.78702499997        8708864.9449799992     
+ Grounding Line, (x,y)   554229.43824799999        8708824.5949900001     
+ Grounding Line, (x,y)   554168.93504000001        8708843.2177799996     
+ Grounding Line, (x,y)   554121.15737899998        8708277.6455700006     
+ Grounding Line, (x,y)   554104.97283600003        8708293.1649900004     
+ Grounding Line, (x,y)   554160.81394100003        8708325.4822400007     
+ Grounding Line, (x,y)   552731.94707500003        8711028.1312099993     
+ Grounding Line, (x,y)   552754.11768400006        8711075.1328999996     
+ Grounding Line, (x,y)   552838.89466300001        8711018.1979499999     
+ Grounding Line, (x,y)   554105.19454199995        8708323.0953199994     
+ Grounding Line, (x,y)   554588.74699699995        8712675.8350900002     
+ Grounding Line, (x,y)   554659.47919300001        8712717.4120300002     
+ Grounding Line, (x,y)   554667.71004999999        8712605.8408300001     
+ Grounding Line, (x,y)   554733.00449600001        8712685.3070500009     
+ Grounding Line, (x,y)   552953.25709700002        8710687.9355100002     
+ Grounding Line, (x,y)   552994.26248499996        8710623.0785900000     
+ Grounding Line, (x,y)   552878.44584700000        8710623.6968699992     
+ Grounding Line, (x,y)   552937.72537700005        8710565.0493299998     
+ Grounding Line, (x,y)   554409.59488200000        8710859.1340599991     
+ Grounding Line, (x,y)   554372.91681700002        8710983.9677900001     
+ Grounding Line, (x,y)   554457.44075299997        8710933.3481200002     
+ Grounding Line, (x,y)   554609.84434700001        8712792.9038600009     
+ Grounding Line, (x,y)   554523.71559499996        8712731.9361300003     
+ Grounding Line, (x,y)   555115.98567800003        8709596.9566500001     
+ Grounding Line, (x,y)   555101.30100199999        8709501.1843299996     
+ Grounding Line, (x,y)   555014.61864999996        8709603.4157599993     
+ Grounding Line, (x,y)   552714.65036299999        8710691.3378299996     
+ Grounding Line, (x,y)   552724.42747899995        8710793.7288400009     
+ Grounding Line, (x,y)   552796.24580999999        8710688.8992599994     
+ Grounding Line, (x,y)   553200.72516100004        8713406.4688499998     
+ Grounding Line, (x,y)   553099.61127400002        8713376.3119500000     
+ Grounding Line, (x,y)   553160.59483900003        8713492.4955899995     
+ Grounding Line, (x,y)   553083.41448799998        8713469.0752099995     
+ Grounding Line, (x,y)   554846.38514300005        8713252.3739100005     
+ Grounding Line, (x,y)   554909.82811200002        8713225.5720300004     
+ Grounding Line, (x,y)   554809.50958099996        8713189.7609000001     
+ Grounding Line, (x,y)   553755.83554000000        8712303.1553099994     
+ Grounding Line, (x,y)   553773.94438899995        8712380.7531100009     
+ Grounding Line, (x,y)   553857.03089199995        8712347.5230899993     
+ Grounding Line, (x,y)   554327.23530299996        8710548.6425599996     
+ Grounding Line, (x,y)   554193.74269200000        8710507.8329399992     
+ Grounding Line, (x,y)   554231.76785299997        8710614.7464000005     
+ Grounding Line, (x,y)   554278.83955599996        8710462.8140699994     
+ Grounding Line, (x,y)   553829.67077199998        8712254.3695599996     
+ Grounding Line, (x,y)   553352.15207600000        8711103.6339699998     
+ Grounding Line, (x,y)   553354.38664799999        8711189.1940400004     
+ Grounding Line, (x,y)   553440.83455999999        8711152.8405799996     
+ Grounding Line, (x,y)   554014.62081899995        8709062.5312300008     
+ Grounding Line, (x,y)   553964.40715999994        8709088.2818199992     
+ Grounding Line, (x,y)   554004.68379200005        8709147.3034000006     
+ Grounding Line, (x,y)   554534.35365199996        8708202.2467800006     
+ Grounding Line, (x,y)   554438.22057100001        8708202.9212599993     
+ Grounding Line, (x,y)   554452.97901999997        8708284.5086100008     
+ Grounding Line, (x,y)   554313.83999500005        8711456.0160900000     
+ Grounding Line, (x,y)   554414.95409400004        8711422.9740500003     
+ Grounding Line, (x,y)   554366.38707599998        8711352.2464199997     
+ Grounding Line, (x,y)   555033.41437000001        8713014.1088200007     
+ Grounding Line, (x,y)   555109.00599400001        8713095.7801300008     
+ Grounding Line, (x,y)   555156.57297800004        8713010.7189199999     
+ Grounding Line, (x,y)   553352.34848399996        8710295.5200699996     
+ Grounding Line, (x,y)   553373.78153799998        8710212.0791599993     
+ Grounding Line, (x,y)   553260.97210999997        8710243.2282200009     
+ Grounding Line, (x,y)   554889.10216000001        8710605.1868500002     
+ Grounding Line, (x,y)   554989.30506799999        8710636.9224500004     
+ Grounding Line, (x,y)   554972.48456500005        8710540.8040399998     
+ Grounding Line, (x,y)   554497.75512099999        8711478.5262300000     
+ Grounding Line, (x,y)   554535.73812999995        8711384.1438800003     
+ Grounding Line, (x,y)   554462.95707000000        8711375.7097500004     
+ Grounding Line, (x,y)   554324.20530399994        8710889.8064799998     
+ Grounding Line, (x,y)   554456.11999200005        8711299.7465300001     
+ Grounding Line, (x,y)   554522.17169700004        8711259.6421499997     
+ Grounding Line, (x,y)   554594.43688199995        8711288.7004300002     
+ Grounding Line, (x,y)   552834.64683400001        8710777.4751600008     
+ Grounding Line, (x,y)   553831.52885000000        8710013.5919899996     
+ Grounding Line, (x,y)   553956.20752199995        8710018.9301200006     
+ Grounding Line, (x,y)   553914.83279300004        8709950.7943099998     
+ Grounding Line, (x,y)   553921.26591700001        8710095.3377500009     
+ Grounding Line, (x,y)   553649.82345499995        8709331.8747099992     
+ Grounding Line, (x,y)   553702.47040999995        8709414.8860199992     
+ Grounding Line, (x,y)   553713.77076500002        8709309.9867000002     
+ Grounding Line, (x,y)   554792.54694599996        8713368.2904400006     
+ Grounding Line, (x,y)   554714.57629400003        8713341.5339400005     
+ Grounding Line, (x,y)   554739.33750999998        8713470.1090099998     
+ Grounding Line, (x,y)   554638.24897299998        8713557.6647399999     
+ Grounding Line, (x,y)   554738.80913299997        8713575.3417799994     
+ Grounding Line, (x,y)   554188.67890299996        8710389.5513700005     
+ Grounding Line, (x,y)   553308.07890700002        8710161.2458599992     
+ Grounding Line, (x,y)   553218.48367200000        8712416.3447399996     
+ Grounding Line, (x,y)   553274.93988199998        8712480.0389799997     
+ Grounding Line, (x,y)   553295.78474999999        8712357.7477000002     
+ Grounding Line, (x,y)   553354.00985300005        8712445.1185100004     
+ Grounding Line, (x,y)   553983.32937599998        8711139.7266300004     
+ Grounding Line, (x,y)   553963.52147200005        8711053.7137899995     
+ Grounding Line, (x,y)   553887.98064900003        8711086.2539300006     
+ Grounding Line, (x,y)   554329.75404499995        8711207.0669800006     
+ Grounding Line, (x,y)   554300.42178199999        8711094.7102000006     
+ Grounding Line, (x,y)   554228.68904900004        8711212.9627700001     
+ Grounding Line, (x,y)   555094.92926999996        8711095.1238499992     
+ Grounding Line, (x,y)   555016.55078399996        8711068.5933699999     
+ Grounding Line, (x,y)   555017.65272500005        8711152.4065799993     
+ Grounding Line, (x,y)   554933.88710000005        8711101.6975800004     
+ Grounding Line, (x,y)   554854.27534699999        8712454.7076699995     
+ Grounding Line, (x,y)   554950.28556100000        8712419.8414799999     
+ Grounding Line, (x,y)   554883.36162200000        8712340.4102400001     
+ Grounding Line, (x,y)   554364.38947399997        8713515.1895199995     
+ Grounding Line, (x,y)   554375.66433699999        8713425.0211399999     
+ Grounding Line, (x,y)   554290.13927199994        8713447.6158300005     
+ Grounding Line, (x,y)   554888.88139400003        8709593.1272700001     
+ Grounding Line, (x,y)   554917.44637799996        8709691.3908300009     
+ Grounding Line, (x,y)   554018.87508200004        8709552.6116199996     
+ Grounding Line, (x,y)   553942.39882999996        8709618.9667199999     
+ Grounding Line, (x,y)   554068.62388400000        8709634.3362399992     
+ Grounding Line, (x,y)   554001.14810500003        8709708.3867600001     
+ Grounding Line, (x,y)   554706.21094100003        8712855.2402299996     
+ Grounding Line, (x,y)   554743.21440399997        8712947.9966899995     
+ Grounding Line, (x,y)   554804.90783399995        8712847.2745600007     
+ Grounding Line, (x,y)   553802.52300199994        8709418.9258200005     
+ Grounding Line, (x,y)   553854.22493100003        8709329.4957100004     
+ Grounding Line, (x,y)   553767.90616500005        8709357.2147799991     
+ Grounding Line, (x,y)   554628.88861300005        8709606.1268000007     
+ Grounding Line, (x,y)   554567.33679299999        8709691.2588899992     
+ Grounding Line, (x,y)   554675.00381499995        8709694.1444799993     
+ Grounding Line, (x,y)   554884.50525100005        8713128.1073100008     
+ Grounding Line, (x,y)   554918.26561799995        8713040.3737599999     
+ Grounding Line, (x,y)   554793.77596999996        8713061.4651900008     
+ Grounding Line, (x,y)   554855.03489000001        8712954.4304000009     
+ Grounding Line, (x,y)   554782.06061199994        8709278.6807799991     
+ Grounding Line, (x,y)   554866.35874299996        8709371.4999199994     
+ Grounding Line, (x,y)   554866.90038699994        8709262.6733800005     
+ Grounding Line, (x,y)   554743.33719100000        8709365.8461499996     
+ Grounding Line, (x,y)   553900.60507399996        8710641.8058800008     
+ Grounding Line, (x,y)   553914.59553199995        8710566.7685199995     
+ Grounding Line, (x,y)   553827.64830899995        8710568.2320900001     
+ Grounding Line, (x,y)   554396.98541900003        8709749.3835300002     
+ Grounding Line, (x,y)   554346.03332299995        8709820.8325299993     
+ Grounding Line, (x,y)   554477.30051900004        8709832.4424200002     
+ Grounding Line, (x,y)   554396.85064299998        8709907.6797499992     
+ Grounding Line, (x,y)   555079.63237200002        8710598.2101399992     
+ Grounding Line, (x,y)   555035.16302400001        8710479.7555800006     
+ Grounding Line, (x,y)   553218.59453400003        8711674.8973299991     
+ Grounding Line, (x,y)   553295.38465899997        8711697.0134100001     
+ Grounding Line, (x,y)   553324.01982000005        8711605.1973299999     
+ Grounding Line, (x,y)   553229.10659500002        8711587.5848200005     
+ Grounding Line, (x,y)   552735.04554900003        8710589.7282400001     
+ Grounding Line, (x,y)   552852.70356000005        8710510.7083800007     
+ Grounding Line, (x,y)   553494.75987299997        8710925.6319999993     
+ Grounding Line, (x,y)   553412.27544899995        8710858.8301700000     
+ Grounding Line, (x,y)   553414.79757499998        8710956.3145199995     
+ Grounding Line, (x,y)   553746.76672399999        8712712.8628000002     
+ Grounding Line, (x,y)   553815.21274800005        8712637.7306100000     
+ Grounding Line, (x,y)   553681.83755399997        8712650.5127300005     
+ Grounding Line, (x,y)   553734.33960399998        8712554.5224099997     
+ Grounding Line, (x,y)   555019.26419500005        8709502.5021899994     
+ Grounding Line, (x,y)   554204.01278999995        8711809.5267399997     
+ Grounding Line, (x,y)   554164.90441500000        8711908.1811200008     
+ Grounding Line, (x,y)   554268.00381000002        8711900.5875300001     
+ Grounding Line, (x,y)   554207.43091700005        8712010.6777800005     
+ Grounding Line, (x,y)   553643.69327799999        8710473.6724800002     
+ Grounding Line, (x,y)   553559.40996700001        8710432.2007500008     
+ Grounding Line, (x,y)   553567.02288900001        8710541.6224000007     
+ Grounding Line, (x,y)   554034.91371400002        8713698.0045200009     
+ Grounding Line, (x,y)   554082.36405900004        8713610.8670300003     
+ Grounding Line, (x,y)   553947.33943000005        8713605.5208500009     
+ Grounding Line, (x,y)   553041.60453400004        8712601.9852300007     
+ Grounding Line, (x,y)   553154.41309599997        8712600.1155800000     
+ Grounding Line, (x,y)   553095.95889999997        8712508.6846099999     
+ Grounding Line, (x,y)   554279.45461000002        8711572.7547600009     
+ Grounding Line, (x,y)   554373.05729999999        8711548.0753300004     
+ Grounding Line, (x,y)   554213.00375599996        8710810.8771199994     
+ Grounding Line, (x,y)   554250.85511600005        8710710.1249400005     
+ Grounding Line, (x,y)   554163.46532600001        8710705.6308399998     
+ Grounding Line, (x,y)   554804.81802100001        8712391.7419600002     
+ Grounding Line, (x,y)   553708.89875099994        8711585.0609300006     
+ Grounding Line, (x,y)   553705.11853600002        8711470.4559199996     
+ Grounding Line, (x,y)   553617.93567399995        8711513.8941600006     
+ Grounding Line, (x,y)   553475.13289500005        8710505.2518499997     
+ Grounding Line, (x,y)   554192.16505900002        8711132.0528100003     
+ Grounding Line, (x,y)   553646.32348200004        8711118.5894000009     
+ Grounding Line, (x,y)   553626.78104000003        8711198.1661499999     
+ Grounding Line, (x,y)   553734.42220300005        8711203.1128100008     
+ Grounding Line, (x,y)   553669.60599399998        8709839.4468099996     
+ Grounding Line, (x,y)   553573.45790699997        8709822.8221000005     
+ Grounding Line, (x,y)   553611.28930700000        8709936.0204499997     
+ Grounding Line, (x,y)   553011.46660799999        8713500.6828300003     
+ Grounding Line, (x,y)   553121.13014599995        8713560.4059500005     
+ Grounding Line, (x,y)   554189.77541200002        8708244.1679500006     
+ Grounding Line, (x,y)   554149.31405199994        8708255.0315499995     
+ Grounding Line, (x,y)   554831.69134599995        8709748.1455099992     
+ Grounding Line, (x,y)   554920.92943300004        8709806.7037799992     
+ Grounding Line, (x,y)   554719.10437800002        8712774.1619700007     
+ Grounding Line, (x,y)   553874.16411600006        8709422.5722499993     
+ Grounding Line, (x,y)   553252.62973499997        8710340.6951700002     
+ Grounding Line, (x,y)   553160.73884100001        8710377.7617799994     
+ Grounding Line, (x,y)   553230.83378999995        8710446.4446900003     
+ Grounding Line, (x,y)   555201.45786400000        8711091.1732800007     
+ Grounding Line, (x,y)   555147.99950100004        8710982.9777300004     
+ Grounding Line, (x,y)   554314.47896500002        8710735.2334899995     
+ Grounding Line, (x,y)   554286.72420299996        8710808.9364999998     
+ Grounding Line, (x,y)   554271.40578499995        8710981.2256600000     
+ Grounding Line, (x,y)   553015.69495100004        8713586.8070899993     
+ Grounding Line, (x,y)   554423.53667800000        8711495.3971800003     
+ Grounding Line, (x,y)   553899.02142100001        8711184.0236900002     
+ Grounding Line, (x,y)   554474.61771300004        8709627.7720299996     
+ Grounding Line, (x,y)   554386.90088400000        8709660.4349499997     
+ Grounding Line, (x,y)   554481.09540899994        8709730.8286899999     
+ Grounding Line, (x,y)   553918.72459300002        8712280.6041899994     
+ Grounding Line, (x,y)   553965.87070199999        8712353.9883600008     
+ Grounding Line, (x,y)   554033.46509499999        8712259.6498399992     
+ Grounding Line, (x,y)   554050.15474400006        8712352.7944399994     
+ Grounding Line, (x,y)   553048.59760099999        8711140.9501699992     
+ Grounding Line, (x,y)   553120.87655599997        8711075.1926199999     
+ Grounding Line, (x,y)   553036.78807100002        8711050.7079900000     
+ Grounding Line, (x,y)   553530.13960999995        8713239.3411999997     
+ Grounding Line, (x,y)   553439.45264599996        8713310.7828100007     
+ Grounding Line, (x,y)   553542.21764299995        8713322.5504400004     
+ Grounding Line, (x,y)   553909.91812799999        8709861.0254100002     
+ Grounding Line, (x,y)   554021.72605099995        8709919.8598999996     
+ Grounding Line, (x,y)   552987.17839200003        8713320.8030500002     
+ Grounding Line, (x,y)   553080.66216599999        8713265.6571699996     
+ Grounding Line, (x,y)   553012.71614499995        8711729.5328599997     
+ Grounding Line, (x,y)   553087.59666200005        8711672.6142500006     
+ Grounding Line, (x,y)   552998.43707400002        8711612.2216100004     
+ Grounding Line, (x,y)   553827.93530899996        8710660.3704599999     
+ Grounding Line, (x,y)   553441.53744900005        8713227.3460600004     
+ Grounding Line, (x,y)   555003.02688799996        8709717.8432700001     
+ Grounding Line, (x,y)   555028.64857199998        8709799.8626199998     
+ Grounding Line, (x,y)   553062.52288499998        8713114.9052000009     
+ Grounding Line, (x,y)   553041.56894799997        8713009.0119599998     
+ Grounding Line, (x,y)   552982.51273299998        8713116.1299900003     
+ Grounding Line, (x,y)   554520.99733100005        8708874.2167900000     
+ Grounding Line, (x,y)   554443.17327799997        8708815.9763099998     
+ Grounding Line, (x,y)   554448.06345799996        8708946.9137699995     
+ Grounding Line, (x,y)   554294.72263300000        8709613.6293400005     
+ Grounding Line, (x,y)   554185.54472699994        8709569.9314300008     
+ Grounding Line, (x,y)   554235.21879900002        8709682.3127900008     
+ Grounding Line, (x,y)   554145.14285700000        8709694.3309799992     
+ Grounding Line, (x,y)   554041.21848799998        8709439.1605200004     
+ Grounding Line, (x,y)   553928.30579699995        8709495.0948600005     
+ Grounding Line, (x,y)   553944.63373400003        8709380.0999100003     
+ Grounding Line, (x,y)   553515.78785399999        8709891.7927899994     
+ Grounding Line, (x,y)   555064.90764800005        8711800.4618699998     
+ Grounding Line, (x,y)   555037.04071400000        8711909.4273499995     
+ Grounding Line, (x,y)   555136.27971100004        8711818.6502400003     
+ Grounding Line, (x,y)   553362.59641500004        8710628.8144799992     
+ Grounding Line, (x,y)   553458.05833999999        8710706.1656800006     
+ Grounding Line, (x,y)   553487.76613600005        8710611.8716000002     
+ Grounding Line, (x,y)   555103.53302500001        8712929.1168600004     
+ Grounding Line, (x,y)   555124.97173200001        8711919.4250200000     
+ Grounding Line, (x,y)   554002.81989399996        8709803.7753999997     
+ Grounding Line, (x,y)   555297.59054500004        8710132.9333699998     
+ Grounding Line, (x,y)   555297.16136799997        8710064.0863000005     
+ Grounding Line, (x,y)   555209.91769100004        8710092.5415899996     
+ Grounding Line, (x,y)   553769.86408099998        8711528.5287699997     
+ Grounding Line, (x,y)   554109.24430300004        8710477.5393400006     
+ Grounding Line, (x,y)   553806.20759000001        8709881.7259100005     
+ Grounding Line, (x,y)   553848.89691500005        8709939.3540700004     
+ Grounding Line, (x,y)   554286.54324499995        8713540.7128899992     
+ Grounding Line, (x,y)   554761.11198299995        8708550.8983100001     
+ Grounding Line, (x,y)   554724.75218499999        8708479.3980999999     
+ Grounding Line, (x,y)   554669.53477499995        8708555.6285999995     
+ Grounding Line, (x,y)   554193.17637500004        8713013.1189200003     
+ Grounding Line, (x,y)   554188.40865799994        8712906.9823000003     
+ Grounding Line, (x,y)   554101.20660899999        8712970.3217399996     
+ Grounding Line, (x,y)   552800.19111599994        8710869.4930199999     
+ Grounding Line, (x,y)   554147.07094400004        8712190.4037299994     
+ Grounding Line, (x,y)   554125.25878000003        8712311.4519699998     
+ Grounding Line, (x,y)   553163.07411499997        8710978.7785700001     
+ Grounding Line, (x,y)   553237.00621699996        8710894.1071799994     
+ Grounding Line, (x,y)   553137.15946700005        8710902.9377999995     
+ Grounding Line, (x,y)   554298.28261100000        8713169.2407499999     
+ Grounding Line, (x,y)   554396.05168399995        8713230.0511200000     
+ Grounding Line, (x,y)   554385.56174300006        8713116.2922799997     
+ Grounding Line, (x,y)   553319.13939100003        8710397.1001999993     
+ Grounding Line, (x,y)   554096.26014599996        8709519.6070799995     
+ Grounding Line, (x,y)   553408.14336400002        8710369.6867200006     
+ Grounding Line, (x,y)   554781.78122400003        8712166.5486900005     
+ Grounding Line, (x,y)   554808.20374899998        8712056.1541900001     
+ Grounding Line, (x,y)   554706.21851200005        8712142.0635199994     
+ Grounding Line, (x,y)   554999.20011700003        8713514.8863999993     
+ Grounding Line, (x,y)   555018.83850199997        8713413.2191199996     
+ Grounding Line, (x,y)   554931.23362700001        8713439.5224300008     
+ Grounding Line, (x,y)   555296.70536799997        8713119.6446899995     
+ Grounding Line, (x,y)   555193.77492200001        8713166.3643399999     
+ Grounding Line, (x,y)   555296.49077999999        8713203.4414200000     
+ Grounding Line, (x,y)   554496.98172699998        8713158.7680500001     
+ Grounding Line, (x,y)   554597.96232299996        8713105.0290699992     
+ Grounding Line, (x,y)   554532.99229900003        8713053.3999000005     
+ Grounding Line, (x,y)   552940.44721100002        8713036.2156600002     
+ Grounding Line, (x,y)   554071.46581600001        8711072.3414999992     
+ Grounding Line, (x,y)   553170.02999700001        8712690.7282599993     
+ Grounding Line, (x,y)   553104.95048600005        8712740.9504400007     
+ Grounding Line, (x,y)   553197.75927399995        8712770.6328400001     
+ Grounding Line, (x,y)   553526.65879799996        8710841.6178699993     
+ Grounding Line, (x,y)   553259.85151099996        8710982.2394699994     
+ Grounding Line, (x,y)   554888.89725699998        8712770.0319999997     
+ Grounding Line, (x,y)   554811.77388500003        8712736.2543499991     
+ Grounding Line, (x,y)   553480.77951799997        8711274.3483600002     
+ Grounding Line, (x,y)   553382.40516299999        8711278.0351899993     
+ Grounding Line, (x,y)   554639.61705000000        8708317.8852200005     
+ Grounding Line, (x,y)   554548.15187800000        8708278.4731300008     
+ Grounding Line, (x,y)   554588.38970099995        8708378.4374499992     
+ Grounding Line, (x,y)   554352.70365799998        8709290.3450000007     
+ Grounding Line, (x,y)   554418.56279200001        8709209.2313199993     
+ Grounding Line, (x,y)   554325.10330099997        8709178.8995699994     
+ Grounding Line, (x,y)   554394.24993000005        8709112.0503400005     
+ Grounding Line, (x,y)   555095.03708399995        8711300.4968400002     
+ Grounding Line, (x,y)   555179.35444899998        8711256.5510799997     
+ Grounding Line, (x,y)   555115.05556600005        8711190.6157499999     
+ Grounding Line, (x,y)   554308.58932699997        8710364.6304400004     
+ Grounding Line, (x,y)   553141.70893099997        8711343.8242099993     
+ Grounding Line, (x,y)   553140.31351300003        8711462.1884499993     
+ Grounding Line, (x,y)   553232.20854200004        8711405.3621900007     
+ Grounding Line, (x,y)   553951.33816900000        8711718.9569400009     
+ Grounding Line, (x,y)   554032.25850300002        8711734.2922499999     
+ Grounding Line, (x,y)   553983.66396599996        8711639.8636300005     
+ Grounding Line, (x,y)   554148.84626100003        8713448.8952200003     
+ Grounding Line, (x,y)   554137.82676400000        8713358.6724999994     
+ Grounding Line, (x,y)   554032.46397299995        8713419.7834500000     
+ Grounding Line, (x,y)   553968.87117099995        8710511.6156699993     
+ Grounding Line, (x,y)   553992.49313700001        8710626.9264300000     
+ Grounding Line, (x,y)   554693.24640599999        8712063.7181800008     
+ Grounding Line, (x,y)   552837.03575799998        8711346.5011400003     
+ Grounding Line, (x,y)   552846.34741299995        8711408.1354300007     
+ Grounding Line, (x,y)   552931.13209700002        8711363.8056400008     
+ Grounding Line, (x,y)   554106.03051800001        8711188.5122900009     
+ Grounding Line, (x,y)   553356.16349199996        8710743.4119300004     
+ Grounding Line, (x,y)   553367.03374700004        8711925.5339599997     
+ Grounding Line, (x,y)   553278.38237200002        8711929.5238899998     
+ Grounding Line, (x,y)   553341.77911799995        8712030.7596600000     
+ Grounding Line, (x,y)   554964.83411299996        8711842.4222599994     
+ Grounding Line, (x,y)   553101.04570100002        8712826.2267499994     
+ Grounding Line, (x,y)   553364.91653499997        8712868.0876599997     
+ Grounding Line, (x,y)   553290.74052500003        8712927.3879499994     
+ Grounding Line, (x,y)   553357.10247399996        8712978.0385999996     
+ Grounding Line, (x,y)   555142.17673299997        8710860.0615500007     
+ Grounding Line, (x,y)   555068.41193499998        8710914.9098499995     
+ Grounding Line, (x,y)   553459.48359099997        8710261.4213699996     
+ Grounding Line, (x,y)   553500.75060799997        8710343.4012400005     
+ Grounding Line, (x,y)   553733.93847699999        8711094.6690900009     
+ Grounding Line, (x,y)   554684.99341000000        8711408.5152100008     
+ Grounding Line, (x,y)   554610.48676300002        8711470.8260999992     
+ Grounding Line, (x,y)   554728.52619600005        8711514.4863399994     
+ Grounding Line, (x,y)   553848.31377600005        8709563.4674999993     
+ Grounding Line, (x,y)   554184.56813599996        8712719.3347600009     
+ Grounding Line, (x,y)   554142.09944999998        8712820.9634099994     
+ Grounding Line, (x,y)   554245.21287499997        8712802.2139100004     
+ Grounding Line, (x,y)   554103.62416799995        8712732.8019699994     
+ Grounding Line, (x,y)   554657.57028400002        8709782.5120000001     
+ Grounding Line, (x,y)   552821.02015500003        8711080.3934899997     
+ Grounding Line, (x,y)   552897.32669899997        8710859.1244399995     
+ Grounding Line, (x,y)   555074.76008100004        8713479.5562800001     
+ Grounding Line, (x,y)   553674.90802600002        8710614.5570899993     
+ Grounding Line, (x,y)   553669.11445500003        8710703.1561200004     
+ Grounding Line, (x,y)   553758.41990900005        8710631.6177099999     
+ Grounding Line, (x,y)   554539.31142000004        8712078.2185900006     
+ Grounding Line, (x,y)   554620.85327399999        8712006.6240100004     
+ Grounding Line, (x,y)   554490.23771599995        8711965.1523199994     
+ Grounding Line, (x,y)   555055.64902000001        8710994.0703100003     
+ Grounding Line, (x,y)   554732.64439799997        8710701.2452399991     
+ Grounding Line, (x,y)   554716.79849399999        8710779.2418900002     
+ Grounding Line, (x,y)   554829.00123900000        8710725.1230699997     
+ Grounding Line, (x,y)   553353.44894699997        8712676.9496999998     
+ Grounding Line, (x,y)   553254.76003500004        8712660.0094700009     
+ Grounding Line, (x,y)   553308.05874400004        8712764.2479500007     
+ Grounding Line, (x,y)   554710.94926400005        8713228.0405899994     
+ Grounding Line, (x,y)   554613.08836299996        8713185.8043699991     
+ Grounding Line, (x,y)   554626.96764399996        8713300.4452000000     
+ Grounding Line, (x,y)   554788.82233200001        8710825.6924900003     
+ Grounding Line, (x,y)   553785.61804600002        8712854.3838400003     
+ Grounding Line, (x,y)   553825.22192699998        8712742.1148199998     
+ Grounding Line, (x,y)   553731.73233000003        8712785.6551500000     
+ Grounding Line, (x,y)   554584.25524900004        8711704.8430400006     
+ Grounding Line, (x,y)   554483.24187499995        8711767.7701299991     
+ Grounding Line, (x,y)   554582.17511800001        8711805.1632300001     
+ Grounding Line, (x,y)   555296.70536799997        8712629.2031599991     
+ Grounding Line, (x,y)   555195.19193800003        8712674.6747699995     
+ Grounding Line, (x,y)   555296.38348600001        8712715.8968300000     
+ Grounding Line, (x,y)   554853.25265200005        8713416.9465699997     
+ Grounding Line, (x,y)   555226.11856400000        8710922.8184300009     
+ Grounding Line, (x,y)   552967.24426399998        8711172.9437499996     
+ Grounding Line, (x,y)   553056.92368999997        8711255.4982799999     
+ Grounding Line, (x,y)   552945.19310799998        8711249.2774100006     
+ Grounding Line, (x,y)   553325.21289700002        8710840.1856299993     
+ Grounding Line, (x,y)   553254.76464499999        8710801.2733399998     
+ Grounding Line, (x,y)   553589.32803600002        8710342.1936200000     
+ Grounding Line, (x,y)   554067.48792600003        8711660.4389600009     
+ Grounding Line, (x,y)   553773.79102000000        8710727.3320199996     
+ Grounding Line, (x,y)   553907.08688600000        8712585.9274700005     
+ Grounding Line, (x,y)   553921.67952300003        8712700.5082500000     
+ Grounding Line, (x,y)   554439.21881200001        8711206.1346199997     
+ Grounding Line, (x,y)   554481.45553399995        8711107.1106400006     
+ Grounding Line, (x,y)   554382.24086999998        8711143.2222899999     
+ Grounding Line, (x,y)   554485.16604100005        8711666.6885000002     
+ Grounding Line, (x,y)   553189.62466700003        8710307.3773299996     
+ Grounding Line, (x,y)   554636.15932900005        8708658.5967999995     
+ Grounding Line, (x,y)   554580.62117399997        8708550.6162000000     
+ Grounding Line, (x,y)   554536.43795100006        8708642.7392299995     
+ Grounding Line, (x,y)   554866.95819399995        8709909.4551100004     
+ Grounding Line, (x,y)   554994.55353300006        8709913.1204599999     
+ Grounding Line, (x,y)   554034.66766799998        8711570.7095400002     
+ Grounding Line, (x,y)   554138.79240200005        8711622.2329900004     
+ Grounding Line, (x,y)   554123.32494399999        8711504.9700099993     
+ Grounding Line, (x,y)   554746.98779799999        8712615.5270600002     
+ Grounding Line, (x,y)   554498.81151799997        8713697.8271600008     
+ Grounding Line, (x,y)   554582.43905199994        8713698.0045200009     
+ Grounding Line, (x,y)   554544.34572400001        8713607.2367700003     
+ Grounding Line, (x,y)   553252.49869799998        8712997.7624999993     
+ Grounding Line, (x,y)   554585.29905999999        8708204.1500000004     
+ Grounding Line, (x,y)   554604.25493000005        8708243.6136900000     
+ Grounding Line, (x,y)   553260.53969500004        8710718.4272499997     
+ Grounding Line, (x,y)   553301.66158499999        8713068.7188000008     
+ Grounding Line, (x,y)   553910.49453300005        8713394.6952999998     
+ Grounding Line, (x,y)   553877.60179200000        8713295.8320599999     
+ Grounding Line, (x,y)   553798.09274200001        8713395.6580999997     
+ Grounding Line, (x,y)   553778.18324799999        8713281.5544900000     
+ Grounding Line, (x,y)   553232.61393999995        8713530.8500399999     
+ Grounding Line, (x,y)   553295.79404600000        8713429.9397700001     
+ Grounding Line, (x,y)   554081.71618700004        8712883.1362999994     
+ Grounding Line, (x,y)   553529.58610099996        8711748.2708800007     
+ Grounding Line, (x,y)   553633.71580200002        8711707.7969099991     
+ Grounding Line, (x,y)   553505.33598600002        8711664.1511599999     
+ Grounding Line, (x,y)   553572.24916100001        8711605.2917999998     
+ Grounding Line, (x,y)   554434.39766799996        8712220.8021200001     
+ Grounding Line, (x,y)   554465.51402899995        8712136.5143100005     
+ Grounding Line, (x,y)   554370.01841799996        8712115.9909899998     
+ Grounding Line, (x,y)   554876.21648599999        8711265.2136899997     
+ Grounding Line, (x,y)   554958.68211900000        8711314.9588300008     
+ Grounding Line, (x,y)   554944.85754600004        8711211.5761500001     
+ Grounding Line, (x,y)   553210.42192800005        8711964.2010699995     
+ Grounding Line, (x,y)   553145.40946200001        8712036.1447400004     
+ Grounding Line, (x,y)   553254.09038499999        8712030.3057799991     
+ Grounding Line, (x,y)   553217.20023800002        8712108.0508299991     
+ Grounding Line, (x,y)   555298.23430999997        8712008.1846600007     
+ Grounding Line, (x,y)   555199.89000100002        8712054.5469599999     
+ Grounding Line, (x,y)   555298.34160399996        8712095.8976199999     
+ Grounding Line, (x,y)   552952.73486099998        8711675.4140000008     
+ Grounding Line, (x,y)   554859.61231700005        8712218.9618100002     
+ Grounding Line, (x,y)   554786.41603199998        8712313.8184500001     
+ Grounding Line, (x,y)   554521.16666900006        8711177.0936999992     
+ Grounding Line, (x,y)   554568.88091700000        8709795.5486999992     
+ Grounding Line, (x,y)   555025.14956900000        8711255.5770999994     
+ Grounding Line, (x,y)   553559.11193100002        8710702.4332599994     
+ Grounding Line, (x,y)   553614.88828900002        8710805.7127299998     
+ Grounding Line, (x,y)   553573.85894700000        8710254.7488100007     
+ Grounding Line, (x,y)   554351.25948600005        8712216.7265600003     
+ Grounding Line, (x,y)   554618.63769799995        8713476.4498900007     
+ Grounding Line, (x,y)   554649.27501800004        8712964.9522799999     
+ Grounding Line, (x,y)   554634.61214200000        8712886.5085300002     
+ Grounding Line, (x,y)   554427.80252899998        8710499.6292199995     
+ Grounding Line, (x,y)   554365.25994400005        8710445.0452100001     
+ Grounding Line, (x,y)   553288.48195599997        8711173.6565099992     
+ Grounding Line, (x,y)   554171.26773900003        8713216.5249099992     
+ Grounding Line, (x,y)   554183.80314199999        8713136.2839000002     
+ Grounding Line, (x,y)   554100.58790000004        8713209.2601200007     
+ Grounding Line, (x,y)   555298.01972099999        8710201.7804499995     
+ Grounding Line, (x,y)   555209.51161900000        8710255.3649000004     
+ Grounding Line, (x,y)   555297.24823200004        8710296.6136099994     
+ Grounding Line, (x,y)   554896.55676299997        8710512.8210899998     
+ Grounding Line, (x,y)   553319.56377899996        8711333.8051800001     
+ Grounding Line, (x,y)   553239.22822599998        8711262.3519299999     
+ Grounding Line, (x,y)   553183.95932400005        8712496.0752600003     
+ Grounding Line, (x,y)   552565.66751499998        8710511.9994500000     
+ Grounding Line, (x,y)   552570.54504800006        8710572.5252100006     
+ Grounding Line, (x,y)   552650.21055399999        8710538.6262599993     
+ Grounding Line, (x,y)   553315.18039999995        8713180.6333399992     
+ Grounding Line, (x,y)   553386.54132199998        8713150.3494199999     
+ Grounding Line, (x,y)   553477.58522699995        8712713.5581299998     
+ Grounding Line, (x,y)   553522.71064299997        8712612.7941699997     
+ Grounding Line, (x,y)   553427.09142600000        8712631.8536499999     
+ Grounding Line, (x,y)   555088.75013800000        8712672.4362599999     
+ Grounding Line, (x,y)   555014.54627199995        8712581.3288599998     
+ Grounding Line, (x,y)   554970.49648900004        8712694.4473599996     
+ Grounding Line, (x,y)   552855.65906900004        8711469.7697199993     
+ Grounding Line, (x,y)   552865.19243000005        8711536.2815499995     
+ Grounding Line, (x,y)   552934.87305900001        8711485.3849599995     
+ Grounding Line, (x,y)   554221.96215399995        8712649.6825300008     
+ Grounding Line, (x,y)   554101.78070899996        8712624.7024600003     
+ Grounding Line, (x,y)   555122.93169000000        8710508.0355099998     
+ Grounding Line, (x,y)   555198.71004899999        8710428.9210899994     
+ Grounding Line, (x,y)   555074.89471699996        8710406.5278200004     
+ Grounding Line, (x,y)   553800.76786999998        8711289.3603099994     
+ Grounding Line, (x,y)   553835.62121500005        8711372.8808200005     
+ Grounding Line, (x,y)   553906.79055100004        8711282.3240900002     
+ Grounding Line, (x,y)   553924.90608600003        8711386.2492399998     
+ Grounding Line, (x,y)   553263.56181200000        8709996.8486299999     
+ Grounding Line, (x,y)   553216.56697699998        8710022.3846400008     
+ Grounding Line, (x,y)   553280.63693299994        8710084.2837199997     
+ Grounding Line, (x,y)   554167.57305799995        8711022.9036699999     
+ Grounding Line, (x,y)   554088.90584100003        8710982.4320700001     
+ Grounding Line, (x,y)   555176.60266199999        8710611.6875999998     
+ Grounding Line, (x,y)   555222.49607100000        8710536.3661000002     
+ Grounding Line, (x,y)   554656.84269600001        8713408.2554499991     
+ Grounding Line, (x,y)   554006.37790299999        8712608.3442100007     
+ Grounding Line, (x,y)   554029.18672400003        8712705.2544999998     
+ Grounding Line, (x,y)   555298.01972099999        8711539.8457200006     
+ Grounding Line, (x,y)   555222.14373899996        8711580.5381199997     
+ Grounding Line, (x,y)   555298.12701499998        8711600.8960900009     
+ Grounding Line, (x,y)   552831.93651799997        8713442.5104300007     
+ Grounding Line, (x,y)   552914.40641299996        8713391.8707599994     
+ Grounding Line, (x,y)   552828.83263299998        8713371.3427799996     
+ Grounding Line, (x,y)   553841.03953099996        8712422.4691199996     
+ Grounding Line, (x,y)   553723.49768699997        8712451.3095800001     
+ Grounding Line, (x,y)   553808.81860999996        8712496.3510100003     
+ Grounding Line, (x,y)   554515.73820200004        8711857.2056300007     
+ Grounding Line, (x,y)   554590.84927400004        8711901.9783100002     
+ Grounding Line, (x,y)   554047.84051400004        8710539.0848800000     
+ Grounding Line, (x,y)   552946.40153799998        8712142.6720199995     
+ Grounding Line, (x,y)   553046.41533400002        8712073.8241099995     
+ Grounding Line, (x,y)   552934.75982299994        8712060.0817499999     
+ Grounding Line, (x,y)   553892.58692000003        8710200.6296299994     
+ Grounding Line, (x,y)   553826.91968000005        8710126.4741999991     
+ Grounding Line, (x,y)   553785.03003000002        8710217.0797799993     
+ Grounding Line, (x,y)   555298.23430999997        8712275.2397799995     
+ Grounding Line, (x,y)   555167.81331000000        8712270.3235800005     
+ Grounding Line, (x,y)   555214.49971600005        8712343.4342199992     
+ Grounding Line, (x,y)   553318.52637500002        8711418.5266100001     
+ Grounding Line, (x,y)   553421.66657000000        8711382.3721799999     
+ Grounding Line, (x,y)   554738.30247100000        8713141.3500200007     
+ Grounding Line, (x,y)   554375.32578700001        8708879.9286599997     
+ Grounding Line, (x,y)   554194.40789100004        8711560.6042800006     
+ Grounding Line, (x,y)   554014.74289400002        8711350.3249500003     
+ Grounding Line, (x,y)   554342.08748900006        8708203.5957399998     
+ Grounding Line, (x,y)   554361.28181099996        8708256.4908600003     
+ Grounding Line, (x,y)   555217.20749099995        8712202.9777000006     
+ Grounding Line, (x,y)   554458.34091899998        8713071.3134400006     
+ Grounding Line, (x,y)   555297.52984600002        8713431.2034200002     
+ Grounding Line, (x,y)   555296.90301899996        8713359.2207800001     
+ Grounding Line, (x,y)   555223.48509099998        8713418.0257200003     
+ Grounding Line, (x,y)   553193.36995299999        8710154.9082100000     
+ Grounding Line, (x,y)   554989.80607399996        8711580.1401099991     
+ Grounding Line, (x,y)   554913.04609700001        8711595.8270599991     
+ Grounding Line, (x,y)   554976.53766499995        8711680.9243299998     
+ Grounding Line, (x,y)   555142.02948000003        8712848.2922300007     
+ Grounding Line, (x,y)   555216.65744200000        8712933.5162000004     
+ Grounding Line, (x,y)   553837.15188999998        8713698.3592499997     
+ Grounding Line, (x,y)   553774.73412200005        8713596.8725199997     
+ Grounding Line, (x,y)   553746.69580900006        8713698.0636400003     
+ Grounding Line, (x,y)   554430.92240599997        8711864.9587399997     
+ Grounding Line, (x,y)   554374.21227000002        8711933.8544200007     
+ Grounding Line, (x,y)   555217.07323600003        8713077.1650900003     
+ Grounding Line, (x,y)   552855.43736300000        8713630.9605999999     
+ Grounding Line, (x,y)   552931.82319499995        8713539.1035900004     
+ Grounding Line, (x,y)   552843.68694000004        8713536.7355199996     
+ Grounding Line, (x,y)   553176.17990400002        8712852.7035900000     
+ Grounding Line, (x,y)   553102.77524700004        8711566.6261000000     
+ Grounding Line, (x,y)   553193.40247400000        8711522.6290499996     
+ Grounding Line, (x,y)   553000.75221199996        8712887.5555900000     
+ Grounding Line, (x,y)   553013.09036699997        8712791.8718899991     
+ Grounding Line, (x,y)   552903.54137999995        8712818.4578799997     
+ Grounding Line, (x,y)   553457.50762599998        8710782.5598700009     
+ Grounding Line, (x,y)   554864.44990300003        8710901.8172999993     
+ Grounding Line, (x,y)   554786.36964799999        8710930.9618699998     
+ Grounding Line, (x,y)   554890.89385300002        8710998.3600699995     
+ Grounding Line, (x,y)   554485.60300899995        8712449.4550899994     
+ Grounding Line, (x,y)   554513.81776200002        8712362.3835300002     
+ Grounding Line, (x,y)   554435.73555999994        8712357.6201200001     
+ Grounding Line, (x,y)   553562.53515999997        8713521.2211399991     
+ Grounding Line, (x,y)   553611.20479100000        8713638.5187199991     
+ Grounding Line, (x,y)   553657.04116999998        8713579.8871899992     
+ Grounding Line, (x,y)   553070.38493199996        8710613.4223500006     
+ Grounding Line, (x,y)   553188.35712800000        8710632.4821199998     
+ Grounding Line, (x,y)   553104.98512900004        8710544.4457099997     
+ Grounding Line, (x,y)   555273.47473599995        8713499.9877400007     
+ Grounding Line, (x,y)   552724.59517300001        8710490.2605499998     
+ Grounding Line, (x,y)   555054.88674200000        8712410.3864799999     
+ Grounding Line, (x,y)   554965.87798800005        8712341.7809699997     
+ Grounding Line, (x,y)   554736.75691300002        8712391.0827399995     
+ Grounding Line, (x,y)   554657.12344000000        8712350.1528099999     
+ Grounding Line, (x,y)   554689.07238300005        8712271.7773800008     
+ Grounding Line, (x,y)   554053.16666600003        8712519.1106899995     
+ Grounding Line, (x,y)   554153.28194500005        8712479.4718900006     
+ Grounding Line, (x,y)   554097.43250300002        8712415.2906199992     
+ Grounding Line, (x,y)   554010.70650400000        8712436.8347600009     
+ Grounding Line, (x,y)   555035.73859099997        8712748.7072299998     
+ Grounding Line, (x,y)   553525.93066600000        8713628.5646599997     
+ Grounding Line, (x,y)   553590.30937699997        8712668.1480700001     
+ Grounding Line, (x,y)   554097.99531599996        8713517.5825999994     
+ Grounding Line, (x,y)   554182.74979200005        8712577.9835700002     
+ Grounding Line, (x,y)   554289.37998700002        8712616.3715899996     
+ Grounding Line, (x,y)   554251.10707300005        8712518.9279999994     
+ Grounding Line, (x,y)   554454.57339499996        8712059.8190700002     
+ Grounding Line, (x,y)   554069.90223400004        8713136.2732200008     
+ Grounding Line, (x,y)   554373.02679599996        8711795.8666299991     
+ Grounding Line, (x,y)   554393.32649999997        8711707.9736299999     
+ Grounding Line, (x,y)   554292.47595500003        8711756.7600800004     
+ Grounding Line, (x,y)   555297.91242700000        8711139.9604400005     
+ Grounding Line, (x,y)   555297.96607400000        8711050.5307700001     
+ Grounding Line, (x,y)   554998.43032100005        8713130.1791699994     
+ Grounding Line, (x,y)   553858.33286099997        8711699.5336199999     
+ Grounding Line, (x,y)   553894.30426400003        8711625.1223900001     
+ Grounding Line, (x,y)   552705.08685099997        8710395.9563299995     
+ Grounding Line, (x,y)   552638.97780400002        8710462.6191300005     
+ Grounding Line, (x,y)   552990.48204699997        8713244.8180000000     
+ Grounding Line, (x,y)   553463.41967500001        8713469.3319199998     
+ Grounding Line, (x,y)   553467.61274100002        8713570.9793400001     
+ Grounding Line, (x,y)   554294.27896899998        8713361.3474000003     
+ Grounding Line, (x,y)   554376.97456899995        8713333.9990699999     
+ Grounding Line, (x,y)   554321.97102299996        8708406.5298999995     
+ Grounding Line, (x,y)   554237.91851999995        8708410.1576400008     
+ Grounding Line, (x,y)   554300.90997200005        8708508.9330199994     
+ Grounding Line, (x,y)   553921.13550700003        8711545.5152300000     
+ Grounding Line, (x,y)   553994.01379700005        8711463.3694199994     
+ Grounding Line, (x,y)   554148.40831099998        8709447.1144099999     
+ Grounding Line, (x,y)   554230.70866200002        8709454.1720599998     
+ Grounding Line, (x,y)   554077.75569699996        8709238.8673899993     
+ Grounding Line, (x,y)   554089.90726300003        8709142.8234000001     
+ Grounding Line, (x,y)   553039.80121299997        8711504.1012600008     
+ Grounding Line, (x,y)   553996.56019500003        8711240.6741099991     
+ Grounding Line, (x,y)   552891.54704099998        8712906.0780699998     
+ Grounding Line, (x,y)   555053.68559999997        8711627.6076200008     
+ Grounding Line, (x,y)   553178.81188000005        8710527.3834000006     
+ Grounding Line, (x,y)   554804.73475299997        8711020.5252400003     
+ Grounding Line, (x,y)   554761.81650299998        8712233.0117499996     
+ Grounding Line, (x,y)   553822.40447600000        8709715.2464000005     
+ Grounding Line, (x,y)   553772.98958099994        8709635.3608999997     
+ Grounding Line, (x,y)   553737.51286999998        8709749.6303800009     
+ Grounding Line, (x,y)   553675.44374699995        8709668.6503400002     
+ Grounding Line, (x,y)   555087.72517400002        8713183.1585000008     
+ Grounding Line, (x,y)   555124.82609700004        8713269.0228700005     
+ Grounding Line, (x,y)   554595.57785500004        8710138.9948100001     
+ Grounding Line, (x,y)   554665.76518800005        8710196.8425799999     
+ Grounding Line, (x,y)   554686.62843100005        8710073.3420199994     
+ Grounding Line, (x,y)   554752.12115499994        8710167.6694900002     
+ Grounding Line, (x,y)   554395.34999000002        8712014.0295800008     
+ Grounding Line, (x,y)   553733.63544900005        8711019.8771499991     
+ Grounding Line, (x,y)   553799.33114699996        8710923.9680100009     
+ Grounding Line, (x,y)   553681.30655300000        8710962.6438800003     
+ Grounding Line, (x,y)   555223.93502600002        8713263.9870999996     
+ Grounding Line, (x,y)   553100.10429699998        8712351.8100700006     
+ Grounding Line, (x,y)   553190.05369199999        8712333.2694400009     
+ Grounding Line, (x,y)   553098.33376800001        8712253.8825599998     
+ Grounding Line, (x,y)   553192.67219900002        8712239.0134399999     
+ Grounding Line, (x,y)   553388.86411500000        8713062.2635999992     
+ Grounding Line, (x,y)   554458.05267600005        8713516.8730699997     
+ Grounding Line, (x,y)   554539.80578599998        8713433.0809899997     
+ Grounding Line, (x,y)   554460.28906600003        8713385.5449800007     
+ Grounding Line, (x,y)   554378.24970499997        8710124.3777900003     
+ Grounding Line, (x,y)   554385.97269600001        8710016.8144700006     
+ Grounding Line, (x,y)   554295.65589299996        8710100.9485800005     
+ Grounding Line, (x,y)   554305.01865900005        8711662.1054900009     
+ Grounding Line, (x,y)   553599.70357300004        8712444.0854400005     
+ Grounding Line, (x,y)   553686.95051700005        8712364.8258900009     
+ Grounding Line, (x,y)   553276.66099700006        8711498.2407300007     
+ Grounding Line, (x,y)   553368.98706600000        8711487.9445300009     
+ Grounding Line, (x,y)   552877.60600100004        8710707.9083099999     
+ Grounding Line, (x,y)   554083.60935399996        8710398.4646600001     
+ Grounding Line, (x,y)   553872.22834499995        8712813.7191899996     
+ Grounding Line, (x,y)   554414.83513899997        8712833.8104999997     
+ Grounding Line, (x,y)   554421.74649199995        8712729.4162200000     
+ Grounding Line, (x,y)   554335.31731299998        8712819.2992300000     
+ Grounding Line, (x,y)   554313.96226900001        8712016.7476700004     
+ Grounding Line, (x,y)   555037.32075199997        8712322.1003300007     
+ Grounding Line, (x,y)   554587.57090299996        8710925.8139999993     
+ Grounding Line, (x,y)   554519.00037000002        8710949.9225600008     
+ Grounding Line, (x,y)   554570.91594500002        8711017.3638199996     
+ Grounding Line, (x,y)   553975.50843699998        8709239.4762299992     
+ Grounding Line, (x,y)   554210.70981100004        8711698.9216099996     
+ Grounding Line, (x,y)   553075.18247999996        8711414.0148099996     
+ Grounding Line, (x,y)   554158.02695700002        8710903.1462099999     
+ Grounding Line, (x,y)   554216.41610999999        8710135.3551499993     
+ Grounding Line, (x,y)   554217.87405900005        8710054.6266500000     
+ Grounding Line, (x,y)   554119.15372399997        8710085.9972900003     
+ Grounding Line, (x,y)   554827.18012599996        8711587.2637399994     
+ Grounding Line, (x,y)   554735.07881600002        8711629.7906500008     
+ Grounding Line, (x,y)   553463.78352199995        8711501.7724399995     
+ Grounding Line, (x,y)   554493.39930499997        8710026.8715000004     
+ Grounding Line, (x,y)   554591.23291999998        8710032.1636900008     
+ Grounding Line, (x,y)   554576.12652299996        8709925.7160000000     
+ Grounding Line, (x,y)   554565.70636099996        8709485.7391199991     
+ Grounding Line, (x,y)   554550.15093799995        8709585.7692200001     
+ Grounding Line, (x,y)   554645.49838500004        8709520.6601700000     
+ Grounding Line, (x,y)   553836.25383499998        8710290.8326800000     
+ Grounding Line, (x,y)   555114.39161499997        8709809.3894500006     
+ Grounding Line, (x,y)   555088.68372700003        8709703.5804200005     
+ Grounding Line, (x,y)   555078.02249799995        8711720.9159200005     
+ Grounding Line, (x,y)   554159.10840599996        8710579.2314599995     
+ Grounding Line, (x,y)   554084.86333600001        8710607.2485000007     
+ Grounding Line, (x,y)   554685.84895400004        8712507.9383199997     
+ Grounding Line, (x,y)   554777.08641100000        8712537.8449700009     
+ Grounding Line, (x,y)   553890.35452299996        8710986.3849199992     
+ Grounding Line, (x,y)   554004.31175800005        8710987.4847100005     
+ Grounding Line, (x,y)   553581.28541300003        8711285.5844599996     
+ Grounding Line, (x,y)   553546.12339299999        8711177.5409699995     
+ Grounding Line, (x,y)   553284.43416099995        8710652.1579700001     
+ Grounding Line, (x,y)   553963.32846600004        8710920.4870400000     
+ Grounding Line, (x,y)   554289.68869700003        8710016.7299600001     
+ Grounding Line, (x,y)   554145.96684200002        8711265.4570400007     
+ Grounding Line, (x,y)   553317.63652900001        8712137.0353200007     
+ Grounding Line, (x,y)   555007.07665099995        8712474.1885599997     
+ Grounding Line, (x,y)   553530.45187999995        8711441.6369400006     
+ Grounding Line, (x,y)   555296.06160300004        8712802.5905000009     
+ Grounding Line, (x,y)   555204.09519300004        8712774.9980200008     
+ Grounding Line, (x,y)   552985.76831499999        8711996.7590500005     
+ Grounding Line, (x,y)   553069.32919099997        8711970.7257700004     
+ Grounding Line, (x,y)   552993.18974099995        8711893.5957800001     
+ Grounding Line, (x,y)   554066.24269400002        8713300.2731500007     
+ Grounding Line, (x,y)   553529.55143300002        8709978.9404799994     
+ Grounding Line, (x,y)   553592.46146200004        8710060.8038699999     
+ Grounding Line, (x,y)   554122.69285600004        8711741.5055000000     
+ Grounding Line, (x,y)   553188.40261300001        8710838.9346399996     
+ Grounding Line, (x,y)   554334.62787800003        8708622.8838800006     
+ Grounding Line, (x,y)   554242.11427699996        8708567.7083100006     
+ Grounding Line, (x,y)   554640.44664099999        8709357.9988599997     
+ Grounding Line, (x,y)   554684.02499299997        8709280.9098799992     
+ Grounding Line, (x,y)   554561.99186600000        8712297.7663899995     
+ Grounding Line, (x,y)   554591.87633300002        8712407.1772600003     
+ Grounding Line, (x,y)   554396.72639299999        8712430.6308699995     
+ Grounding Line, (x,y)   554651.48676500004        8711554.5470499992     
+ Grounding Line, (x,y)   553708.54420700006        8711786.7513500005     
+ Grounding Line, (x,y)   553738.23226299998        8711684.4401799999     
+ Grounding Line, (x,y)   555001.17759600002        8711760.0047999993     
+ Grounding Line, (x,y)   555117.31971399998        8713385.7001300007     
+ Grounding Line, (x,y)   555044.76976800000        8713323.1468800008     
+ Grounding Line, (x,y)   553141.49395999999        8712148.6361200009     
+ Grounding Line, (x,y)   555095.52911300003        8712005.4957999997     
+ Grounding Line, (x,y)   555203.65981300001        8711956.7012200002     
+ Grounding Line, (x,y)   554580.95255599997        8711123.1923300009     
+ Grounding Line, (x,y)   554657.84661600005        8711056.3857400008     
+ Grounding Line, (x,y)   554660.13451400003        8711149.2412000000     
+ Grounding Line, (x,y)   555151.40517899999        8710341.5740600005     
+ Grounding Line, (x,y)   555174.48965300003        8711735.4066499993     
+ Grounding Line, (x,y)   553794.87193699996        8713103.7158300001     
+ Grounding Line, (x,y)   553832.94769299997        8713197.9937600009     
+ Grounding Line, (x,y)   553907.24368099996        8713108.2203299999     
+ Grounding Line, (x,y)   553929.37699000002        8713204.0387600008     
+ Grounding Line, (x,y)   554651.30058699998        8710970.8269200008     
+ Grounding Line, (x,y)   554273.38361300004        8709519.6332200002     
+ Grounding Line, (x,y)   553599.32271800004        8712337.0234699994     
+ Grounding Line, (x,y)   554014.93600300001        8709317.7114000004     
+ Grounding Line, (x,y)   554307.27963500004        8708222.4407599997     
+ Grounding Line, (x,y)   554267.71322799998        8708303.6164900009     
+ Grounding Line, (x,y)   554323.89199799998        8708796.6951599997     
+ Grounding Line, (x,y)   554260.53742900002        8708906.4124999996     
+ Grounding Line, (x,y)   553784.33160799998        8710821.3699999992     
+ Grounding Line, (x,y)   553879.21223599999        8710732.8646099996     
+ Grounding Line, (x,y)   553885.54488599999        8710832.9577900004     
+ Grounding Line, (x,y)   555038.53163999994        8712180.2995100003     
+ Grounding Line, (x,y)   555101.82429400005        8712098.5123299994     
+ Grounding Line, (x,y)   555010.82358600001        8712086.8127900008     
+ Grounding Line, (x,y)   555111.07503199996        8713695.5879299995     
+ Grounding Line, (x,y)   555086.94195500005        8713587.9335800000     
+ Grounding Line, (x,y)   555020.72980299999        8713696.2807599995     
+ Grounding Line, (x,y)   554178.04240799998        8713576.3958500009     
+ Grounding Line, (x,y)   554264.25549000001        8713627.1167500000     
+ Grounding Line, (x,y)   552947.81735899998        8713631.6984499991     
+ Grounding Line, (x,y)   555183.57151000004        8713329.0189100001     
+ Grounding Line, (x,y)   554253.58386699995        8708659.8033900000     
+ Grounding Line, (x,y)   554251.97044099995        8710890.8010600004     
+ Grounding Line, (x,y)   553000.43874200003        8712508.0846299995     
+ Grounding Line, (x,y)   554635.02091299999        8712179.0908199996     
+ Grounding Line, (x,y)   553748.76373500004        8710059.0306400005     
+ Grounding Line, (x,y)   554987.26744700002        8711409.7100099996     
+ Grounding Line, (x,y)   554898.90675400000        8711366.7900399994     
+ Grounding Line, (x,y)   555086.39480799995        8711532.6824099999     
+ Grounding Line, (x,y)   555077.39709400001        8711406.0443900004     
+ Grounding Line, (x,y)   555001.74540200003        8711490.3143099993     
+ Grounding Line, (x,y)   553231.00746400002        8713294.8717500009     
+ Grounding Line, (x,y)   553275.95499200001        8713354.1466000006     
+ Grounding Line, (x,y)   553333.99889299995        8713262.0336000007     
+ Grounding Line, (x,y)   553968.81047100003        8712207.2324999999     
+ Grounding Line, (x,y)   554654.32907099999        8711637.0358899999     
+ Grounding Line, (x,y)   554567.27659499994        8711592.4990999997     
+ Grounding Line, (x,y)   552945.28327300004        8712591.1930999998     
+ Grounding Line, (x,y)   553885.24998199998        8712919.1703299992     
+ Grounding Line, (x,y)   553794.37719699997        8712950.0011400003     
+ Grounding Line, (x,y)   553444.73175899999        8712058.1057799999     
+ Grounding Line, (x,y)   553402.30329299998        8712135.0509900004     
+ Grounding Line, (x,y)   555298.01972099999        8712366.8689799998     
+ Grounding Line, (x,y)   554217.51153300004        8712281.0846100003     
+ Grounding Line, (x,y)   553727.34120999998        8710531.9762100000     
+ Grounding Line, (x,y)   553746.05360300001        8710417.6887299996     
+ Grounding Line, (x,y)   553197.96312199999        8710755.7683400009     
+ Grounding Line, (x,y)   553089.32378700003        8710820.5407400001     
+ Grounding Line, (x,y)   553256.53023000003        8713135.7680500001     
+ Grounding Line, (x,y)   554301.67165300006        8710177.1197400000     
+ Grounding Line, (x,y)   554394.28808900004        8710214.6865800004     
+ Grounding Line, (x,y)   553003.93158700003        8712225.7960199993     
+ Grounding Line, (x,y)   553015.63995099999        8712325.0130300000     
+ Grounding Line, (x,y)   554174.56720799999        8710275.7261100002     
+ Grounding Line, (x,y)   554115.49899899994        8710331.8258299995     
+ Grounding Line, (x,y)   554320.28584400006        8712740.0758699998     
+ Grounding Line, (x,y)   555158.99661300005        8711444.7461200003     
+ Grounding Line, (x,y)   552913.43418800004        8710252.0481000002     
+ Grounding Line, (x,y)   552860.58150400000        8710315.3698200006     
+ Grounding Line, (x,y)   552938.23131599999        8710348.6542000007     
+ Grounding Line, (x,y)   554859.96314100001        8713320.2008999996     
+ Grounding Line, (x,y)   554944.76623099996        8713330.1193799991     
+ Grounding Line, (x,y)   554739.87576199998        8709465.1181600001     
+ Grounding Line, (x,y)   554665.45771700004        8709433.8794500008     
+ Grounding Line, (x,y)   555112.65019700001        8712192.5950700007     
+ Grounding Line, (x,y)   553385.72652999999        8710046.4813599996     
+ Grounding Line, (x,y)   553401.84471800004        8710130.0628900006     
+ Grounding Line, (x,y)   554835.84278700000        8712122.6919999998     
+ Grounding Line, (x,y)   554838.86973200005        8713494.9644000009     
+ Grounding Line, (x,y)   553859.45866799995        8710387.4659400005     
+ Grounding Line, (x,y)   553949.92253800004        8710413.1885100007     
+ Grounding Line, (x,y)   553937.46165199997        8710294.2948499992     
+ Grounding Line, (x,y)   554313.23710999999        8712284.7517200001     
+ Grounding Line, (x,y)   554276.03712899995        8712370.7692499999     
+ Grounding Line, (x,y)   554186.96810000006        8712380.4897300005     
+ Grounding Line, (x,y)   553116.67695500003        8710665.1228599995     
+ Grounding Line, (x,y)   552774.57800800004        8710955.1473299991     
+ Grounding Line, (x,y)   554251.65573200001        8710301.2568200007     
+ Grounding Line, (x,y)   554481.23762699997        8709932.5196000002     
+ Grounding Line, (x,y)   554568.90653299994        8709394.9723600000     
+ Grounding Line, (x,y)   553621.76603499998        8711387.3527899999     
+ Grounding Line, (x,y)   553828.44510899996        8709797.1091600005     
+ Grounding Line, (x,y)   553237.11551300006        8712560.3830900006     
+ Grounding Line, (x,y)   553347.56796899997        8712562.4467099998     
+ Grounding Line, (x,y)   553970.18741699995        8713318.5609399993     
+ Grounding Line, (x,y)   554021.62486800004        8713218.7425400000     
+ Grounding Line, (x,y)   554086.60550499998        8710837.1750399992     
+ Grounding Line, (x,y)   554048.29443200002        8710909.5489600003     
+ Grounding Line, (x,y)   553117.21029900003        8711187.8497700002     
+ Grounding Line, (x,y)   553872.29897000000        8713631.6471699998     
+ Grounding Line, (x,y)   553866.23660599999        8713559.3013199996     
+ Grounding Line, (x,y)   553826.74195000005        8713479.7378100008     
+ Grounding Line, (x,y)   553734.12630999996        8713494.2266600002     
+ Grounding Line, (x,y)   553926.35041199997        8713489.0431100000     
+ Grounding Line, (x,y)   554005.79946899996        8713532.7449399997     
+ Grounding Line, (x,y)   555222.31525099999        8711185.8104200009     
+ Grounding Line, (x,y)   553607.15336000000        8711781.8793499991     
+ Grounding Line, (x,y)   553637.20930900006        8711847.5729300007     
+ Grounding Line, (x,y)   553975.07811000000        8710189.0943999998     
+ Grounding Line, (x,y)   553895.38285699999        8711854.6771399993     
+ Grounding Line, (x,y)   553808.09468600003        8711772.5991999991     
+ Grounding Line, (x,y)   553797.11971799994        8711860.6386300009     
+ Grounding Line, (x,y)   555021.12110600004        8713236.0659200009     
+ Grounding Line, (x,y)   554498.58016000001        8709131.6395299993     
+ Grounding Line, (x,y)   553672.04388200003        8710019.7838300001     
+ Grounding Line, (x,y)   553522.85621200001        8712816.9018799998     
+ Grounding Line, (x,y)   553444.11724499997        8712825.1064700000     
+ Grounding Line, (x,y)   553645.47091999999        8711630.6026499998     
+ Grounding Line, (x,y)   553465.14252200001        8712912.4573700000     
+ Grounding Line, (x,y)   552988.64408700005        8710264.9909300003     
+ Grounding Line, (x,y)   554040.65575200005        8712157.5356799997     
+ Grounding Line, (x,y)   553599.15981999994        8710624.2303199992     
+ Grounding Line, (x,y)   553703.96068799996        8710881.5163599998     
+ Grounding Line, (x,y)   554481.47378200002        8709537.4329700004     
+ Grounding Line, (x,y)   554368.52789400006        8709566.8898600005     
+ Grounding Line, (x,y)   553809.46923499997        8711041.4768400006     
+ Grounding Line, (x,y)   553475.44065100001        8710994.0208700001     
+ Grounding Line, (x,y)   554714.29575399996        8709627.7934399992     
+ Grounding Line, (x,y)   554912.89269699994        8712603.2512800004     
+ Grounding Line, (x,y)   554492.66185399995        8710261.9582000002     
+ Grounding Line, (x,y)   554584.41787500004        8710229.6062700003     
+ Grounding Line, (x,y)   554485.13537599996        8710158.3446900006     
+ Grounding Line, (x,y)   552967.41523299995        8712659.0598799996     
+ Grounding Line, (x,y)   555137.66695700004        8711623.3753100000     
+ Grounding Line, (x,y)   554373.57054300001        8713603.1217000000     
+ Grounding Line, (x,y)   554457.36025999999        8713629.8749700002     
+ Grounding Line, (x,y)   553274.90168699995        8710557.6512599997     
+ Grounding Line, (x,y)   553674.15996600001        8712845.6986999996     
+ Grounding Line, (x,y)   553585.82701300003        8712896.7516799998     
+ Grounding Line, (x,y)   553695.54550100002        8712938.0864199996     
+ Grounding Line, (x,y)   554222.84610099997        8711620.6435199995     
+ Grounding Line, (x,y)   555130.00297899998        8710174.8875999991     
+ Grounding Line, (x,y)   555100.59608499997        8710070.9424099997     
+ Grounding Line, (x,y)   554535.48586400005        8709030.6410099994     
+ Grounding Line, (x,y)   554612.98732900003        8709103.9685600009     
+ Grounding Line, (x,y)   554565.86164400005        8709187.9635300003     
+ Grounding Line, (x,y)   554271.37770499999        8712182.0668800008     
+ Grounding Line, (x,y)   554363.12496000004        8708326.3098700009     
+ Grounding Line, (x,y)   553666.25276800001        8711258.8189300001     
+ Grounding Line, (x,y)   554837.29949500004        8709668.6397200003     
+ Grounding Line, (x,y)   554404.62712199998        8711067.2721100003     
+ Grounding Line, (x,y)   553519.04955300002        8711353.9607699998     
+ Grounding Line, (x,y)   554158.53665100003        8710009.4505800009     
+ Grounding Line, (x,y)   553936.03280199994        8713698.1818899997     
+ Grounding Line, (x,y)   554813.89318100002        8711499.2586700004     
+ Grounding Line, (x,y)   553097.96457700001        8711872.4181800000     
+ Grounding Line, (x,y)   553169.57214199996        8710047.9206499998     
+ Grounding Line, (x,y)   553136.72011100000        8710110.2083800007     
+ Grounding Line, (x,y)   553213.27782600001        8710084.5051600002     
+ Grounding Line, (x,y)   553742.63963899994        8709940.4968299996     
+ Grounding Line, (x,y)   552781.09229199996        8710430.0564500000     
+ Grounding Line, (x,y)   554928.50457999995        8711453.7148599997     
+ Grounding Line, (x,y)   554231.05892700003        8709139.3153300006     
+ Grounding Line, (x,y)   554260.19113100006        8709023.3125800006     
+ Grounding Line, (x,y)   554153.34090099996        8709070.8017599992     
+ Grounding Line, (x,y)   554840.03934699995        8713697.6664199997     
+ Grounding Line, (x,y)   554930.38457500003        8713696.9735899996     
+ Grounding Line, (x,y)   554879.26814099995        8713622.8230099995     
+ Grounding Line, (x,y)   553128.43984300003        8710728.7807700001     
+ Grounding Line, (x,y)   554972.25102800003        8713606.6266699992     
+ Grounding Line, (x,y)   554929.37980000000        8710181.9774600007     
+ Grounding Line, (x,y)   555027.03199900000        8710239.4924500007     
+ Grounding Line, (x,y)   555019.74824500002        8710130.6484099999     
+ Grounding Line, (x,y)   553900.29463999998        8711771.2679800000     
+ Grounding Line, (x,y)   554313.65573600004        8709097.3111400008     
+ Grounding Line, (x,y)   554206.02638699999        8712109.3587100003     
+ Grounding Line, (x,y)   554113.69165499997        8712070.4745199997     
+ Grounding Line, (x,y)   554907.20142900001        8712866.9576999992     
+ Grounding Line, (x,y)   552941.31293999997        8711559.5756400004     
+ Grounding Line, (x,y)   554770.02794199996        8711424.6786499992     
+ Grounding Line, (x,y)   554433.06643799995        8710581.4993099999     
+ Grounding Line, (x,y)   553145.30401800002        8710241.0012200009     
+ Grounding Line, (x,y)   554619.18643000000        8711373.2741100006     
+ Grounding Line, (x,y)   554973.39328199998        8712799.2667399999     
+ Grounding Line, (x,y)   554894.83241599996        8711973.0846699998     
+ Grounding Line, (x,y)   554879.87170899997        8711896.0199599992     
+ Grounding Line, (x,y)   554791.97005300003        8711944.6974700000     
+ Grounding Line, (x,y)   553113.54196499998        8712913.6461299993     
+ Grounding Line, (x,y)   555138.24368399999        8709912.6502700001     
+ Grounding Line, (x,y)   555077.08564800001        8709968.2277099993     
+ Grounding Line, (x,y)   555162.83983800001        8710013.6864000000     
+ Grounding Line, (x,y)   554086.52434899996        8709842.3308300003     
+ Grounding Line, (x,y)   555229.00851099996        8710171.5015799999     
+ Grounding Line, (x,y)   553613.98873400001        8712979.5419800002     
+ Grounding Line, (x,y)   554807.83032800001        8709835.9734400008     
+ Grounding Line, (x,y)   554747.06005600002        8711091.0294499993     
+ Grounding Line, (x,y)   554590.69703499996        8712506.0188999996     
+ Grounding Line, (x,y)   555223.86051699996        8709966.1514100004     
+ Grounding Line, (x,y)   552925.53682399995        8710440.4803500008     
+ Grounding Line, (x,y)   552975.15161599999        8710495.7764100004     
+ Grounding Line, (x,y)   554212.86877299997        8713501.1870000008     
+ Grounding Line, (x,y)   554330.83656500001        8712545.1713699996     
+ Grounding Line, (x,y)   553059.31223599997        8710910.3980500009     
+ Grounding Line, (x,y)   552983.07042999996        8710887.9695299994     
+ Grounding Line, (x,y)   552990.33386799996        8710808.9857800007     
+ Grounding Line, (x,y)   554606.60245200002        8710671.7073400002     
+ Grounding Line, (x,y)   554545.06065799994        8710761.4664600007     
+ Grounding Line, (x,y)   554661.68865100003        8710728.8941699993     
+ Grounding Line, (x,y)   554645.32141500001        8710806.5096400008     
+ Grounding Line, (x,y)   555230.69783900003        8712847.6126899999     
+ Grounding Line, (x,y)   554653.27653399995        8710284.1909500007     
+ Grounding Line, (x,y)   554621.52975800005        8710369.3668099996     
+ Grounding Line, (x,y)   554729.20709599997        8710350.8521599993     
+ Grounding Line, (x,y)   554685.05604199995        8710429.4905399997     
+ Grounding Line, (x,y)   554626.89714200003        8712099.0376600008     
+ Grounding Line, (x,y)   554544.03259700001        8712194.1574900001     
+ Grounding Line, (x,y)   554733.20214299997        8711185.4733700007     
+ Grounding Line, (x,y)   554885.25688200002        8712684.8440700006     
+ Grounding Line, (x,y)   553738.59527299996        8710306.6952800006     
+ Grounding Line, (x,y)   553661.13923700002        8710383.4780100007     
+ Grounding Line, (x,y)   553503.75817599997        8711075.1560800001     
+ Grounding Line, (x,y)   554806.43853100005        8711873.6550699994     
+ Grounding Line, (x,y)   553600.03897200001        8709397.1095499992     
+ Grounding Line, (x,y)   554818.39830500004        8712637.2546399999     
+ Grounding Line, (x,y)   554859.02844699996        8712548.6334799994     
+ Grounding Line, (x,y)   554383.73260400002        8713003.1731199995     
+ Grounding Line, (x,y)   554286.60393500002        8713066.2687599994     
+ Grounding Line, (x,y)   552896.76724900003        8711099.1853400003     
+ Grounding Line, (x,y)   552951.71060600004        8711032.2225400005     
+ Grounding Line, (x,y)   554208.86264199996        8708484.0928799994     
+ Grounding Line, (x,y)   553600.03491499997        8710149.2124700006     
+ Grounding Line, (x,y)   553681.92047100002        8710210.9910400007     
+ Grounding Line, (x,y)   554101.31226100004        8713055.3558499999     
+ Grounding Line, (x,y)   553389.96433999995        8710539.1261999998     
+ Grounding Line, (x,y)   553323.67475600005        8710476.0213699993     
+ Grounding Line, (x,y)   554340.35692399996        8708955.9446099997     
+ Grounding Line, (x,y)   554367.41503899998        8709029.6734599993     
+ Grounding Line, (x,y)   554673.90034299996        8713146.3339300007     
+ Grounding Line, (x,y)   553156.52150399995        8713315.8678399995     
+ Grounding Line, (x,y)   553039.25304200000        8712152.8106299993     
+ Grounding Line, (x,y)   553316.81315399997        8711247.4085700009     
+ Grounding Line, (x,y)   554912.32945500000        8709997.0176899992     
+ Grounding Line, (x,y)   555006.58487999998        8710031.4728299994     
+ Grounding Line, (x,y)   553624.58923699998        8709744.5838900004     
+ Grounding Line, (x,y)   552805.33178799995        8712863.8575599995     
+ Grounding Line, (x,y)   552809.32249799999        8712939.0898300000     
+ Grounding Line, (x,y)   554314.83850299998        8710263.4388400000     
+ Grounding Line, (x,y)   554878.94876499998        8708785.6850499995     
+ Grounding Line, (x,y)   554818.72162400000        8708856.1642899998     
+ Grounding Line, (x,y)   554906.38489200000        8708850.8112199996     
+ Grounding Line, (x,y)   554204.35821400001        8708788.9539599996     
+ Grounding Line, (x,y)   552922.46600699995        8710946.9874699991     
+ Grounding Line, (x,y)   555151.50011499994        8713496.0421799999     
+ Grounding Line, (x,y)   553970.67284100002        8712786.5116300005     
+ Grounding Line, (x,y)   553370.03102899995        8711706.0712100007     
+ Grounding Line, (x,y)   553423.24976999999        8711639.9101700000     
+ Grounding Line, (x,y)   554177.39852000005        8709224.7738799993     
+ Grounding Line, (x,y)   554145.89226200001        8709163.3163500000     
+ Grounding Line, (x,y)   554551.57876599999        8713242.0410600007     
+ Grounding Line, (x,y)   554142.28948200005        8710801.5648400001     
+ Grounding Line, (x,y)   552930.74287600000        8711940.2553400006     
+ Grounding Line, (x,y)   553348.44231099996        8713350.2341399994     
+ Grounding Line, (x,y)   554932.48947699997        8712510.1088399999     
+ Grounding Line, (x,y)   553523.24499699997        8710767.6978799999     
+ Grounding Line, (x,y)   554076.03043299995        8711280.7481200006     
+ Grounding Line, (x,y)   553626.22407600004        8713340.8713399991     
+ Grounding Line, (x,y)   553621.72575200000        8713255.2576000001     
+ Grounding Line, (x,y)   554975.12027900002        8710925.2466000002     
+ Grounding Line, (x,y)   554441.72372899996        8710783.9310999997     
+ Grounding Line, (x,y)   554505.78791399999        8710864.6150400005     
+ Grounding Line, (x,y)   554626.14156000002        8713636.3588399999     
+ Grounding Line, (x,y)   554716.70202500001        8710855.4853000008     
+ Grounding Line, (x,y)   553389.63173000002        8712770.2137700003     
+ Grounding Line, (x,y)   554377.51303300005        8711270.1713399999     
+ Grounding Line, (x,y)   552781.98992800002        8710346.4931199998     
+ Grounding Line, (x,y)   554405.27419499995        8708541.9926600009     
+ Grounding Line, (x,y)   554099.73042599997        8709354.1196899991     
+ Grounding Line, (x,y)   554989.98785200005        8710339.4086000007     
+ Grounding Line, (x,y)   554919.86927599995        8710278.2555500008     
+ Grounding Line, (x,y)   553250.44539600005        8713213.7233099993     
+ Grounding Line, (x,y)   554662.96557000000        8711857.5848600008     
+ Grounding Line, (x,y)   554331.55645000003        8713697.4724300001     
+ Grounding Line, (x,y)   554415.18398400000        8713697.6497900002     
+ Grounding Line, (x,y)   553877.05513300002        8711460.7655299995     
+ Grounding Line, (x,y)   553510.57845799997        8710097.0895300005     
+ Grounding Line, (x,y)   553461.87005000003        8710022.3384799995     
+ Grounding Line, (x,y)   555009.53364599997        8709087.0944699999     
+ Grounding Line, (x,y)   554955.08572700003        8709148.9029500000     
+ Grounding Line, (x,y)   555038.13373100001        8709152.4977700002     
+ Grounding Line, (x,y)   554302.60837100004        8713266.0709799994     
+ Grounding Line, (x,y)   553597.80118800001        8710917.6562500000     
+ Grounding Line, (x,y)   553709.21721200005        8710787.8174500000     
+ Grounding Line, (x,y)   555116.57888900000        8712758.5829399992     
+ Grounding Line, (x,y)   554958.29137899994        8710439.4184300005     
+ Grounding Line, (x,y)   553636.66740499996        8713512.4506499991     
+ Grounding Line, (x,y)   553777.71807399997        8709288.0987000000     
+ Grounding Line, (x,y)   553322.16434699995        8713509.6229400001     
+ Grounding Line, (x,y)   554433.79469999997        8709295.4793699998     
+ Grounding Line, (x,y)   554570.42394999997        8712590.2634500004     
+ Grounding Line, (x,y)   554488.35694299999        8712554.2000999991     
+ Grounding Line, (x,y)   554721.07472499995        8709203.4432299994     
+ Grounding Line, (x,y)   553826.73294100002        8709228.7225400005     
+ Grounding Line, (x,y)   553412.26951699995        8711565.0089299995     
+ Grounding Line, (x,y)   554233.73100699997        8713217.2591900006     
+ Grounding Line, (x,y)   554728.40484400000        8710575.7901700009     
+ Grounding Line, (x,y)   554757.84554999997        8710461.3919200003     
+ Grounding Line, (x,y)   554665.46650300000        8710506.0285199992     
+ Grounding Line, (x,y)   554221.82352600002        8711497.4892100003     
+ Grounding Line, (x,y)   554497.01139000000        8712811.1974500008     
+ Grounding Line, (x,y)   553394.58936900005        8712352.8940800000     
+ Grounding Line, (x,y)   553353.48095799994        8712240.2141200006     
+ Grounding Line, (x,y)   553248.72237199999        8712183.8618800007     
+ Grounding Line, (x,y)   553595.11675900000        8711973.0374100003     
+ Grounding Line, (x,y)   553684.03806000005        8712011.1123099998     
+ Grounding Line, (x,y)   553661.50436999998        8711925.5234200004     
+ Grounding Line, (x,y)   553764.70102399995        8711955.1565199997     
+ Grounding Line, (x,y)   554281.99052300001        8712090.0062399991     
+ Grounding Line, (x,y)   554005.24898200005        8710729.3645699993     
+ Grounding Line, (x,y)   553994.16443899996        8710827.0041300002     
+ Grounding Line, (x,y)   554090.34586600005        8710750.9949600007     
+ Grounding Line, (x,y)   553260.45699199999        8712856.2383800000     
+ Grounding Line, (x,y)   553394.56595399999        8713539.2533500008     
+ Grounding Line, (x,y)   554011.24320200004        8710108.3304299992     
+ Grounding Line, (x,y)   553911.69445600000        8709734.8286899999     
+ Grounding Line, (x,y)   554702.22451500001        8713633.5542200003     
+ Grounding Line, (x,y)   554067.28332900000        8710684.0330599993     
+ Grounding Line, (x,y)   553722.93095099996        8713195.0102100000     
+ Grounding Line, (x,y)   554407.17883200001        8712614.3809999991     
+ Grounding Line, (x,y)   554367.76829599997        8708469.7825399991     
+ Grounding Line, (x,y)   554423.58423899999        8708381.0974599998     
+ Grounding Line, (x,y)   554911.70535099995        8712113.9657300003     
+ Grounding Line, (x,y)   554925.52364699997        8712040.9144100007     
+ Grounding Line, (x,y)   552980.22155799996        8711099.2019599993     
+ Grounding Line, (x,y)   553201.11297999998        8711152.1183599997     
+ Grounding Line, (x,y)   553418.44476999994        8711982.4119899999     
+ Grounding Line, (x,y)   553459.51137500000        8712286.4831600003     
+ Grounding Line, (x,y)   553448.87004499999        8712201.1459199991     
+ Grounding Line, (x,y)   552881.82038599998        8711645.3609400000     
+ Grounding Line, (x,y)   552878.93820700003        8711697.4618699998     
+ Grounding Line, (x,y)   552894.89534199995        8713473.0123900007     
+ Grounding Line, (x,y)   554818.86394299997        8713568.2193899993     
+ Grounding Line, (x,y)   554189.50507299998        8711412.6882099994     
+ Grounding Line, (x,y)   553158.33741299994        8712988.8752100002     
+ Grounding Line, (x,y)   554812.69303299999        8709441.5273800008     
+ Grounding Line, (x,y)   554027.98071599996        8710342.3163099997     
+ Grounding Line, (x,y)   555297.80513300002        8711412.8094500005     
+ Grounding Line, (x,y)   555297.91242700000        8711349.2913199998     
+ Grounding Line, (x,y)   555221.42567200004        8711381.4454100002     
+ Grounding Line, (x,y)   554786.13477000000        8709608.5602599997     
+ Grounding Line, (x,y)   554805.21479000000        8709523.2270299997     
+ Grounding Line, (x,y)   554880.34467999998        8709487.5288800001     
+ Grounding Line, (x,y)   554821.62179300003        8710538.5979399998     
+ Grounding Line, (x,y)   554085.77169400000        8711417.4900599997     
+ Grounding Line, (x,y)   554151.87265499996        8710189.4091899991     
+ Grounding Line, (x,y)   553465.34955000004        8712561.3041699994     
+ Grounding Line, (x,y)   552807.32714299997        8712782.2697199993     
+ Grounding Line, (x,y)   552570.54504800006        8710362.5695600007     
+ Grounding Line, (x,y)   552627.13598100003        8710398.9551899992     
+ Grounding Line, (x,y)   552652.96391900000        8710336.3464100007     
+ Grounding Line, (x,y)   554954.20672400005        8709533.9744499996     
+ Grounding Line, (x,y)   553851.19035299995        8713017.6890500002     
+ Grounding Line, (x,y)   554270.66191000002        8711362.5169099998     
+ Grounding Line, (x,y)   554263.28354400001        8709245.4224699996     
+ Grounding Line, (x,y)   554284.21505400003        8709342.2928100005     
+ Grounding Line, (x,y)   554447.97305300005        8709042.5083300006     
+ Grounding Line, (x,y)   552918.04574099998        8712214.3293699995     
+ Grounding Line, (x,y)   555296.47674199997        8710391.4467699993     
+ Grounding Line, (x,y)   555296.47674199997        8710482.3462700006     
+ Grounding Line, (x,y)   553764.69615400000        8709520.7122099996     
+ Grounding Line, (x,y)   553703.15105300001        8709591.2935000006     
+ Grounding Line, (x,y)   553074.72684400005        8710092.3756000008     
+ Grounding Line, (x,y)   553024.94236099999        8710121.5596099999     
+ Grounding Line, (x,y)   553088.54828200000        8710173.0085600000     
+ Grounding Line, (x,y)   554491.28198700002        8709344.9365699999     
+ Grounding Line, (x,y)   554502.78390399995        8709242.0101299994     
+ Grounding Line, (x,y)   553641.97093900002        8713443.7038800009     
+ Grounding Line, (x,y)   553709.60876600002        8713352.3085500002     
+ Grounding Line, (x,y)   555160.56889500003        8711343.1747399997     
+ Grounding Line, (x,y)   553197.22775900003        8711044.9548099991     
+ Grounding Line, (x,y)   554448.25293900003        8712905.4948399998     
+ Grounding Line, (x,y)   554358.39762399998        8712902.5135600008     
+ Grounding Line, (x,y)   553231.00746400002        8713622.5415300000     
+ Grounding Line, (x,y)   553309.52367000002        8713580.3409100007     
+ Grounding Line, (x,y)   554707.08948900003        8709945.0674300008     
+ Grounding Line, (x,y)   554719.56988700002        8709852.2521499991     
+ Grounding Line, (x,y)   554635.64295400004        8709867.8084200006     
+ Grounding Line, (x,y)   554487.91336100001        8712984.1433099993     
+ Grounding Line, (x,y)   553652.41722399998        8710296.1317999996     
+ Grounding Line, (x,y)   553804.56861199997        8711608.7365799993     
+ Grounding Line, (x,y)   553126.12620399997        8713068.5163899995     
+ Grounding Line, (x,y)   554507.02932400000        8712635.9189999998     
+ Grounding Line, (x,y)   555180.35758600000        8713563.3366000000     
+ Grounding Line, (x,y)   553854.87047099997        8709644.3454899993     
+ Grounding Line, (x,y)   554863.47332500003        8710805.6791299991     
+ Grounding Line, (x,y)   554641.75083300006        8709020.9127300009     
+ Grounding Line, (x,y)   554571.83078600001        8708948.4764099997     
+ Grounding Line, (x,y)   554581.04549499997        8709287.8902499992     
+ Grounding Line, (x,y)   553256.14279399998        8712270.8213100005     
+ Grounding Line, (x,y)   553806.36608900002        8710476.5421500001     
+ Grounding Line, (x,y)   553190.62271999998        8713149.3296099994     
+ Grounding Line, (x,y)   553112.88827100000        8713171.6579199992     
+ Grounding Line, (x,y)   554800.44368799997        8709973.6569100004     
+ Grounding Line, (x,y)   554837.21357599995        8710050.9673599992     
+ Grounding Line, (x,y)   552947.62304099998        8712737.1002099998     
+ Grounding Line, (x,y)   553027.52087300003        8712695.3902000003     
+ Grounding Line, (x,y)   553608.25974999997        8713155.9823899996     
+ Grounding Line, (x,y)   553493.28809799999        8713161.8964900002     
+ Grounding Line, (x,y)   555026.10829500004        8711344.8005700000     
+ Grounding Line, (x,y)   554658.52174800006        8708945.6295800004     
+ Grounding Line, (x,y)   554724.83106200001        8708901.7194599994     
+ Grounding Line, (x,y)   554620.51521400001        8708864.7082700003     
+ Grounding Line, (x,y)   553682.02155599999        8709524.0024999995     
+ Grounding Line, (x,y)   553034.04085400002        8710713.4096099995     
+ Grounding Line, (x,y)   553570.45451199997        8712751.7233700007     
+ Grounding Line, (x,y)   552575.42258200003        8710633.0509699993     
+ Grounding Line, (x,y)   552602.02731200005        8710712.8651599996     
+ Grounding Line, (x,y)   552652.55472400005        8710659.4055499993     
+ Grounding Line, (x,y)   553716.20427200000        8711871.1186400000     
+ Grounding Line, (x,y)   552857.45592900005        8710401.6043100003     
+ Grounding Line, (x,y)   555180.24732900003        8713632.1799899992     
+ Grounding Line, (x,y)   555185.14249899995        8711882.2717199996     
+ Grounding Line, (x,y)   554933.82102000003        8708915.9373799991     
+ Grounding Line, (x,y)   554877.12479799998        8708992.1796499994     
+ Grounding Line, (x,y)   554971.67733300000        8709001.5159200002     
+ Grounding Line, (x,y)   554884.91496099997        8711667.2829100005     
+ Grounding Line, (x,y)   554951.35967699997        8712185.2451699991     
+ Grounding Line, (x,y)   554975.67134400003        8709370.8765600007     
+ Grounding Line, (x,y)   554956.49224499997        8709450.8961399999     
+ Grounding Line, (x,y)   554832.88233099994        8711742.8233400006     
+ Grounding Line, (x,y)   554751.31506699999        8711804.4647400007     
+ Grounding Line, (x,y)   554861.53547899995        8711819.2326800004     
+ Grounding Line, (x,y)   553100.32862199994        8712666.6926700007     
+ Grounding Line, (x,y)   555062.05205800000        8709423.2202300001     
+ Grounding Line, (x,y)   555232.98274999997        8710838.5438700002     
+ Grounding Line, (x,y)   553526.32271500002        8712984.9500699993     
+ Grounding Line, (x,y)   552955.05247600004        8712271.7386000007     
+ Grounding Line, (x,y)   552925.43441700004        8710761.5347799994     
+ Grounding Line, (x,y)   552891.89789599995        8713329.2205200009     
+ Grounding Line, (x,y)   553165.92392600002        8711625.1804099996     
+ Grounding Line, (x,y)   554034.74516900000        8711977.1175200008     
+ Grounding Line, (x,y)   554006.93404900003        8712073.4986700006     
+ Grounding Line, (x,y)   553891.65852000006        8712178.4769700002     
+ Grounding Line, (x,y)   553025.60298500000        8711815.2173500005     
+ Grounding Line, (x,y)   553448.95172000001        8713018.2063299995     
+ Grounding Line, (x,y)   554091.20986399997        8709753.8096500002     
+ Grounding Line, (x,y)   555023.37787099998        8710829.1106700003     
+ Grounding Line, (x,y)   555095.72651399998        8710767.7095500007     
+ Grounding Line, (x,y)   555006.35759399994        8710730.0069500003     
+ Grounding Line, (x,y)   554201.41994199995        8709373.0125300009     
+ Grounding Line, (x,y)   554149.50891600002        8709296.2218299992     
+ Grounding Line, (x,y)   554317.08182500000        8709705.7897999994     
+ Grounding Line, (x,y)   553609.15656300006        8713062.8787500001     
+ Grounding Line, (x,y)   553164.06804599997        8711726.7309099995     
+ Grounding Line, (x,y)   553094.94978799997        8711769.6840700004     
+ Grounding Line, (x,y)   555238.10232099995        8710026.3409800008     
+ Grounding Line, (x,y)   554686.33852800005        8713080.0407999996     
+ Grounding Line, (x,y)   552629.51886600000        8710784.6979300007     
+ Grounding Line, (x,y)   552664.99183900002        8710872.9369500000     
+ Grounding Line, (x,y)   553525.01978199999        8713081.9742500000     
+ Grounding Line, (x,y)   554473.28633499995        8711008.4718500003     
+ Grounding Line, (x,y)   553351.11655799998        8709889.8042600006     
+ Grounding Line, (x,y)   553363.21639099997        8709960.6516399998     
+ Grounding Line, (x,y)   553431.53469300002        8709942.7003700007     
+ Grounding Line, (x,y)   554350.92312199995        8712674.7994700000     
+ Grounding Line, (x,y)   555121.64760400006        8712593.2515699994     
+ Grounding Line, (x,y)   554618.22464100004        8712247.4404399991     
+ Grounding Line, (x,y)   554097.23880699999        8710260.0679700002     
+ Grounding Line, (x,y)   554024.20404700004        8710252.3788099997     
+ Grounding Line, (x,y)   554928.22314400005        8710087.8094699997     
+ Grounding Line, (x,y)   552968.14785700000        8712420.4791299999     
+ Grounding Line, (x,y)   552901.76511299994        8712508.6234300006     
+ Grounding Line, (x,y)   554457.13164799998        8710689.1556100007     
+ Grounding Line, (x,y)   553996.47380699997        8712928.0493100006     
+ Grounding Line, (x,y)   553942.24904599995        8712858.3750400003     
+ Grounding Line, (x,y)   554396.45337100001        8710299.0584699996     
+ Grounding Line, (x,y)   554397.08021599997        8710376.2743299995     
+ Grounding Line, (x,y)   555210.20600999997        8711659.9244100004     
+ Grounding Line, (x,y)   555235.26640600001        8712135.3906599991     
+ Grounding Line, (x,y)   554256.45944699994        8709770.9084900003     
+ Grounding Line, (x,y)   554440.15577900002        8708451.4175099991     
+ Grounding Line, (x,y)   554117.81634599995        8711986.9278200008     
+ Grounding Line, (x,y)   553625.64530099998        8712580.6651099995     
+ Grounding Line, (x,y)   553744.86126599996        8710147.7615099996     
+ Grounding Line, (x,y)   553752.09698999999        8713024.3341600001     
+ Grounding Line, (x,y)   554849.01165000000        8710133.4621399995     
+ Grounding Line, (x,y)   554773.88252700004        8710089.0156100001     
+ Grounding Line, (x,y)   554747.46627800004        8711724.8838100005     
+ Grounding Line, (x,y)   554989.94333699998        8711994.6120200008     
+ Grounding Line, (x,y)   553392.74668600003        8709855.4701300003     
+ Grounding Line, (x,y)   553453.16866199998        8709864.8197700009     
+ Grounding Line, (x,y)   554063.63309699995        8709091.7525900006     
+ Grounding Line, (x,y)   553619.54707700002        8711000.6910100002     
+ Grounding Line, (x,y)   553545.93114799995        8710997.7476400007     
+ Grounding Line, (x,y)   554386.92274499999        8711625.1404599994     
+ Grounding Line, (x,y)   554531.54114800005        8708790.3501999993     
+ Grounding Line, (x,y)   555182.10941100004        8710766.4339000005     
+ Grounding Line, (x,y)   554612.43034900003        8708772.6507699993     
+ Grounding Line, (x,y)   553795.09034500003        8710350.6706600003     
+ Grounding Line, (x,y)   555298.18066199997        8711754.3803599998     
+ Grounding Line, (x,y)   555248.11361300002        8711707.9768199995     
+ Grounding Line, (x,y)   555227.96630500001        8711804.3067700006     
+ Grounding Line, (x,y)   554904.93421400001        8711523.4491099995     
+ Grounding Line, (x,y)   554295.92409200000        8709424.6624200009     
+ Grounding Line, (x,y)   554392.15089000005        8709392.9903800003     
+ Grounding Line, (x,y)   554738.66055100004        8710015.4853099994     
+ Grounding Line, (x,y)   554640.12503800006        8709969.1038199998     
+ Grounding Line, (x,y)   552903.34329800005        8713261.9108799994     
+ Grounding Line, (x,y)   554929.13739499997        8710767.2401999999     
+ Grounding Line, (x,y)   554235.17030999996        8710223.7176399995     
+ Grounding Line, (x,y)   553459.96141900006        8710180.9965899996     
+ Grounding Line, (x,y)   554808.85341099999        8710380.9974600002     
+ Grounding Line, (x,y)   555244.83416800003        8713331.4981299993     
+ Grounding Line, (x,y)   553753.31709899998        8709834.5824500006     
+ Grounding Line, (x,y)   554721.28784000000        8708812.2220699992     
+ Grounding Line, (x,y)   554812.17501300003        8708785.8963399995     
+ Grounding Line, (x,y)   554765.37829599995        8709121.7544599995     
+ Grounding Line, (x,y)   554692.96123899997        8709137.7315800004     
+ Grounding Line, (x,y)   553479.38245999999        8713378.5885799993     
+ Grounding Line, (x,y)   553529.23803500005        8709737.9185099993     
+ Grounding Line, (x,y)   553648.26821400004        8712510.8635699991     
+ Grounding Line, (x,y)   554810.66763399995        8709187.7121399995     
+ Grounding Line, (x,y)   555215.64743100002        8713509.2328600008     
+ Grounding Line, (x,y)   554137.46070599998        8709920.8333800007     
+ Grounding Line, (x,y)   555298.95854499994        8712975.3340700008     
+ Grounding Line, (x,y)   555297.51007399999        8712888.9622799996     
+ Grounding Line, (x,y)   554684.93528700003        8708740.3992699999     
+ Grounding Line, (x,y)   554774.24083200004        8708732.3743999992     
+ Grounding Line, (x,y)   552826.83727799996        8711231.2139800005     
+ Grounding Line, (x,y)   552877.34246800002        8711188.0352599993     
+ Grounding Line, (x,y)   552801.56278499996        8711176.6742899995     
+ Grounding Line, (x,y)   554481.02125200001        8712287.3883900009     
+ Grounding Line, (x,y)   553584.27992100001        8711073.3296399992     
+ Grounding Line, (x,y)   555080.87067199999        8712520.7921799999     
+ Grounding Line, (x,y)   554528.14290600002        8713323.6388499998     
+ Grounding Line, (x,y)   554926.49781900004        8710849.8142600004     
+ Grounding Line, (x,y)   553946.92676700000        8713008.1311600003     
+ Grounding Line, (x,y)   554007.29495300003        8713077.5613400005     
+ Grounding Line, (x,y)   553143.29887000006        8711946.7771899998     
+ Grounding Line, (x,y)   554775.96859499998        8709904.5126900002     
+ Grounding Line, (x,y)   554500.29365200002        8710624.0406899992     
+ Grounding Line, (x,y)   554381.00658299995        8710640.0781200007     
+ Grounding Line, (x,y)   553830.51544200000        8711219.3057700004     
+ Grounding Line, (x,y)   554181.01802099997        8708930.5699799992     
+ Grounding Line, (x,y)   554199.37270499999        8708985.1479700003     
+ Grounding Line, (x,y)   553418.81029099994        8712494.4615100008     
+ Grounding Line, (x,y)   553542.55530300003        8712244.7934099995     
+ Grounding Line, (x,y)   553507.32135300001        8712143.0451699998     
+ Grounding Line, (x,y)   554721.10740099999        8712001.9270699993     
+ Grounding Line, (x,y)   554534.19558299996        8712895.3205200005     
+ Grounding Line, (x,y)   554570.67122000002        8712972.0086599998     
+ Grounding Line, (x,y)   555190.04813200003        8709828.7838499993     
+ Grounding Line, (x,y)   554560.47320400004        8708716.9382799994     
+ Grounding Line, (x,y)   554133.79462599999        8713697.8271600008     
+ Grounding Line, (x,y)   554837.07868499996        8710220.1871900000     
+ Grounding Line, (x,y)   554822.16657600005        8710302.5730799995     
+ Grounding Line, (x,y)   555222.01868800004        8712590.2126599997     
+ Grounding Line, (x,y)   554413.32314200001        8709491.8886399996     
+ Grounding Line, (x,y)   553641.08391499997        8710549.7557599992     
+ Grounding Line, (x,y)   555165.43828000000        8711532.1418500002     
+ Grounding Line, (x,y)   555298.44889799994        8712183.6105799992     
+ Grounding Line, (x,y)   552818.19074100000        8712549.4783399999     
+ Grounding Line, (x,y)   552824.06595199998        8712457.4703199994     
+ Grounding Line, (x,y)   554684.32355700003        8711936.3359699994     
+ Grounding Line, (x,y)   555070.58461100003        8709880.6501000002     
+ Grounding Line, (x,y)   555074.33593499998        8710690.4233400002     
+ Grounding Line, (x,y)   553785.71455300006        8711448.5369099993     
+ Grounding Line, (x,y)   553725.40530200000        8711359.5552600008     
+ Grounding Line, (x,y)   554060.48582199996        8712793.7547399998     
+ Grounding Line, (x,y)   555219.85135400004        8709893.5753700007     
+ Grounding Line, (x,y)   554456.34324500000        8711567.7637200002     
+ Grounding Line, (x,y)   553206.15170599998        8713067.5777000003     
+ Grounding Line, (x,y)   553273.59892899997        8711070.2696000002     
+ Grounding Line, (x,y)   553087.29021799995        8710980.8678699993     
+ Grounding Line, (x,y)   555298.12701499998        8711846.8142600004     
+ Grounding Line, (x,y)   553533.14552899997        8711530.5631000008     
+ Grounding Line, (x,y)   554128.50415599998        8711830.6981899999     
+ Grounding Line, (x,y)   553428.19314400002        8712424.2289499994     
+ Grounding Line, (x,y)   553693.89407799998        8713095.9297599997     
+ Grounding Line, (x,y)   555074.64717200003        8710326.4940699991     
+ Grounding Line, (x,y)   554211.64826799999        8709294.6733100004     
+ Grounding Line, (x,y)   553556.38131199998        8713410.4610799998     
+ Grounding Line, (x,y)   553025.52616999997        8710337.8487400003     
+ Grounding Line, (x,y)   554141.77604499995        8708994.6430399995     
+ Grounding Line, (x,y)   554089.67511600000        8709040.9796099998     
+ Grounding Line, (x,y)   554856.77815699996        8708740.1244500000     
+ Grounding Line, (x,y)   555052.70347099996        8712842.3719699997     
+ Grounding Line, (x,y)   555023.29197200004        8712934.7427800000     
+ Grounding Line, (x,y)   554279.88417500001        8712884.7919100001     
+ Grounding Line, (x,y)   554341.15303799999        8711863.2857600003     
+ Grounding Line, (x,y)   554284.12910799996        8711827.4246900007     
+ Grounding Line, (x,y)   553531.94530300004        8710185.0343100000     
+ Grounding Line, (x,y)   553342.67205900000        8711013.3141600005     
+ Grounding Line, (x,y)   553422.63608099998        8711046.2377799992     
+ Grounding Line, (x,y)   552933.04978500004        8711731.4584700000     
+ Grounding Line, (x,y)   552944.80368300003        8711805.3208099995     
+ Grounding Line, (x,y)   554799.60333600000        8711226.4490699992     
+ Grounding Line, (x,y)   554810.24334900000        8711337.2583099995     
+ Grounding Line, (x,y)   554732.56339000002        8711275.0175299998     
+ Grounding Line, (x,y)   554892.73348000005        8710363.7484700009     
+ Grounding Line, (x,y)   554969.10698699998        8712264.9624400008     
+ Grounding Line, (x,y)   555234.31234499998        8711001.7202700004     
+ Grounding Line, (x,y)   554183.14475700003        8713647.3478399999     
+ Grounding Line, (x,y)   552829.94116299995        8712365.4622900002     
+ Grounding Line, (x,y)   552912.84397499997        8712336.2050400004     
+ Grounding Line, (x,y)   552835.92722700001        8712293.6295200009     
+ Grounding Line, (x,y)   554547.09102900000        8709861.1614500005     
+ Grounding Line, (x,y)   553565.78543199995        8711905.1675600000     
+ Grounding Line, (x,y)   553401.74310700002        8713399.8627799992     
+ Grounding Line, (x,y)   553375.82462700002        8713466.9557700008     
+ Grounding Line, (x,y)   554667.44116299995        8708371.9815100003     
+ Grounding Line, (x,y)   553308.49950499996        8713644.9358399995     
+ Grounding Line, (x,y)   554390.12934400002        8708717.0453699995     
+ Grounding Line, (x,y)   554485.79724700004        8708720.3544100001     
+ Grounding Line, (x,y)   553475.57504000003        8709675.3953799997     
+ Grounding Line, (x,y)   553569.31037700002        8709663.3932399992     
+ Grounding Line, (x,y)   552817.30391699995        8713089.5543499999     
+ Grounding Line, (x,y)   552820.11219400004        8713159.7612800002     
+ Grounding Line, (x,y)   552895.43303800002        8713118.9394099992     
+ Grounding Line, (x,y)   552825.72874799999        8713300.1751300003     
+ Grounding Line, (x,y)   552822.92047100002        8713229.9682000000     
+ Grounding Line, (x,y)   552699.13457500003        8710949.2038499992     
+ Grounding Line, (x,y)   554743.26920600003        8710253.7192400005     
+ Grounding Line, (x,y)   553884.96740099997        8710914.5550699998     
+ Grounding Line, (x,y)   554318.93853499996        8712455.6254299991     
+ Grounding Line, (x,y)   554358.07236899994        8712362.1139400005     
+ Grounding Line, (x,y)   554306.23780200002        8709926.6070000008     
+ Grounding Line, (x,y)   554338.54531500000        8709489.0935600009     
+ Grounding Line, (x,y)   554642.99257100001        8709200.3178400006     
+ Grounding Line, (x,y)   554266.74084099999        8709843.7562300004     
+ Grounding Line, (x,y)   553883.35997100000        8710485.2625600006     
+ Grounding Line, (x,y)   554243.44788600004        8708745.5378300007     
+ Grounding Line, (x,y)   554205.29483699996        8708696.8917699996     
+ Grounding Line, (x,y)   553674.67467300000        8712103.4179200009     
+ Grounding Line, (x,y)   553739.07704899996        8712140.2578699999     
+ Grounding Line, (x,y)   553762.55121499998        8712071.5845899992     
+ Grounding Line, (x,y)   554555.66456900002        8713517.2563600000     
+ Grounding Line, (x,y)   553493.34822599997        8711882.0601300001     
+ Grounding Line, (x,y)   553497.14966200001        8711970.3495400008     
+ Grounding Line, (x,y)   553326.45204400003        8710004.0932700001     
+ Grounding Line, (x,y)   554026.91413000005        8710452.4916500002     
+ Grounding Line, (x,y)   554027.53362100001        8713008.4177899994     
+ Grounding Line, (x,y)   554399.86828699999        8712515.2383299991     
+ Grounding Line, (x,y)   555071.33592300001        8712261.0887800008     
+ Grounding Line, (x,y)   554834.60754800006        8708694.5638500005     
+ Grounding Line, (x,y)   554781.95640100003        8708673.7240900006     
+ Grounding Line, (x,y)   554851.98027199996        8711435.1714100000     
+ Grounding Line, (x,y)   554721.00559800002        8709547.7165300008     
+ Grounding Line, (x,y)   554179.18942199997        8709826.5639800001     
+ Grounding Line, (x,y)   554588.27925200004        8713369.6530099995     
+ Grounding Line, (x,y)   553467.44764699996        8710419.7087200005     
+ Grounding Line, (x,y)   554494.68996100000        8708571.5953199994     
+ Grounding Line, (x,y)   554500.45438300003        8708497.7671099994     
+ Grounding Line, (x,y)   553840.65304100001        8712560.6934799999     
+ Grounding Line, (x,y)   554124.72444100003        8711345.5036200006     
+ Grounding Line, (x,y)   555112.41140700004        8710261.5102500003     
+ Grounding Line, (x,y)   553842.39202100004        8709486.6477899998     
+ Grounding Line, (x,y)   554255.08272800001        8712712.3278000001     
+ Grounding Line, (x,y)   555296.47674199997        8710573.2457599994     
+ Grounding Line, (x,y)   554647.71148399997        8708481.0366099998     
+ Grounding Line, (x,y)   554184.07354000001        8709747.0580700003     
+ Grounding Line, (x,y)   554794.38671899994        8713635.4188299999     
+ Grounding Line, (x,y)   553498.75329999998        8709619.4230099991     
+ Grounding Line, (x,y)   553560.89494000003        8709601.6317699999     
+ Grounding Line, (x,y)   554697.71194800001        8713009.3920099996     
+ Grounding Line, (x,y)   554530.55303800001        8710093.3561099991     
+ Grounding Line, (x,y)   553655.93063800002        8712748.4521999992     
+ Grounding Line, (x,y)   553805.08238100004        8712170.7067399994     
+ Grounding Line, (x,y)   553842.80367000005        8712103.2540099993     
+ Grounding Line, (x,y)   554846.48312700004        8711085.9597999994     
+ Grounding Line, (x,y)   554933.47753399995        8709302.5038500000     
+ Grounding Line, (x,y)   555298.34160399996        8712495.3000700008     
+ Grounding Line, (x,y)   555298.18066199997        8712431.0845199991     
+ Grounding Line, (x,y)   555223.14506799995        8712463.3805700000     
+ Grounding Line, (x,y)   554446.09364199999        8713308.5875400007     
+ Grounding Line, (x,y)   555172.26590999996        8709522.5252100006     
+ Grounding Line, (x,y)   555194.21481200005        8709610.0991200004     
+ Grounding Line, (x,y)   554213.67607499997        8713401.0926300008     
+ Grounding Line, (x,y)   553917.48074100004        8712075.3062299993     
+ Grounding Line, (x,y)   553966.01182100002        8712141.0380399991     
+ Grounding Line, (x,y)   554536.11131700000        8710671.6255300008     
+ Grounding Line, (x,y)   554707.15593000001        8710927.5906399991     
+ Grounding Line, (x,y)   554232.89142100001        8711057.7230900005     
+ Grounding Line, (x,y)   553156.37792799994        8711246.0947500002     
+ Grounding Line, (x,y)   553920.08410199999        8712434.9336200003     
+ Grounding Line, (x,y)   555298.18066199997        8711927.4994600005     
+ Grounding Line, (x,y)   554036.64832200005        8710025.6663300004     
+ Grounding Line, (x,y)   554479.99454400002        8713253.5549999997     
+ Grounding Line, (x,y)   554094.34139900003        8709983.8226900008     
+ Grounding Line, (x,y)   553193.36919300002        8711890.3961900007     
+ Grounding Line, (x,y)   553173.80870000005        8711805.3679600004     
+ Grounding Line, (x,y)   553055.43821699999        8711349.2084800005     
+ Grounding Line, (x,y)   553017.70459500002        8713411.0153100006     
+ Grounding Line, (x,y)   552956.81459099997        8713449.0392000005     
+ Grounding Line, (x,y)   554731.13069899997        8708609.5865599997     
+ Grounding Line, (x,y)   553147.42164700001        8713643.5798599999     
+ Grounding Line, (x,y)   553076.67191200005        8713638.2333300002     
+ Grounding Line, (x,y)   554212.69317300001        8713298.1754199993     
+ Grounding Line, (x,y)   554136.67430600000        8713277.9248399995     
+ Grounding Line, (x,y)   554860.69576399995        8709104.4590000007     
+ Grounding Line, (x,y)   554936.04215800005        8709066.9056899995     
+ Grounding Line, (x,y)   553718.89623499999        8713422.7982899994     
+ Grounding Line, (x,y)   553617.05156399996        8712049.8778799996     
+ Grounding Line, (x,y)   554229.43438800005        8709903.2238200009     
+ Grounding Line, (x,y)   553063.53754100006        8710254.0089800004     
+ Grounding Line, (x,y)   555132.68345899996        8712467.8547200002     
+ Grounding Line, (x,y)   554205.33152500005        8711311.5965100005     
+ Grounding Line, (x,y)   552809.32249799999        8712700.6818899997     
+ Grounding Line, (x,y)   552887.67621099995        8712664.1752099991     
+ Grounding Line, (x,y)   552813.75661899999        8712625.0801100004     
+ Grounding Line, (x,y)   554979.01783499995        8711004.3345699999     
+ Grounding Line, (x,y)   554376.86590199999        8710716.1825300008     
+ Grounding Line, (x,y)   554309.21171800001        8710649.0206000004     
+ Grounding Line, (x,y)   553541.12613500003        8712052.2522000000     
+ Grounding Line, (x,y)   553840.53338200005        8712023.2644699998     
+ Grounding Line, (x,y)   553685.56861099997        8712273.4797300007     
+ Grounding Line, (x,y)   554502.13602900004        8708344.0209199991     
+ Grounding Line, (x,y)   554446.06226000004        8710086.5434099995     
+ Grounding Line, (x,y)   554921.58605599997        8711755.2996399999     
+ Grounding Line, (x,y)   554662.43981100002        8711784.9144499991     
+ Grounding Line, (x,y)   555162.44403500005        8712139.9204300009     
+ Grounding Line, (x,y)   554537.19230200001        8710395.7287700009     
+ Grounding Line, (x,y)   554563.80899599998        8710311.1522700004     
+ Grounding Line, (x,y)   554473.84497199999        8710341.5756100006     
+ Grounding Line, (x,y)   554758.90876899997        8712455.4272200000     
+ Grounding Line, (x,y)   554663.55497099995        8712440.7200499997     
+ Grounding Line, (x,y)   555297.80697799998        8710815.7922099996     
+ Grounding Line, (x,y)   555297.91335000005        8710888.4466600008     
+ Grounding Line, (x,y)   553053.79092499998        8712421.4820600003     
+ Grounding Line, (x,y)   555296.27619100001        8713287.2381500006     
+ Grounding Line, (x,y)   554307.10428199999        8708708.3755200002     
+ Grounding Line, (x,y)   555231.63449900004        8710343.2416800000     
+ Grounding Line, (x,y)   553674.58909100003        8710106.0755100008     
+ Grounding Line, (x,y)   553124.85664699995        8710458.7475499995     
+ Grounding Line, (x,y)   553620.06305800006        8709592.1329100002     
+ Grounding Line, (x,y)   554586.54241300002        8710849.2298099995     
+ Grounding Line, (x,y)   552874.72579199995        8711602.7933699992     
+ Grounding Line, (x,y)   554913.20346300001        8713528.2646600008     
+ Grounding Line, (x,y)   554946.61625700002        8712952.8474899996     
+ Grounding Line, (x,y)   553857.74525000004        8711931.3968199994     
+ Grounding Line, (x,y)   553984.98689099995        8713152.2917899992     
+ Grounding Line, (x,y)   554147.76210900000        8708480.2849300001     
+ Grounding Line, (x,y)   554167.23938799999        8708423.6994199995     
+ Grounding Line, (x,y)   553030.22153300000        8713186.0336399991     
+ Grounding Line, (x,y)   554793.31960299995        8709032.6429999992     
+ Grounding Line, (x,y)   553901.66149199998        8711995.4900400005     
+ Grounding Line, (x,y)   553965.39043599996        8712517.0743899997     
+ Grounding Line, (x,y)   554784.49884100002        8713289.4195799995     
+ Grounding Line, (x,y)   552785.45132200001        8710277.2846600004     
+ Grounding Line, (x,y)   554441.15942899999        8708636.1018100008     
+ Grounding Line, (x,y)   552843.15381599998        8710248.7239999995     
+ Grounding Line, (x,y)   554009.79491499998        8712850.4913899992     
+ Grounding Line, (x,y)   552846.35159500001        8710924.9049600009     
+ Grounding Line, (x,y)   552989.25989600003        8711318.7906599995     
+ Grounding Line, (x,y)   554282.76693200006        8712967.3406900000     
+ Grounding Line, (x,y)   555297.52348600002        8712562.2516200002     
+ Grounding Line, (x,y)   553208.13062900002        8712924.9253100008     
+ Grounding Line, (x,y)   552852.55518400006        8712106.5095899999     
+ Grounding Line, (x,y)   554926.26278100000        8710688.6354699992     
+ Grounding Line, (x,y)   555154.83145800000        8709666.5073600002     
+ Grounding Line, (x,y)   554122.74477800005        8712550.3171500005     
+ Grounding Line, (x,y)   554796.36639700003        8711148.0482100006     
+ Grounding Line, (x,y)   552958.74174299999        8712964.8465599995     
+ Grounding Line, (x,y)   554783.25647100003        8710633.6636500005     
+ Grounding Line, (x,y)   555297.96607400000        8711212.8668099996     
+ Grounding Line, (x,y)   553565.78364599997        8713697.4724300001     
+ Grounding Line, (x,y)   553492.62063999998        8713697.7680399995     
+ Grounding Line, (x,y)   553450.06347299996        8713096.0048399996     
+ Grounding Line, (x,y)   554193.76612100005        8708618.4078199994     
+ Grounding Line, (x,y)   553616.80755599996        8712245.6590599995     
+ Grounding Line, (x,y)   552847.23423800000        8712164.1531700008     
+ Grounding Line, (x,y)   555297.83195599995        8713047.4893800002     
+ Grounding Line, (x,y)   554680.36808499997        8710649.2873299997     
+ Grounding Line, (x,y)   553434.37681399996        8709821.1359999999     
+ Grounding Line, (x,y)   553491.39726500004        8709812.9995499998     
+ Grounding Line, (x,y)   555003.68209300004        8709205.3542400002     
+ Grounding Line, (x,y)   554232.67553799995        8713697.6497900002     
+ Grounding Line, (x,y)   553811.57516500005        8711137.7079799995     
+ Grounding Line, (x,y)   552901.99563999998        8713698.3592499997     
+ Grounding Line, (x,y)   552973.23719400004        8713698.3592499997     
+ Grounding Line, (x,y)   552862.75366299995        8711965.0611099992     
+ Grounding Line, (x,y)   552865.63584200002        8711907.6392299999     
+ Grounding Line, (x,y)   553457.97880100005        8709742.7761000004     
+ Grounding Line, (x,y)   555148.86047499999        8710683.7527399994     
+ Grounding Line, (x,y)   554673.09589000000        8711705.6975299995     
+ Grounding Line, (x,y)   553701.65990600002        8713639.1337000001     
+ Grounding Line, (x,y)   553192.57840999996        8713698.3592499997     
+ Grounding Line, (x,y)   553269.43651799997        8713698.3592499997     
+ Grounding Line, (x,y)   554693.82418700005        8708422.6413499992     
+ Grounding Line, (x,y)   554796.36324900005        8708618.9620800000     
+ Grounding Line, (x,y)   554959.61966199998        8711923.0276100002     
+ Grounding Line, (x,y)   552887.35281199997        8712417.6480400003     
+ Grounding Line, (x,y)   553543.34745999996        8712390.9154700004     
+ Grounding Line, (x,y)   554114.94960900000        8708393.5978500005     
+ Grounding Line, (x,y)   553524.16358499997        8712325.9501799997     
+ Grounding Line, (x,y)   553701.74535800004        8713280.9271499999     
+ Grounding Line, (x,y)   555247.10731100000        8710771.4394899998     
+ Grounding Line, (x,y)   555168.29776999995        8709744.9134400003     
+ Grounding Line, (x,y)   552903.68131300004        8711303.2503200006     
+ Grounding Line, (x,y)   552998.65052599995        8711410.7516500000     
+ Grounding Line, (x,y)   554805.50450200005        8711670.4088899996     
+ Grounding Line, (x,y)   554063.70692499995        8710183.5949099995     
+ Grounding Line, (x,y)   554804.35702100000        8708944.5066299997     
+ Grounding Line, (x,y)   552720.10737099999        8710309.7291700002     
+ Grounding Line, (x,y)   554237.26655599999        8712441.0568599999     
+ Grounding Line, (x,y)   552913.33243299997        8711427.5694800001     
+ Grounding Line, (x,y)   554741.17684900004        8709765.6703100000     
+ Grounding Line, (x,y)   554737.70265400002        8711878.0385200009     
+ Grounding Line, (x,y)   555298.23430999997        8711661.9464500006     
+ Grounding Line, (x,y)   554485.47378200002        8709441.3266700003     
+ Grounding Line, (x,y)   555113.03500100004        8712335.5566000007     
+ Grounding Line, (x,y)   553920.07748400001        8709128.8141099997     
+ Grounding Line, (x,y)   552625.71983199997        8710598.5383700002     
+ Grounding Line, (x,y)   553671.24491999997        8713019.7842699997     
+ Grounding Line, (x,y)   553557.12131500000        8709475.2196800001     
+ Grounding Line, (x,y)   553628.54725399998        8709467.6337899994     
+ Grounding Line, (x,y)   554227.79328099999        8709979.2783100009     
+ Grounding Line, (x,y)   554725.58292500000        8708987.0858900007     
+ Grounding Line, (x,y)   552881.86021700001        8712984.8916699998     
+ Grounding Line, (x,y)   553109.66395399999        8710319.4997600000     
+ Grounding Line, (x,y)   554941.83095700003        8709230.6785100009     
+ Grounding Line, (x,y)   553582.17856399994        8712183.8947400004     
+ Grounding Line, (x,y)   553660.90021100000        8711323.1996500008     
+ Grounding Line, (x,y)   554858.36185600003        8710443.0048699994     
+ Grounding Line, (x,y)   553992.90511800000        8711886.2325100005     
+ Grounding Line, (x,y)   553940.17358299997        8711942.6958300006     
+ Grounding Line, (x,y)   553842.76630899997        8711530.2401899993     
+ Grounding Line, (x,y)   553396.46580999997        8710451.1975299995     
+ Grounding Line, (x,y)   554866.10165099998        8708906.1237199996     
+ Grounding Line, (x,y)   554886.60557599994        8709189.7998099998     
+ Grounding Line, (x,y)   553307.34054799995        8709940.4470899999     
+ Grounding Line, (x,y)   555237.10141100001        8711508.1894499995     
+ Grounding Line, (x,y)   554515.64315899997        8710476.0444099996     
+ Grounding Line, (x,y)   554598.74644200003        8710451.9599699993     
+ Grounding Line, (x,y)   555252.11981199996        8711631.5021599997     
+ Grounding Line, (x,y)   552857.65442300006        8712035.7853500005     
+ Grounding Line, (x,y)   555055.15238800005        8709343.9671100006     
+ Grounding Line, (x,y)   555016.62623699999        8709276.7908999994     
+ Grounding Line, (x,y)   553439.26421800000        8711923.4593899995     
+ Grounding Line, (x,y)   555260.94834200002        8709842.2253799997     
+ Grounding Line, (x,y)   555278.84026700002        8709918.7323000003     
+ Grounding Line, (x,y)   553875.74780799996        8709169.3463899996     
+ Grounding Line, (x,y)   553900.44160500006        8709240.8619599994     
+ Grounding Line, (x,y)   554178.91181399999        8708537.4850999992     
+ Grounding Line, (x,y)   553254.38944099995        8711825.3169700000     
+ Grounding Line, (x,y)   553314.60975299997        8711766.5276400000     
+ Grounding Line, (x,y)   553238.11115899996        8711747.6614299994     
+ Grounding Line, (x,y)   552776.28829199995        8711122.1345899999     
+ Grounding Line, (x,y)   553335.91961300001        8711841.4502200000     
+ Grounding Line, (x,y)   554576.58267799998        8710529.8272500001     
+ Grounding Line, (x,y)   555164.37464299996        8712402.8290100005     
+ Grounding Line, (x,y)   555296.73219200002        8709995.2392200008     
+ Grounding Line, (x,y)   552876.05602799996        8711749.5627999995     
+ Grounding Line, (x,y)   555066.73381500004        8709217.9010600001     
+ Grounding Line, (x,y)   555092.89513299998        8709289.5121199992     
+ Grounding Line, (x,y)   554639.62845099997        8710587.8649300002     
+ Grounding Line, (x,y)   553963.78850699996        8712012.6215799991     
+ Grounding Line, (x,y)   554721.11362600001        8708683.5361199994     
+ Grounding Line, (x,y)   553601.64590999996        8712816.5907199997     
+ Grounding Line, (x,y)   552866.57348000002        8710189.1197400000     
+ Grounding Line, (x,y)   552920.86567900004        8710169.9316799995     
+ Grounding Line, (x,y)   552813.31320700003        8713014.3220899999     
+ Grounding Line, (x,y)   555298.01972099999        8710961.1011100002     
+ Grounding Line, (x,y)   552914.33582000004        8711999.5885199998     
+ Grounding Line, (x,y)   554733.62101100001        8711351.9309299998     
+ Grounding Line, (x,y)   553656.23972700001        8713697.7680399995     
+ Grounding Line, (x,y)   553941.67100500001        8710770.2742800005     
+ Grounding Line, (x,y)   553558.15490400000        8712523.7353099994     
+ Grounding Line, (x,y)   553497.47513799998        8712458.1351999994     
+ Grounding Line, (x,y)   552873.33439099998        8712587.7100399993     
+ Grounding Line, (x,y)   555119.05645000003        8709361.1231900007     
+ Grounding Line, (x,y)   555145.66118000005        8709441.8242000006     
+ Grounding Line, (x,y)   552868.51802099997        8711850.2173599992     
+ Grounding Line, (x,y)   552920.57803300000        8711879.4057000000     
+ Grounding Line, (x,y)   554054.22226199997        8711820.8442000002     
+ Grounding Line, (x,y)   554082.18291099998        8711901.6668900009     
+ Grounding Line, (x,y)   554713.55081100005        8709064.5378300007     
+ Grounding Line, (x,y)   555172.19972000003        8712527.2393999994     
+ Grounding Line, (x,y)   555249.41962599999        8713568.7720500007     
+ Grounding Line, (x,y)   552871.09805499995        8712740.5369799994     
+ Grounding Line, (x,y)   555236.52870499995        8713009.8572799992     
+ Grounding Line, (x,y)   555242.56870499998        8711444.6618600003     
+ Grounding Line, (x,y)   555244.74829699995        8710613.6870099995     
+ Grounding Line, (x,y)   554985.32245600002        8712873.0842099991     
+ Grounding Line, (x,y)   552662.46270799998        8710730.9127099998     
+ Grounding Line, (x,y)   553476.08106999996        8712370.5354100000     
+ Grounding Line, (x,y)   554749.69411899999        8713698.3592499997     
+ Grounding Line, (x,y)   553536.51811399998        8709547.9299400002     
+ Grounding Line, (x,y)   554133.12950799998        8708448.5809599999     
+ Grounding Line, (x,y)   555243.92482499999        8712399.1124699991     
+ Grounding Line, (x,y)   552951.00484800001        8713189.6852400005     
+ Grounding Line, (x,y)   554666.06658600003        8713698.1818899997     
+ Grounding Line, (x,y)   552568.10628199996        8710437.2845099997     
+ Grounding Line, (x,y)   552730.87225999997        8710889.0588700008     
+ Grounding Line, (x,y)   553725.39940700005        8711287.1164500006     
+ Grounding Line, (x,y)   555297.91242700000        8711476.3275799993     
+ Grounding Line, (x,y)   553386.23524399998        8713625.0782500003     
+ Grounding Line, (x,y)   552796.83364900004        8710214.9952199999     
+ Grounding Line, (x,y)   554296.08523800003        8711285.6621499993     
+ Grounding Line, (x,y)   552879.06901500002        8711254.6784700006     
+ Grounding Line, (x,y)   552623.23308599996        8710292.3718800005     
+ Grounding Line, (x,y)   552675.16345200001        8710266.6212900002     
+ Grounding Line, (x,y)   555216.16371400002        8709697.6730199996     
+ Grounding Line, (x,y)   552841.91329199995        8712221.7967499997     
+ Grounding Line, (x,y)   552869.67151799996        8713048.7846399993     
+ Grounding Line, (x,y)   554505.68007799995        8708416.6150300000     
+ Grounding Line, (x,y)   555235.83923899999        8711312.5980200004     
+ Grounding Line, (x,y)   552892.62425100000        8712264.1346700005     
+ Grounding Line, (x,y)   553393.82262100000        8711781.6525699999     
+ Grounding Line, (x,y)   553420.34468700003        8711856.9413300008     
+ Grounding Line, (x,y)   553973.86425700004        8711799.4282300007     
+ Grounding Line, (x,y)   553140.98151700001        8712419.4329000004     
+ Grounding Line, (x,y)   555297.36356600001        8710734.9433999993     
+ Grounding Line, (x,y)   555296.92015400005        8710654.0945800003     
+ Grounding Line, (x,y)   555231.24585499999        8710693.0409999993     
+ Grounding Line, (x,y)   555298.01972099999        8711285.7731899992     
+ Grounding Line, (x,y)   553115.72030199994        8713698.3592499997     
+ Grounding Line, (x,y)   553044.47874799999        8713698.3592499997     
+ Grounding Line, (x,y)   553346.29462599999        8713698.3592499997     
+ Grounding Line, (x,y)   553419.45763299998        8713698.0636400003     
+ Grounding Line, (x,y)   552880.43113499996        8713192.3150699995     
+ Grounding Line, (x,y)   552831.93651799997        8711288.8575599995     
+ Grounding Line, (x,y)   553943.10805399995        8710699.2529700007     
+ Grounding Line, (x,y)   555241.37880499999        8712527.8687399998     
+ Grounding Line, (x,y)   553599.86234200001        8712114.5299600009     
+ Grounding Line, (x,y)   553937.94894200005        8709301.5290399995     
+ Grounding Line, (x,y)   554865.11857100006        8711169.5781800002     
+ Grounding Line, (x,y)   553482.65513700002        8711588.1172000002     
+ Grounding Line, (x,y)   553046.90191100002        8710478.8150699995     
+ Grounding Line, (x,y)   553079.91736900003        8710395.9257100001     
+ Grounding Line, (x,y)   552998.54420100001        8710416.2500800006     
+ Grounding Line, (x,y)   554576.30510899995        8708454.3659199998     
+ Grounding Line, (x,y)   555242.61525899998        8711883.5186899994     
+ Grounding Line, (x,y)   555245.40457400004        8711249.3587400001     
+ Grounding Line, (x,y)   552727.09381700004        8710240.8706899993     
+ Grounding Line, (x,y)   554762.70981499995        8709685.4839299992     
+ Grounding Line, (x,y)   553601.08401600004        8709526.9511799999     
+ Grounding Line, (x,y)   554502.67998899997        8710553.2687800005     
+ Grounding Line, (x,y)   554568.46098600002        8710610.3283399995     
+ Grounding Line, (x,y)   553886.45477900002        8712504.6859799996     
+ Grounding Line, (x,y)   554631.79746499995        8708422.7442600001     
+ Grounding Line, (x,y)   553011.58003299998        8713650.6914700009     
+ Grounding Line, (x,y)   552975.15787800006        8710150.7436100002     
+ Grounding Line, (x,y)   553023.53873699997        8710187.7046600003     
+ Grounding Line, (x,y)   555238.55602799996        8709769.9492000006     
+ Grounding Line, (x,y)   553472.62604400003        8711803.8541499991     
+ Grounding Line, (x,y)   553449.75332500006        8711724.1837900002     
+ Grounding Line, (x,y)   554648.97117300006        8710887.7439300008     
+ Grounding Line, (x,y)   553658.75815200002        8712185.3545999993     
+ Grounding Line, (x,y)   553733.35505699995        8712215.3163799997     
+ Grounding Line, (x,y)   552929.80621099996        8711619.0731099993     
+ Grounding Line, (x,y)   553457.64442300005        8713644.4729299992     
+ Grounding Line, (x,y)   554395.90726799995        8712289.0168099999     
+ Grounding Line, (x,y)   552834.59618999995        8711133.2846000008     
+ Grounding Line, (x,y)   553170.60145600000        8713236.0294599999     
+ Grounding Line, (x,y)   554180.46375600004        8708743.4500500001     
+ Grounding Line, (x,y)   554453.25897800003        8710426.5843899995     
+ Grounding Line, (x,y)   553332.99618300004        8710921.1896000002     
+ Grounding Line, (x,y)   554589.03228299995        8711205.2115199994     
+ Grounding Line, (x,y)   554725.74459799996        8710999.5533099994     
+ Grounding Line, (x,y)   553550.95141199999        8711828.1341699995     
+ Grounding Line, (x,y)   554670.27696599998        8711314.1849499997     
+ Grounding Line, (x,y)   554660.87309500005        8711236.3823300004     
+ Grounding Line, (x,y)   553122.14949300000        8710070.1481199991     
+ Grounding Line, (x,y)   553668.78372599999        8711050.4854600001     
+ Grounding Line, (x,y)   553935.29182499996        8709185.1604200006     
+ Grounding Line, (x,y)   553006.53086399997        8710967.1921999995     
+ Grounding Line, (x,y)   554621.33866600005        8713030.5725800004     
+ Grounding Line, (x,y)   552963.97315500001        8710205.5002500005     
+ Grounding Line, (x,y)   554358.93216400000        8710798.8706899993     
+ Grounding Line, (x,y)   553021.56857500004        8710553.4312399998     
+ Grounding Line, (x,y)   554271.80666200002        8708228.2051100004     
+ Grounding Line, (x,y)   554228.79568200000        8708236.1865299996     
+ Grounding Line, (x,y)   552575.59176200000        8710302.4223599993     
+GroundedSolver: Done
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver_post]
+MAIN: 
+MAIN: -------------------------------------
+MAIN:  Steady state iteration:            1
+MAIN: -------------------------------------
+MAIN: 
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: heightdepth
+StructuredProjectToPlane: ------------------------------------------
+StructuredProjectToPlane: Performing projection on a structured mesh
+StructuredProjectToPlane: ------------------------------------------
+DetectExtrudedStructure: Determining extruded structure
+DetectExtrudedStructure: Unit vector of direction:   0.000   0.000   1.000
+DetectExtrudedStructure: determine top and bottom pointers
+DetectExtrudedStructure: Layered structure detected in 14 cycles
+DetectExtrudedStructure:  Top and bottom pointer init time:    6.5699999999999648E-003
+DetectExtrudedStructure: Top and bottom pointer init rounds: 14
+DetectExtrudedStructure: Number of nodes at the top: 1688
+DetectExtrudedStructure: Number of nodes at the bottom: 1688
+StructuredProjectToPlane: Created variable: depth
+StructuredProjectToPlane: Created variable: height
+StructuredProjectToPlane:  Projection time:    7.7299999999991265E-004
+StructuredProjectToPlane: ------------------------------------------
+Loading user function library: [StructuredProjectToPlane]...[StructuredProjectToPlane_post]
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: resultoutput
+ResultOutputSolver: -------------------------------------
+ResultOutputSolver: Saving with prefix: tb_s2_depthcalc
+ResultOutputSolver: Working on mesh:
+ResultOutputSolver: Dimension of mesh is: 3
+ResultOutputSolver: Creating list for saving - if not present
+ResultOutputSolver: Saving in unstructured VTK XML (.vtu) format
+VtuOutputSolver: Saving results in VTK XML format with prefix: tb_s2_depthcalc
+VtuOutputSolver: Saving number of partitions: 1
+SolverOutputDirectory: Creating directory: ./vtuoutputs
+GenerateSaveMask: Number of active elements 53576 out of 53576
+GenerateSaveMask: Number of geometry nodes 25320 out of 25320
+VtuOutputSolver: Total number of geometry nodes to save: 25320
+VtuOutputSolver: Total number of dof nodes to save: 25320
+VtuOutputSolver: Total number of elements to save: 53576
+VtuOutputSolver: Setting offset for boundary entities: 100
+VtuOutputSolver: Writing the vtu file: ./vtuoutputs/tb_s2_depthcalc_t0001.vtu
+AscBinWriteInit: Initializing buffered ascii/binary writing
+ResultOutputSolver: -------------------------------------
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_post]
+SaveResult: -----------------------------------------
+SaveResult: Saving results to file: ./TB_S2_depthcalc_.result
+SaveResult: Done writing results file
+SaveResult: -----------------------------------------
+ReloadInputFile: Realoading input file
+LoadInputFile: Loading input file:
+ElmerSolver: *** Elmer Solver: ALL DONE ***
+ElmerSolver: The end
+SOLVER TOTAL TIME(CPU,REAL):         0.83        1.63
+ELMER SOLVER FINISHED AT: 2021/09/07 11:04:54

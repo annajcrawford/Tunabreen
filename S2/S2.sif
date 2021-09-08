@@ -1,0 +1,139 @@
+!---LUA BEGIN
+! assert(loadfile('../COLD.lua'))()
+! assert(loadfile('../TB.lua'))()
+!---LUA END
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+$name="TB_S2_depthcalc"
+
+! The total cost function to minimize is J=J_u + LambdaReg * Jreg
+! where J_u=velocity error; Jreg=regularisation (smoothness)
+$LambdaReg=1.0e5
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Header
+  Mesh DB "." "#meshdb#"
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Constants
+  water density = Real #rhoo
+  Buoyancy Use Basal Melt = Logical False
+  sea level = Real #zsl
+
+  ! parameters for the ismip6 basal melt
+  ! (seems to be mostly in SI units)
+  gamma 0 = Real -11075.0 ! unit: m/yr
+  Ice Density = Real 910.0
+  SW Density = Real 1025.0
+  Latent Heat = Real #Lf  !3.34e05
+  SW Cp = Real 3974.0
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Simulation
+  Coordinate System  = Cartesian 3D 
+  Simulation Type = Steady State
+ 
+  Extruded Mesh Levels = #MLEV
+  Extruded Mesh Density = Variable Coordinate 1
+    Real MATC "1.0 + 2.5 * tx[0]"
+
+  Steady State Min Iterations = 1
+  Steady State Max Iterations = 1
+
+  OutPut File = "$name$_.result"
+  Output Intervals = 1
+
+  Restart File = "../S1/readnc.result"
+  Restart Position = 0
+
+  Restart Before Initial Conditions = logical True
+  Initialize Dirichlet Conditions = Logical False
+
+  max output level = 9
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Main ice body
+Body 1
+  Equation = 1
+  Body Force = 1
+  Material = 1
+  Initial Condition = 1
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Initial Condition 1
+End
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Body Force 1
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! ice material properties in MPa - m - a system 
+Material 1
+  sea level = Real #zsl
+  Density = Real #rhoi
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Solver 1
+  Exec Solver = Before simulation 
+  Equation = "MapCoordinate_init"
+  Procedure = "StructuredMeshMapper" "StructuredMeshMapper"
+  Active Coordinate = Integer 3
+
+  Top Surface Variable Name = String "h"
+  Bottom Surface Variable Name = String "b"
+
+  Dot Product Tolerance = Real 0.001
+  Displacement Mode = Logical False
+  Correct Surface = Logical True
+  Minimum Height = Real #MINH
+End
+
+Solver 2
+  Exec Solver = Before all 
+  Equation = "GroundedMask"
+  Procedure = "ElmerIceSolvers" "GroundedSolver"
+  Variable = GroundedMask
+  Variable DOFs = 1
+  Toler = Real #GLTolerance
+  Bedrock Variable = String "b" 
+End
+
+Solver 3
+  Equation = "HeightDepth"
+  Exec Solver = "Before Timestep"
+  Procedure = "StructuredProjectToPlane" "StructuredProjectToPlane"
+  Active Coordinate = Integer 3
+  Operator 1 = depth
+  Operator 2 = height
+End
+
+Solver 4
+  !Exec Solver = String "after saving"
+  Equation = String "ResultOutput"
+  Procedure = File "ResultOutputSolve" "ResultOutputSolver"
+  Save Geometry Ids = Logical True
+  Output File Name = File $name
+  Output Format = String "vtu"
+  Output Directory = File #outdir
+  Vtu Format = Logical True
+  Save Geometry Ids = Logical True
+  Scalar Field 1  = h
+  Scalar Field 2  = b
+  Scalar Field 3 = vx
+  Scalar Field 4 = vy
+  Scalar Field 5 = depth
+  Scalar Field 6 = height
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Equation 1
+  Active Solvers (4) = 1 2 3 4  
+End
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

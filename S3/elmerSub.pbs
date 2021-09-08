@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH --job-name=TunaIS
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=00:10:0
+#SBATCH --partition=standard
+#SBATCH --qos=standard
+#SBATCH --account=n01-DOMINOS
+
+# Setup the job environment (this module needs to be loaded before any other modules)
+#module load epcc-job-env
+
+# Switch to current working directory
+# I'm unsure if this is needed??
+#cd /work/n01/n01/annac/ElmerTest/TemperateIceTest
+
+# Set the number of threads to 1
+#   This prevents any threaded system libraries from automatically 
+#   using threading.
+
+export OMP_NUM_THREADS=1
+
+export ELMER_HOME=/work/n01/n01/annac/elmerice/Elmer__09-08-21/
+export PATH=$ELMER_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$ELMER_HOME/lib/elmersolver:$LD_LIBRARY_PATH
+export NETCDFHOME=/opt/cray/pe/netcdf/4.7.4.0/gnu/9.1
+
+srun --distribution=block:block --hint=nomultithread ElmerSolver_mpi
