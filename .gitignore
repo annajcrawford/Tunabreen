@@ -2,14 +2,14 @@
 ./S2/*.pbs
 ./S3/*.pbs
 *~
-./S1/~
-./S2/~
-./S3/~
+./S1/*~
+./S2/*~
+./S3/*~
 ./data/*
 ./mesh/*
-./S1/ELMERSTART*
-./S2/ELMERSTART*
-./S3/ELMERSTART*
+./S1/ELMERS*
+./S2/ELMERS*
+./S3/ELMERS*
 ./S1/slurm*
 ./S2/slurm*
 ./S3/slurm*
@@ -24,3 +24,6 @@
 *slurm*
 *.so
 *.f90
+*.vtu
+*.result*
+*.sh

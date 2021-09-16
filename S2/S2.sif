@@ -63,8 +63,20 @@ Body 1
   Initial Condition = 1
 End
 
+Body 2
+  Equation = 2
+  Material = 2
+End
+
+Body 3
+  Equation = 3
+  Material = 3
+End
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Initial Condition 1
+!  FS lower = String b
+!  FS upper = String h
 End
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -76,6 +88,22 @@ End
 Material 1
   sea level = Real #zsl
   Density = Real #rhoi
+  thickness = variable h, b
+    Real lua "thick(tx[0],tx[1])"
+  FS lower = String b
+  FS upper = String h
+End
+
+Material 2
+  Density = Real #rhoi
+  Min FS lower = Equals b
+  Min Zs Bottom = Equals b
+End
+
+Material 3
+  Density = Real #rhoi
+  Min FS upper = variable b
+    Real lua "tx[0] + MINH"
 End
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -85,8 +113,8 @@ Solver 1
   Procedure = "StructuredMeshMapper" "StructuredMeshMapper"
   Active Coordinate = Integer 3
 
-  Top Surface Variable Name = String "h"
-  Bottom Surface Variable Name = String "b"
+  Top Surface Variable Name = String h
+  Bottom Surface Variable Name = String b
 
   Dot Product Tolerance = Real 0.001
   Displacement Mode = Logical False
@@ -95,13 +123,13 @@ Solver 1
 End
 
 Solver 2
-  Exec Solver = Before all 
+  Exec Solver = Never !not set up with FS upper and lower here!
   Equation = "GroundedMask"
   Procedure = "ElmerIceSolvers" "GroundedSolver"
   Variable = GroundedMask
   Variable DOFs = 1
   Toler = Real #GLTolerance
-  Bedrock Variable = String "b" 
+!  Bedrock Variable = String "b" 
 End
 
 Solver 3
@@ -114,6 +142,13 @@ Solver 3
 End
 
 Solver 4
+  Procedure = "SaveData" "SaveMaterials"
+  Parameter 1 = String "thickness"
+  Parameter 2 = String "FS lower"
+  Parameter 3 = String "FS upper"
+End
+
+Solver 5
   !Exec Solver = String "after saving"
   Equation = String "ResultOutput"
   Procedure = File "ResultOutputSolve" "ResultOutputSolver"
@@ -129,11 +164,16 @@ Solver 4
   Scalar Field 4 = vy
   Scalar Field 5 = depth
   Scalar Field 6 = height
+  Scalar Field 7 = GroundedMask
+!  Scalar Field 8 = thickness
 End
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Equation 1
-  Active Solvers (4) = 1 2 3 4  
+  Active Solvers (4) = 1 3 4 5 
 End
 
+Equation 2
+  Active Solvers (1) = 2
+End
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

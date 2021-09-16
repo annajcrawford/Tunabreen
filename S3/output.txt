@@ -1,0 +1,730 @@
+ELMER SOLVER (v 9.0) STARTED AT: 2021/09/15 19:29:28
+ParCommInit:  Initialize #PEs:            1
+MAIN: 
+MAIN: =============================================================
+MAIN: ElmerSolver finite element software, Welcome!
+MAIN: This program is free software licensed under (L)GPL
+MAIN: Copyright 1st April 1995 - , CSC - IT Center for Science Ltd.
+MAIN: Webpage http://www.csc.fi/elmer, Email elmeradm@csc.fi
+MAIN: Version: 9.0 (Rev: f5097f1, Compiled: 2021-07-16)
+MAIN:  Running one task without MPI parallelization.
+MAIN:  Running with just one thread per task.
+MAIN:  HYPRE library linked in.
+MAIN:  MUMPS library linked in.
+MAIN:  Lua interpreter linked in.
+MAIN:  Zoltan library linked in.
+MAIN: =============================================================
+LoadInputFile: Trying to read "Run Control" section only
+MAIN: 
+MAIN: 
+MAIN: -------------------------------------
+MAIN: Reading Model: S3.sif
+LoadInputFile: Scanning input file: S3.sif
+LoadInputFile: Scanning only size info
+LoadInputFile: First time visiting
+LoadInputFile: Reading base load of sif file
+LoadInputFile: Loading input file: S3.sif
+LoadInputFile: Reading base load of sif file
+CheckKeyword:  Unlisted keyword: [water density] in section: [constants]
+CheckKeyword:  Unlisted keyword: [buoyancy use basal melt] in section: [constants]
+CheckKeyword:  Unlisted keyword: [sea level] in section: [constants]
+CheckKeyword:  Unlisted keyword: [gamma 0] in section: [constants]
+CheckKeyword:  Unlisted keyword: [ice density] in section: [constants]
+CheckKeyword:  Unlisted keyword: [sw density] in section: [constants]
+CheckKeyword:  Unlisted keyword: [latent heat] in section: [constants]
+CheckKeyword:  Unlisted keyword: [sw cp] in section: [constants]
+CheckKeyword:  Unlisted keyword: [alpha] in section: [initial condition 1]
+CheckKeyword:  Unlisted keyword: [fs lower] in section: [initial condition 1]
+CheckKeyword:  Unlisted keyword: [fs upper] in section: [initial condition 1]
+CheckKeyword:  Unlisted keyword: [costv passive] in section: [body force 1]
+Loading user function library: [USFs]...[PassiveCond_H]
+CheckKeyword:  Unlisted keyword: [passive element min nodes] in section: [body force 1]
+CheckKeyword:  Unlisted keyword: [sea level] in section: [material 1]
+CheckKeyword:  Unlisted keyword: [cauchy] in section: [material 1]
+CheckKeyword:  Unlisted keyword: [temperature] in section: [material 1]
+CheckKeyword:  Unlisted keyword: [limit temperature] in section: [material 1]
+CheckKeyword:  Unlisted keyword: [min fs upper] in section: [material 3]
+CheckKeyword:  Unlisted keyword: [top surface variable name] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [bottom surface variable name] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [correct surface] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [minimum height] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [toler] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [bedrock variable] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [nonlinear system abort not converged] in section: [solver 3]
+CheckKeyword:  Unlisted keyword: [problem dimension] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [cost variable name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [cost filename] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [lambda] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [observed variable dimension] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [observed variable name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [observation file name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [x dim name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [y dim name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [x var name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [y var name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [save used data] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [direct solver equation name] in section: [solver 5]
+CheckKeyword:  Unlisted keyword: [adjoint solution name] in section: [solver 6]
+CheckKeyword:  Unlisted keyword: [gradient variable name] in section: [solver 6]
+CheckKeyword:  Unlisted keyword: [problem dimension] in section: [solver 7]
+CheckKeyword:  Unlisted keyword: [cost filename] in section: [solver 7]
+CheckKeyword:  Unlisted keyword: [optimized variable name] in section: [solver 7]
+CheckKeyword:  Unlisted keyword: [gradient variable name] in section: [solver 7]
+CheckKeyword:  Unlisted keyword: [cost variable name] in section: [solver 7]
+CheckKeyword:  Unlisted keyword: [lambda] in section: [solver 7]
+CheckKeyword:  Unlisted keyword: [reset cost value] in section: [solver 7]
+CheckKeyword:  Unlisted keyword: [a priori regularisation] in section: [solver 7]
+CheckKeyword:  Unlisted keyword: [cost variable name] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [optimized variable name] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [gradient variable name] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [gradient norm file] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [mesh independent] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 dxmin] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 epsg] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 niter] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 nsim] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 impres] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 dis mode] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 df1] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 normtype] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 outputfile] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [m1qn3 ndz] in section: [solver 8]
+CheckKeyword:  Unlisted keyword: [flow solver name] in section: [solver 9]
+CheckKeyword:  Unlisted keyword: [stress variable name] in section: [solver 9]
+Loading user function library: [ElmerIceUSF]...[SeaPressure]
+CheckKeyword:  Unlisted keyword: [compute sea pressure] in section: [boundary condition 2]
+CheckKeyword:  Unlisted keyword: [fs lower condition] in section: [boundary condition 3]
+Loading user function library: [ElmerIceUSF]...[TenPowerA_masked]
+Loading user function library: [ElmerIceUSF]...[TenPowerA_masked]
+CheckKeyword:  Unlisted keyword: [slip coefficient derivative] in section: [boundary condition 3]
+Loading user function library: [ElmerIceUSF]...[TenPowerA_d_Masked]
+LoadInputFile: Number of BCs: 4
+LoadInputFile: Number of Body Forces: 1
+LoadInputFile: Number of Initial Conditions: 1
+LoadInputFile: Number of Materials: 3
+LoadInputFile: Number of Equations: 3
+LoadInputFile: Number of Solvers: 10
+LoadInputFile: Number of Bodies: 3
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper_Init0]
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver_Init0]
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostDiscSolver_Init0]
+Loading user function library: [ElmerIceSolvers]...[Adjoint_LinearSolver_Init0]
+Loading user function library: [ElmerIceSolvers]...[AdjointStokes_GradientBetaSolver_Init0]
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostRegSolver_Init0]
+Loading user function library: [ElmerIceSolvers]...[Optimize_m1qn3Parallel_Init0]
+Loading user function library: [ElmerIceSolvers]...[ComputeDevStress_Init0]
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_Init0]
+LoadMesh: Starting
+ElmerAsciiMesh: Performing step: 1
+ElmerAsciiMesh: Base mesh name: ./../mesh/
+ReadHeaderFile: Reading header info from file: ./../mesh//mesh.header
+InitializeMesh: Number of nodes in mesh: 1688
+InitializeMesh: Number of bulk elements in mesh: 3170
+InitializeMesh: Number of boundary elements in mesh: 204
+InitializeMesh: Initial number of max element nodes: 3
+ElmerAsciiMesh: Performing step: 2
+ReadNodesFile: Reading nodes from file: ./../mesh//mesh.nodes
+SetMeshDimension: Dimension of mesh is: 2
+SetMeshDimension: Max dimension of mesh is: 2
+ElmerAsciiMesh: Performing step: 3
+ReadElementsFile: Reading bulk elements from file: ./../mesh//mesh.elements
+ElmerAsciiMesh: Performing step: 4
+ReadBoundaryFile: Reading boundary elements from file: ./../mesh//mesh.boundary
+PermuteNodeNumbering: Performing node mapping
+MapBodiesAndBCs: Skipping remapping of bodies
+MapBodiesAndBCs: Remapping boundaries
+MapBodiesAndBCs: Minimum initial boundary index: 1
+MapBodiesAndBCs: Maximum initial boundary index: 4
+ElmerAsciiMesh: Performing step: 5
+ElmerAsciiMesh: Performing step: 6
+LoadMesh: Loading mesh done
+LoadMesh: Elapsed REAL time:     0.1177 (s)
+MeshStabParams: Computing stabilization parameters
+MeshStabParams: Elapsed REAL time:     0.0020 (s)
+MeshExtrude: Creating 14 extruded element layers
+UnitSegmentDivision: Creating functional division
+UnitSegmentDivision: Convergence obtained in 135 iterations
+UnitSegmentDivision: Mesh division ready
+UnitSegmentDivision: w(0) :   0.0000E+00
+UnitSegmentDivision: w(1) :   3.7444E-02
+UnitSegmentDivision: w(2) :   7.8392E-02
+UnitSegmentDivision: w(3) :   1.2317E-01
+UnitSegmentDivision: w(4) :   1.7215E-01
+UnitSegmentDivision: w(5) :   2.2571E-01
+UnitSegmentDivision: w(6) :   2.8428E-01
+UnitSegmentDivision: w(7) :   3.4833E-01
+UnitSegmentDivision: w(8) :   4.1838E-01
+UnitSegmentDivision: w(9) :   4.9499E-01
+UnitSegmentDivision: w(10) :   5.7877E-01
+UnitSegmentDivision: w(11) :   6.7039E-01
+UnitSegmentDivision: w(12) :   7.7059E-01
+UnitSegmentDivision: w(13) :   8.8017E-01
+UnitSegmentDivision: w(14) :   1.0000E+00
+MeshExtrude: First Extruded BC set to: 3
+MeshExtrude: Number of new BCs for layers: 1
+SetMeshDimension: Dimension of mesh is: 3
+SetMeshDimension: Max dimension of mesh is: 3
+NonNodalElements: Requested elements require creation of edges
+FindMeshEdges: Determining faces in 3D mesh
+FindMeshFaces3D: Number of faces found: 115548
+FindMeshEdges: Determining edges in 3D mesh
+FindMeshEdges3D: Number of edges found: 96487
+MAIN: -------------------------------------
+AddSolvers: Setting up 10 solvers
+AddSolvers: Setting up solver 1: mapcoordinate_init
+AddEquationBasics: Using procedure: StructuredMeshMapper StructuredMeshMapper
+AddEquationBasics: Setting up solver: mapcoordinate_init
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper_Init]
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper_bulk]
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper]
+AddSolvers: Setting up solver 2: groundedmask
+AddEquationBasics: Using procedure: ElmerIceSolvers GroundedSolver
+AddEquationBasics: Setting up solver: groundedmask
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver_Init]
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver_bulk]
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver]
+AddEquationBasics: Creating standard variable: groundedmask
+OptimizeBandwidth: ---------------------------------------------------------
+OptimizeBandwidth: Computing matrix structure for: groundedmask...done.
+OptimizeBandwidth: Half bandwidth without optimization: 1670
+OptimizeBandwidth: 
+OptimizeBandwidth: Bandwidth Optimization ...done.
+OptimizeBandwidth: Half bandwidth after optimization: 98
+OptimizeBandwidth: ---------------------------------------------------------
+AddSolvers: Setting up solver 3: navier-stokes
+AddEquationBasics: Setting up keywords internally for legacy solver: navier-stokes
+AddEquationBasics: Using procedure: FlowSolve FlowSolver
+AddEquationBasics: Setting up solver: navier-stokes
+Loading user function library: [FlowSolve]...[FlowSolver_Init]
+Loading user function library: [FlowSolve]...[FlowSolver_bulk]
+Loading user function library: [FlowSolve]...[FlowSolver]
+AddEquationBasics: Creating standard variable: flow solution[velocity:3 pressure:1]
+OptimizeBandwidth: ---------------------------------------------------------
+OptimizeBandwidth: Computing matrix structure for: navier-stokes...done.
+OptimizeBandwidth: Half bandwidth without optimization: 3283
+OptimizeBandwidth: 
+OptimizeBandwidth: Bandwidth Optimization ...done.
+OptimizeBandwidth: Half bandwidth after optimization: 1416
+OptimizeBandwidth: ---------------------------------------------------------
+AddSolvers: Setting up solver 4: cost
+AddEquationBasics: Using procedure: ElmerIceSolvers Adjoint_CostDiscSolver
+AddEquationBasics: Setting up solver: cost
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostDiscSolver_Init]
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostDiscSolver_bulk]
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostDiscSolver]
+AddEquationBasics: Creating standard variable: costv
+OptimizeBandwidth: ---------------------------------------------------------
+OptimizeBandwidth: Computing matrix structure for: cost...done.
+OptimizeBandwidth: Half bandwidth without optimization: 1670
+OptimizeBandwidth: ---------------------------------------------------------
+AddSolvers: Setting up solver 5: adjoint
+AddEquationBasics: Using procedure: ElmerIceSolvers Adjoint_LinearSolver
+AddEquationBasics: Setting up solver: adjoint
+Loading user function library: [ElmerIceSolvers]...[Adjoint_LinearSolver_Init]
+Loading user function library: [ElmerIceSolvers]...[Adjoint_LinearSolver_bulk]
+Loading user function library: [ElmerIceSolvers]...[Adjoint_LinearSolver]
+AddEquationBasics: Creating standard variable: adjoint
+OptimizeBandwidth: ---------------------------------------------------------
+OptimizeBandwidth: Computing matrix structure for: adjoint...done.
+OptimizeBandwidth: Half bandwidth without optimization: 3283
+OptimizeBandwidth: 
+OptimizeBandwidth: Bandwidth Optimization ...done.
+OptimizeBandwidth: Half bandwidth after optimization: 1416
+OptimizeBandwidth: ---------------------------------------------------------
+AddSolvers: Setting up solver 6: djdbeta
+AddEquationBasics: Using procedure: ElmerIceSolvers AdjointStokes_GradientBetaSolver
+AddEquationBasics: Setting up solver: djdbeta
+Loading user function library: [ElmerIceSolvers]...[AdjointStokes_GradientBetaSolver_Init]
+Loading user function library: [ElmerIceSolvers]...[AdjointStokes_GradientBetaSolver_bulk]
+Loading user function library: [ElmerIceSolvers]...[AdjointStokes_GradientBetaSolver]
+AddEquationBasics: Creating standard variable: djdbeta_var
+OptimizeBandwidth: ---------------------------------------------------------
+OptimizeBandwidth: Computing matrix structure for: djdbeta...done.
+OptimizeBandwidth: Half bandwidth without optimization: 1670
+OptimizeBandwidth: ---------------------------------------------------------
+AddSolvers: Setting up solver 7: djdbeta_reg
+AddEquationBasics: Using procedure: ElmerIceSolvers Adjoint_CostRegSolver
+AddEquationBasics: Setting up solver: djdbeta_reg
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostRegSolver_Init]
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostRegSolver_bulk]
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostRegSolver]
+AddEquationBasics: Creating standard variable: djdbreg
+OptimizeBandwidth: ---------------------------------------------------------
+OptimizeBandwidth: Computing matrix structure for: djdbeta_reg...done.
+OptimizeBandwidth: Half bandwidth without optimization: 1670
+OptimizeBandwidth: ---------------------------------------------------------
+AddSolvers: Setting up solver 8: optimize_m1qn3
+AddEquationBasics: Using procedure: ElmerIceSolvers Optimize_m1qn3Parallel
+AddEquationBasics: Setting up solver: optimize_m1qn3
+Loading user function library: [ElmerIceSolvers]...[Optimize_m1qn3Parallel_Init]
+Loading user function library: [ElmerIceSolvers]...[Optimize_m1qn3Parallel_bulk]
+Loading user function library: [ElmerIceSolvers]...[Optimize_m1qn3Parallel]
+AddEquationBasics: Creating global variable: optimize_m1qn3_var
+AddSolvers: Setting up solver 9: stresssolver
+AddEquationBasics: Using procedure: ElmerIceSolvers ComputeDevStress
+AddEquationBasics: Setting up solver: stresssolver
+Loading user function library: [ElmerIceSolvers]...[ComputeDevStress_Init]
+Loading user function library: [ElmerIceSolvers]...[ComputeDevStress_bulk]
+Loading user function library: [ElmerIceSolvers]...[ComputeDevStress]
+AddEquationBasics: Creating standard variable: sij
+OptimizeBandwidth: ---------------------------------------------------------
+OptimizeBandwidth: Computing matrix structure for: stresssolver...done.
+OptimizeBandwidth: Half bandwidth without optimization: 3283
+OptimizeBandwidth: 
+OptimizeBandwidth: Bandwidth Optimization ...done.
+OptimizeBandwidth: Half bandwidth after optimization: 1416
+OptimizeBandwidth: ---------------------------------------------------------
+AddSolvers: Setting up solver 10: resultoutput
+AddEquationBasics: Using procedure: ResultOutputSolve ResultOutputSolver
+AddEquationBasics: Setting up solver: resultoutput
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_Init]
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_bulk]
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver]
+AddMeshCoordinatesAndTime: Setting mesh coordinates and time
+SetInitialConditions: Setting up initial conditions (if any)
+Restart: Perfoming global Restart for:
+LoadRestartFile: 
+LoadRestartFile: --------------------------------------------
+LoadRestartFile: Restart for mesh name:
+LoadRestartFile: Restart for number of nodes: 25320
+LoadRestartFile: Reading data from file: ../S2/TB_S2_depthcalc_.result
+LoadRestartFile: Reading all variables (if not wanted use "Restart Variable i" )
+LoadRestartFile: ASCII 3
+LoadRestartFile: Reading ascii restart file version 3
+LoadRestartFile: Total number of dofs in restart file: 10
+WARNING:: LoadRestartFile: Fields are of different size (25320 vs. 1688): groundedmask
+LoadRestartFile: Creating variable: vx
+LoadRestartFile: Creating variable: vy
+LoadRestartFile: Creating variable: b
+LoadRestartFile: Creating variable: h
+LoadRestartFile: Creating variable: depth
+LoadRestartFile: Creating variable: height
+LoadRestartFile: Reading time sequence:    1.100E+00
+LoadRestartFile: Reading variables on timestep: 1
+LoadRestartFile: Time spent for restart (s):      1.7109E-01
+LoadRestartFile: All done
+LoadRestartFile: --------------------------------------------
+ElmerSolver: Number of timesteps to be saved: 300
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: mapcoordinate_init
+StructuredMeshMapper: ---------------------------------------
+StructuredMeshMapper: Performing mapping on a structured mesh
+StructuredMeshMapper: ---------------------------------------
+StructuredMeshMapper: Defaulting "Recompute Stabilization" to True.
+DetectExtrudedStructure: Determining extruded structure
+DetectExtrudedStructure: Unit vector of direction:   0.000   0.000   1.000
+DetectExtrudedStructure: Applying extrusion on the whole mesh
+DetectExtrudedStructure: determine top and bottom pointers
+DetectExtrudedStructure: Layered structure detected in 14 cycles
+DetectExtrudedStructure:  Top and bottom pointer init time:    6.6260000000002428E-003
+DetectExtrudedStructure: Top and bottom pointer init rounds: 14
+DetectExtrudedStructure: Number of nodes at the top: 1688
+DetectExtrudedStructure: Number of nodes at the bottom: 1688
+StructuredMeshMapper: Adjusting upper surface to maintain minimum height to: 0.1100E+02
+StructuredMeshMapper: > Correct Surface < in case of intersecting upper and lower surface
+StructuredMeshMapper:  Active coordinate mapping time:    3.9800000000012048E-004
+MeshStabParams: Computing stabilization parameters
+MeshStabParams: Elapsed REAL time:     0.0235 (s)
+Loading user function library: [StructuredMeshMapper]...[StructuredMeshMapper_post]
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: groundedmask
+GroundedSolver: Computing grounded mask from geometry
+GroundedSolver: Memory allocation done.
+GroundedSolver: Bedrock Variable name found
+GroundedSolver: No front variable defined. Some basal frontal nodes may be left with GroundedMask=1
+GroundedSolver: Done
+Loading user function library: [ElmerIceSolvers]...[GroundedSolver_post]
+MAIN: 
+MAIN: -------------------------------------
+MAIN:  Steady state iteration:            1
+MAIN: -------------------------------------
+MAIN: 
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: navier-stokes
+FlowSolver: Solving the Navier-Stokes equations
+DefaultStart: Starting solver: navier-stokes
+FlowSolve: Enforcing relative pressure relaxation
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           1
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly:
+: .....Saving bulk values for: navier-stokes
+FlowSolve: Assembly done
+SeaPressure: Sea level =     0.0000
+DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
+EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
+ScaleLinearSystem: Scaling diagonal entries to unity
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 1688
+DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
+FlowSolve: Dirichlet conditions done
+DefaultSolve: Solving linear system with default routines
+SolveSystem: Solving linear system
+SolveLinearSystem: Assuming real valued linear system
+SolveLinearSystem: Assuming serial linear system
+ScaleLinearSystem: Scaling diagonal entries to unity
+SolveLinearSystem: Serial linear System Solver: direct
+DirectSolver: Using direct method: mumps
+SolveLinearSystem: Calculating nodal loads
+ComputeNorm: Computing norm of solution
+ComputeChange: NS (ITER=1) (NRM,RELC): ( 0.53219427E-03  2.0000000     ) :: navier-stokes
+SolveSystem: Linear system time (CPU,REAL) for flow solution:     7.61    7.86 (s)
+FlowSolve: iter:    1 Assembly: (s)    5.53    5.53
+FlowSolve: iter:    1 Solve:    (s)    7.61    7.61
+FlowSolve:  Result Norm     :    5.3219427382753773E-004
+FlowSolve:  Relative Change :    2.0000000000000000
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           2
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly:
+: .....Saving bulk values for: navier-stokes
+FlowSolve: Assembly done
+DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
+EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
+ScaleLinearSystem: Scaling diagonal entries to unity
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 1688
+DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
+FlowSolve: Dirichlet conditions done
+DefaultSolve: Solving linear system with default routines
+SolveSystem: Solving linear system
+SolveLinearSystem: Assuming real valued linear system
+SolveLinearSystem: Assuming serial linear system
+ScaleLinearSystem: Scaling diagonal entries to unity
+SolveLinearSystem: Serial linear System Solver: direct
+DirectSolver: Using direct method: mumps
+SolveLinearSystem: Calculating nodal loads
+ComputeNorm: Computing norm of solution
+ComputeChange: NS (ITER=2) (NRM,RELC): ( 0.15949090      1.9866971     ) :: navier-stokes
+SolveSystem: Linear system time (CPU,REAL) for flow solution:     7.61    7.75 (s)
+FlowSolve: iter:    2 Assembly: (s)    5.54   11.07
+FlowSolve: iter:    2 Solve:    (s)    7.61   15.22
+FlowSolve:  Result Norm     :   0.15949089825105986
+FlowSolve:  Relative Change :    1.9866970631443144
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           3
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly:
+: .....Saving bulk values for: navier-stokes
+FlowSolve: Assembly done
+DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
+EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
+ScaleLinearSystem: Scaling diagonal entries to unity
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 1688
+DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
+FlowSolve: Dirichlet conditions done
+DefaultSolve: Solving linear system with default routines
+SolveSystem: Solving linear system
+SolveLinearSystem: Assuming real valued linear system
+SolveLinearSystem: Assuming serial linear system
+ScaleLinearSystem: Scaling diagonal entries to unity
+SolveLinearSystem: Serial linear System Solver: direct
+DirectSolver: Using direct method: mumps
+SolveLinearSystem: Calculating nodal loads
+ComputeNorm: Computing norm of solution
+ComputeChange: NS (ITER=3) (NRM,RELC): (  4.9892953      1.8760944     ) :: navier-stokes
+SolveSystem: Linear system time (CPU,REAL) for flow solution:     7.61    7.75 (s)
+FlowSolve: iter:    3 Assembly: (s)    5.53   16.60
+FlowSolve: iter:    3 Solve:    (s)    7.61   22.84
+FlowSolve:  Result Norm     :    4.9892953348427156
+FlowSolve:  Relative Change :    1.8760943717368308
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           4
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly:
+: .....Saving bulk values for: navier-stokes
+FlowSolve: Assembly done
+DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
+EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
+ScaleLinearSystem: Scaling diagonal entries to unity
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 1688
+DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
+FlowSolve: Dirichlet conditions done
+DefaultSolve: Solving linear system with default routines
+SolveSystem: Solving linear system
+SolveLinearSystem: Assuming real valued linear system
+SolveLinearSystem: Assuming serial linear system
+ScaleLinearSystem: Scaling diagonal entries to unity
+SolveLinearSystem: Serial linear System Solver: direct
+DirectSolver: Using direct method: mumps
+SolveLinearSystem: Calculating nodal loads
+ComputeNorm: Computing norm of solution
+ComputeChange: NS (ITER=4) (NRM,RELC): (  17.700543      1.1204353     ) :: navier-stokes
+SolveSystem: Linear system time (CPU,REAL) for flow solution:     7.60    7.74 (s)
+FlowSolve: iter:    4 Assembly: (s)    5.51   22.12
+FlowSolve: iter:    4 Solve:    (s)    7.60   30.44
+FlowSolve:  Result Norm     :    17.700542665570481
+FlowSolve:  Relative Change :    1.1204352653814704
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           5
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly:
+: .....Saving bulk values for: navier-stokes
+FlowSolve: Assembly done
+DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
+EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
+ScaleLinearSystem: Scaling diagonal entries to unity
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 1688
+DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
+FlowSolve: Dirichlet conditions done
+DefaultSolve: Solving linear system with default routines
+SolveSystem: Solving linear system
+SolveLinearSystem: Assuming real valued linear system
+SolveLinearSystem: Assuming serial linear system
+ScaleLinearSystem: Scaling diagonal entries to unity
+SolveLinearSystem: Serial linear System Solver: direct
+DirectSolver: Using direct method: mumps
+SolveLinearSystem: Calculating nodal loads
+ComputeNorm: Computing norm of solution
+ComputeChange: NS (ITER=5) (NRM,RELC): (  24.291053     0.31389663     ) :: navier-stokes
+SolveSystem: Linear system time (CPU,REAL) for flow solution:     7.61    7.74 (s)
+FlowSolve: iter:    5 Assembly: (s)    5.52   27.64
+FlowSolve: iter:    5 Solve:    (s)    7.61   38.04
+FlowSolve:  Result Norm     :    24.291052760006362
+FlowSolve:  Relative Change :   0.31389662753426312
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           6
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly:
+: .....Saving bulk values for: navier-stokes
+FlowSolve: Assembly done
+DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
+EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
+ScaleLinearSystem: Scaling diagonal entries to unity
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 1688
+DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
+FlowSolve: Dirichlet conditions done
+DefaultSolve: Solving linear system with default routines
+SolveSystem: Solving linear system
+SolveLinearSystem: Assuming real valued linear system
+SolveLinearSystem: Assuming serial linear system
+ScaleLinearSystem: Scaling diagonal entries to unity
+SolveLinearSystem: Serial linear System Solver: direct
+DirectSolver: Using direct method: mumps
+SolveLinearSystem: Calculating nodal loads
+ComputeNorm: Computing norm of solution
+ComputeChange: NS (ITER=6) (NRM,RELC): (  27.086711     0.10882757     ) :: navier-stokes
+SolveSystem: Linear system time (CPU,REAL) for flow solution:     7.62    7.75 (s)
+FlowSolve: iter:    6 Assembly: (s)    5.52   33.15
+FlowSolve: iter:    6 Solve:    (s)    7.62   45.66
+FlowSolve:  Result Norm     :    27.086711365347359
+FlowSolve:  Relative Change :   0.10882756978369187
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           7
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly:
+: .....Saving bulk values for: navier-stokes
+FlowSolve: Assembly done
+DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
+EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
+ScaleLinearSystem: Scaling diagonal entries to unity
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 1688
+DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
+FlowSolve: Dirichlet conditions done
+DefaultSolve: Solving linear system with default routines
+SolveSystem: Solving linear system
+SolveLinearSystem: Assuming real valued linear system
+SolveLinearSystem: Assuming serial linear system
+ScaleLinearSystem: Scaling diagonal entries to unity
+SolveLinearSystem: Serial linear System Solver: direct
+DirectSolver: Using direct method: mumps
+SolveLinearSystem: Calculating nodal loads
+ComputeNorm: Computing norm of solution
+ComputeChange: NS (ITER=7) (NRM,RELC): (  28.550397     0.52615429E-01 ) :: navier-stokes
+SolveSystem: Linear system time (CPU,REAL) for flow solution:     7.61    7.74 (s)
+FlowSolve: iter:    7 Assembly: (s)    5.52   38.68
+FlowSolve: iter:    7 Solve:    (s)    7.61   53.27
+FlowSolve:  Result Norm     :    28.550396528937110
+FlowSolve:  Relative Change :    5.2615429485331461E-002
+Loading user function library: [FlowSolve]...[FlowSolver_post]
+SolverActivate: Solver time (CPU,REAL) for navier-stokes:    91.95   93.23 (s)
+ComputeNorm: Computing norm of solution
+ComputeChange: SS (ITER=1) (NRM,RELC): (  28.550397      2.0000000     ) :: navier-stokes
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: cost
+Adjoint_CostDiscSolver: Data File is in netcdf format
+WARNING:: Adjoint_CostDiscSolver: keyword <Netcdf Var 1 Name not found, taking default
+WARNING:: Adjoint_CostDiscSolver: keyword <Netcdf Var 2 Name not found, taking default
+Adjoint_CostDiscSolver: Compute cost
+: ....................  4%
+: ....................  9%
+: .................... 17%
+: .................... 27%
+: .................... 41%
+: .................... 66%
+: .................... 97%
+: .....Adjoint_CostDiscSolvertotal number of data points:2811619
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostDiscSolver_post]
+ComputeNorm: Computing norm of solution
+ComputeChange: SS (ITER=1) (NRM,RELC): ( 0.54080847E+10  2.0000000     ) :: cost
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: adjoint
+Adjoint Solver: Copy Normal-Tangential keyword in BC 1
+Adjoint Solver: Copy Normal-Tangential keyword in BC 3
+Adjoint Solver: Copy Normal-Tangential keyword in BC 4
+DefaultSolve: Solving linear system with default routines
+SolveSystem: Solving linear system
+SolveLinearSystem: Assuming real valued linear system
+SolveLinearSystem: Assuming serial linear system
+ScaleLinearSystem: Scaling diagonal entries to unity
+SolveLinearSystem: Serial linear System Solver: direct
+DirectSolver: Using direct method: mumps
+ComputeNorm: Computing norm of solution
+ComputeChange: NS (ITER=1) (NRM,RELC): (  4132.6176      2.0000000     ) :: adjoint
+Loading user function library: [ElmerIceSolvers]...[Adjoint_LinearSolver_post]
+ComputeNorm: Computing norm of solution
+ComputeChange: SS (ITER=1) (NRM,RELC): (  4132.5294      2.0000000     ) :: adjoint
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: djdbeta
+Loading user function library: [ElmerIceSolvers]...[AdjointStokes_GradientBetaSolver_post]
+ComputeNorm: Computing norm of solution
+ComputeChange: SS (ITER=1) (NRM,RELC): (  0.0000000      0.0000000     ) :: djdbeta
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: djdbeta_reg
+Loading user function library: [ElmerIceSolvers]...[Adjoint_CostRegSolver_post]
+ComputeNorm: Computing norm of solution
+ComputeChange: SS (ITER=1) (NRM,RELC): ( 0.10169601E-27  2.0000000     ) :: djdbeta_reg
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: optimize_m1qn3
+Optimize_m1qn3Parallel: Solver defined on boundary
+Optimize_m1qn3Parallel: m1qn3: Cost,omode=  0.54080847E+10 -1
+ComputeChange: SS (ITER=1) (NRM,RELC): (  3.1345914     0.43879499E-01 ) :: Optimize
+Loading user function library: [ElmerIceSolvers]...[Optimize_m1qn3Parallel_post]
+SaveResult: -----------------------------------------
+SaveResult: Saving results to file: ./TB_drag_.result
+SaveResult: Done writing results file
+SaveResult: -----------------------------------------
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: resultoutput
+ResultOutputSolver: -------------------------------------
+ResultOutputSolver: Saving with prefix: tb_drag
+ResultOutputSolver: Working on mesh:
+ResultOutputSolver: Dimension of mesh is: 3
+ResultOutputSolver: Creating list for saving - if not present
+CreateListForSaving: Scalar Field 1 exists, creating no list!
+ResultOutputSolver: Saving in unstructured VTK XML (.vtu) format
+VtuOutputSolver: Saving results in VTK XML format with prefix: tb_drag
+VtuOutputSolver: Saving number of partitions: 1
+SolverOutputDirectory: Creating directory: ./vtuoutputs
+VtuOutputSolver: Full filename base is: ./vtuoutputs/tb_drag
+GenerateSaveMask: Number of active elements 53576 out of 53576
+GenerateSaveMask: Number of geometry nodes 25320 out of 25320
+VtuOutputSolver: Total number of geometry nodes to save: 25320
+VtuOutputSolver: Total number of dof nodes to save: 25320
+VtuOutputSolver: Total number of elements to save: 53576
+VtuOutputSolver: Setting offset for boundary entities: 100
+VtuOutputSolver: Writing the vtu file: ./vtuoutputs/tb_drag_t0001.vtu
+AscBinWriteInit: Initializing buffered ascii/binary writing
+AscBinWriteInit: Writing in binary
+AscBinWriteInit: Writing in double precision
+AscBinWriteInit: Writing to unit number: 58
+AscBinWriteInit: Size of buffer is: 25320
+VtuOutputSolver: Writing nodal fields
+VtuOutputSolver: Saving variable: alpha
+VtuOutputSolver: Saving variable: h
+VtuOutputSolver: Saving variable: b
+VtuOutputSolver: Saving variable: groundedmask
+VtuOutputSolver: Saving variable: vx
+VtuOutputSolver: Saving variable: vy
+VtuOutputSolver: Saving variable: thickness
+VtuOutputSolver: Saving variable: fs upper
+VtuOutputSolver: Saving variable: fs lower
+VtuOutputSolver: Saving variable: velocity
+VtuOutputSolver: Number of nodal fields written: 10
+VtuOutputSolver: Writing elemental fields
+VtuOutputSolver: Number of elemental fields written: 0
+VtuOutputSolver: Writing entity IDs for bodies and boundaries
+VtuOutputSolver: Writing coordinates for each used node
+VtuOutputSolver: Writing the elemental connectivity data
+VtuOutputSolver: Writing nodal fields
+VtuOutputSolver: Saving variable: alpha
+VtuOutputSolver: Saving variable: h
+VtuOutputSolver: Saving variable: b
+VtuOutputSolver: Saving variable: groundedmask
+VtuOutputSolver: Saving variable: vx
+VtuOutputSolver: Saving variable: vy
+VtuOutputSolver: Saving variable: thickness
+VtuOutputSolver: Saving variable: fs upper
+VtuOutputSolver: Saving variable: fs lower
+VtuOutputSolver: Saving variable: velocity
+VtuOutputSolver: Writing elemental fields
+AscBinWriteFree: Terminating buffered ascii/binary writing
+VtuOutputSolver: All done for now
+ResultOutputSolver: -------------------------------------
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_post]
+MAIN: 
+MAIN: -------------------------------------
+MAIN:  Steady state iteration:            2
+MAIN: -------------------------------------
+MAIN: 
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: navier-stokes
+FlowSolver: Solving the Navier-Stokes equations
+DefaultStart: Starting solver: navier-stokes
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           1
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly:
+: .....Saving bulk values for: navier-stokes
+FlowSolve: Assembly done
+SeaPressure: Sea level =     0.0000
+DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
+EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
+ScaleLinearSystem: Scaling diagonal entries to unity
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 1688
+DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
+FlowSolve: Dirichlet conditions done
+DefaultSolve: Solving linear system with default routines
+SolveSystem: Solving linear system
+SolveLinearSystem: Assuming real valued linear system
+SolveLinearSystem: Assuming serial linear system
+ScaleLinearSystem: Scaling diagonal entries to unity
+SolveLinearSystem: Serial linear System Solver: direct
+DirectSolver: Using direct method: mumps
+SolveLinearSystem: Calculating nodal loads
+ComputeNorm: Computing norm of solution
+ComputeChange: NS (ITER=1) (NRM,RELC): (  49.938023     0.54498808     ) :: navier-stokes
+SolveSystem: Linear system time (CPU,REAL) for flow solution:     7.61    7.74 (s)
+FlowSolve: iter:    1 Assembly: (s)    5.48    5.48
+FlowSolve: iter:    1 Solve:    (s)    7.61    7.61
+FlowSolve:  Result Norm     :    49.938022936948606
+FlowSolve:  Relative Change :   0.54498807731266485
+FlowSolve: 
+FlowSolve: 
+FlowSolve: -------------------------------------
+FlowSolve:  NAVIER-STOKES ITERATION           2
+FlowSolve: -------------------------------------
+FlowSolve: 
+FlowSolve: Starting Assembly...
+FlowSolve: Assembly:
+: ...

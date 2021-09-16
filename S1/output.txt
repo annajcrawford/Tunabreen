@@ -1,0 +1,276 @@
+ELMER SOLVER (v 9.0) STARTED AT: 2021/09/09 13:25:10
+ParCommInit:  Initialize #PEs:            1
+MAIN: 
+MAIN: =============================================================
+MAIN: ElmerSolver finite element software, Welcome!
+MAIN: This program is free software licensed under (L)GPL
+MAIN: Copyright 1st April 1995 - , CSC - IT Center for Science Ltd.
+MAIN: Webpage http://www.csc.fi/elmer, Email elmeradm@csc.fi
+MAIN: Version: 9.0 (Rev: f5097f1, Compiled: 2021-07-16)
+MAIN:  Running one task without MPI parallelization.
+MAIN:  Running with just one thread per task.
+MAIN:  HYPRE library linked in.
+MAIN:  MUMPS library linked in.
+MAIN:  Lua interpreter linked in.
+MAIN:  Zoltan library linked in.
+MAIN: =============================================================
+LoadInputFile: Trying to read "Run Control" section only
+MAIN: 
+MAIN: 
+MAIN: -------------------------------------
+MAIN: Reading Model: S1.sif
+LoadInputFile: Scanning input file: S1.sif
+LoadInputFile: Scanning only size info
+LoadInputFile: First time visiting
+LoadInputFile: Reading base load of sif file
+LoadInputFile: Loading input file: S1.sif
+LoadInputFile: Reading base load of sif file
+CheckKeyword:  Unlisted keyword: [read full array] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [x dim name] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [y dim name] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [x var name] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [y var name] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [epsilon x] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [epsilon y] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [enable scaling] in section: [solver 1]
+CheckKeyword:  Unlisted keyword: [read full array] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [x dim name] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [y dim name] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [x var name] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [y var name] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [epsilon x] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [epsilon y] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [enable scaling] in section: [solver 2]
+CheckKeyword:  Unlisted keyword: [read full array] in section: [solver 3]
+CheckKeyword:  Unlisted keyword: [x dim name] in section: [solver 3]
+CheckKeyword:  Unlisted keyword: [y dim name] in section: [solver 3]
+CheckKeyword:  Unlisted keyword: [x var name] in section: [solver 3]
+CheckKeyword:  Unlisted keyword: [y var name] in section: [solver 3]
+CheckKeyword:  Unlisted keyword: [epsilon x] in section: [solver 3]
+CheckKeyword:  Unlisted keyword: [epsilon y] in section: [solver 3]
+CheckKeyword:  Unlisted keyword: [enable scaling] in section: [solver 3]
+CheckKeyword:  Unlisted keyword: [read full array] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [x dim name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [y dim name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [x var name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [y var name] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [epsilon x] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [epsilon y] in section: [solver 4]
+CheckKeyword:  Unlisted keyword: [enable scaling] in section: [solver 4]
+WARNING:: LoadInputFile: There are no BCs in the system!
+LoadInputFile: Number of Body Forces: 0
+LoadInputFile: Number of Initial Conditions: 0
+LoadInputFile: Number of Materials: 0
+LoadInputFile: Number of Equations: 1
+LoadInputFile: Number of Solvers: 5
+LoadInputFile: Number of Bodies: 1
+Loading user function library: [GridDataReader]...[GridDataReader_Init0]
+Loading user function library: [GridDataReader]...[GridDataReader_Init0]
+Loading user function library: [GridDataReader]...[GridDataReader_Init0]
+Loading user function library: [GridDataReader]...[GridDataReader_Init0]
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_Init0]
+LoadMesh: Starting
+ElmerAsciiMesh: Performing step: 1
+ElmerAsciiMesh: Base mesh name: ./../mesh/
+InitializeMesh: Number of nodes in mesh: 1688
+InitializeMesh: Number of bulk elements in mesh: 3170
+InitializeMesh: Number of boundary elements in mesh: 204
+ElmerAsciiMesh: Performing step: 2
+SetMeshDimension: Dimension of mesh is: 2
+SetMeshDimension: Max dimension of mesh is: 2
+ElmerAsciiMesh: Performing step: 3
+ElmerAsciiMesh: Performing step: 4
+PermuteNodeNumbering: Performing node mapping
+MapBodiesAndBCs: Remapping boundaries
+MapBodiesAndBCs: Minimum initial boundary index: 1
+MapBodiesAndBCs: Maximum initial boundary index: 4
+ElmerAsciiMesh: Performing step: 5
+ElmerAsciiMesh: Performing step: 6
+LoadMesh: Loading mesh done
+LoadMesh: Elapsed REAL time:     0.3750 (s)
+MeshStabParams: Computing stabilization parameters
+MeshStabParams: Elapsed REAL time:     0.0147 (s)
+UnitSegmentDivision: Creating functional division
+UnitSegmentDivision: Convergence obtained in 135 iterations
+UnitSegmentDivision: Mesh division ready
+UnitSegmentDivision: w(0) :   0.0000E+00
+UnitSegmentDivision: w(1) :   3.7444E-02
+UnitSegmentDivision: w(2) :   7.8392E-02
+UnitSegmentDivision: w(3) :   1.2317E-01
+UnitSegmentDivision: w(4) :   1.7215E-01
+UnitSegmentDivision: w(5) :   2.2571E-01
+UnitSegmentDivision: w(6) :   2.8428E-01
+UnitSegmentDivision: w(7) :   3.4833E-01
+UnitSegmentDivision: w(8) :   4.1838E-01
+UnitSegmentDivision: w(9) :   4.9499E-01
+UnitSegmentDivision: w(10) :   5.7877E-01
+UnitSegmentDivision: w(11) :   6.7039E-01
+UnitSegmentDivision: w(12) :   7.7059E-01
+UnitSegmentDivision: w(13) :   8.8017E-01
+UnitSegmentDivision: w(14) :   1.0000E+00
+MeshExtrude: First Extruded BC set to: 1
+MeshExtrude: Number of new BCs for layers: 1
+SetMeshDimension: Dimension of mesh is: 3
+SetMeshDimension: Max dimension of mesh is: 3
+NonNodalElements: Requested elements require creation of edges
+FindMeshEdges: Determining faces in 3D mesh
+FindMeshEdges: Determining edges in 3D mesh
+MAIN: -------------------------------------
+AddEquationBasics: Setting up solver: read vx
+Loading user function library: [GridDataReader]...[GridDataReader_Init]
+Loading user function library: [GridDataReader]...[GridDataReader_bulk]
+Loading user function library: [GridDataReader]...[GridDataReader]
+AddEquationBasics: Setting up solver: read vy
+Loading user function library: [GridDataReader]...[GridDataReader_Init]
+Loading user function library: [GridDataReader]...[GridDataReader_bulk]
+Loading user function library: [GridDataReader]...[GridDataReader]
+AddEquationBasics: Setting up solver: read bed
+Loading user function library: [GridDataReader]...[GridDataReader_Init]
+Loading user function library: [GridDataReader]...[GridDataReader_bulk]
+Loading user function library: [GridDataReader]...[GridDataReader]
+AddEquationBasics: Setting up solver: read surface
+Loading user function library: [GridDataReader]...[GridDataReader_Init]
+Loading user function library: [GridDataReader]...[GridDataReader_bulk]
+Loading user function library: [GridDataReader]...[GridDataReader]
+AddEquationBasics: Setting up solver: resultoutput
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_Init]
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_bulk]
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver]
+ElmerSolver: Number of timesteps to be saved: 1
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: read vx
+GridDataReader: -----------------------------------------
+GridDataReader: Obtaining field(s) from grid NetCDF format
+GridDataReader: Keyword > X Epsilon < not given, setting to default eps
+GridDataReader: Keyword > Y Epsilon < not given, setting equal to > X Epsilon <
+GridDataReader: Keyword > Z Epsilon < not given, setting equal to > X Epsilon <
+GridDataReader: Found 1 dimensional coordinate variable > lon < : 1
+GridDataReader: Found dimension > lon < with id 1 and size 1600
+GridDataReader: Grid parameter of dimension > lon < is    2.000E+00
+GridDataReader: Range of dimension > lon < is [   5.521E+05   5.553E+05]
+GridDataReader: Found 1 dimensional coordinate variable > lat < : 1
+GridDataReader: Found dimension > lat < with id 2 and size 2750
+GridDataReader: Grid parameter of dimension > lat < is    2.000E+00
+GridDataReader: Range of dimension > lat < is [   8.708E+06   8.714E+06]
+GridDataReader: Omitting the extra dimensions of Elmer mesh
+GridDataReader: No time given, using 1st step
+GridDataReader: Performing interpolation for variable: vx
+GridDataReader: Reading full variable array from NETCDF file
+GridDataReader: Number of proper mappings  : 25320
+GridDataReader: Elapsed REAL time:     1.1797 (s)
+GridDataReader: All done
+GridDataReader: -----------------------------------------
+Loading user function library: [GridDataReader]...[GridDataReader_post]
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: read vy
+GridDataReader: -----------------------------------------
+GridDataReader: Obtaining field(s) from grid NetCDF format
+GridDataReader: Keyword > X Epsilon < not given, setting to default eps
+GridDataReader: Keyword > Y Epsilon < not given, setting equal to > X Epsilon <
+GridDataReader: Keyword > Z Epsilon < not given, setting equal to > X Epsilon <
+GridDataReader: Found 1 dimensional coordinate variable > lon < : 1
+GridDataReader: Found dimension > lon < with id 1 and size 1600
+GridDataReader: Grid parameter of dimension > lon < is    2.000E+00
+GridDataReader: Range of dimension > lon < is [   5.521E+05   5.553E+05]
+GridDataReader: Found 1 dimensional coordinate variable > lat < : 1
+GridDataReader: Found dimension > lat < with id 2 and size 2750
+GridDataReader: Grid parameter of dimension > lat < is    2.000E+00
+GridDataReader: Range of dimension > lat < is [   8.708E+06   8.714E+06]
+GridDataReader: Omitting the extra dimensions of Elmer mesh
+GridDataReader: No time given, using 1st step
+GridDataReader: Performing interpolation for variable: vy
+GridDataReader: Reading full variable array from NETCDF file
+GridDataReader: Number of proper mappings  : 25320
+GridDataReader: Elapsed REAL time:     0.1449 (s)
+GridDataReader: All done
+GridDataReader: -----------------------------------------
+Loading user function library: [GridDataReader]...[GridDataReader_post]
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: read bed
+GridDataReader: -----------------------------------------
+GridDataReader: Obtaining field(s) from grid NetCDF format
+GridDataReader: Keyword > X Epsilon < not given, setting to default eps
+GridDataReader: Keyword > Y Epsilon < not given, setting equal to > X Epsilon <
+GridDataReader: Keyword > Z Epsilon < not given, setting equal to > X Epsilon <
+GridDataReader: Found 1 dimensional coordinate variable > lon < : 1
+GridDataReader: Found dimension > lon < with id 1 and size 1600
+GridDataReader: Grid parameter of dimension > lon < is    2.000E+00
+GridDataReader: Range of dimension > lon < is [   5.521E+05   5.553E+05]
+GridDataReader: Found 1 dimensional coordinate variable > lat < : 1
+GridDataReader: Found dimension > lat < with id 2 and size 2750
+GridDataReader: Grid parameter of dimension > lat < is    2.000E+00
+GridDataReader: Range of dimension > lat < is [   8.708E+06   8.714E+06]
+GridDataReader: Omitting the extra dimensions of Elmer mesh
+GridDataReader: No time given, using 1st step
+GridDataReader: Performing interpolation for variable: b
+GridDataReader: Reading full variable array from NETCDF file
+GridDataReader: Number of proper mappings  : 25320
+GridDataReader: Elapsed REAL time:     0.1607 (s)
+GridDataReader: All done
+GridDataReader: -----------------------------------------
+Loading user function library: [GridDataReader]...[GridDataReader_post]
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: read surface
+GridDataReader: -----------------------------------------
+GridDataReader: Obtaining field(s) from grid NetCDF format
+GridDataReader: Keyword > X Epsilon < not given, setting to default eps
+GridDataReader: Keyword > Y Epsilon < not given, setting equal to > X Epsilon <
+GridDataReader: Keyword > Z Epsilon < not given, setting equal to > X Epsilon <
+GridDataReader: Found 1 dimensional coordinate variable > lon < : 1
+GridDataReader: Found dimension > lon < with id 1 and size 1600
+GridDataReader: Grid parameter of dimension > lon < is    2.000E+00
+GridDataReader: Range of dimension > lon < is [   5.521E+05   5.553E+05]
+GridDataReader: Found 1 dimensional coordinate variable > lat < : 1
+GridDataReader: Found dimension > lat < with id 2 and size 2750
+GridDataReader: Grid parameter of dimension > lat < is    2.000E+00
+GridDataReader: Range of dimension > lat < is [   8.708E+06   8.714E+06]
+GridDataReader: Omitting the extra dimensions of Elmer mesh
+GridDataReader: No time given, using 1st step
+GridDataReader: Performing interpolation for variable: h
+GridDataReader: Reading full variable array from NETCDF file
+GridDataReader: Number of proper mappings  : 25320
+GridDataReader: Elapsed REAL time:     0.1305 (s)
+GridDataReader: All done
+GridDataReader: -----------------------------------------
+Loading user function library: [GridDataReader]...[GridDataReader_post]
+MAIN: 
+MAIN: -------------------------------------
+MAIN: Time: 1/1:   1.000E-01
+MAIN: -------------------------------------
+MAIN: 
+SingleSolver: Attempting to call solver
+SingleSolver: Solver Equation string is: resultoutput
+ResultOutputSolver: -------------------------------------
+ResultOutputSolver: Saving with prefix: readnc
+ResultOutputSolver: Working on mesh:
+ResultOutputSolver: Dimension of mesh is: 3
+ResultOutputSolver: Creating list for saving - if not present
+CreateListForSaving: Field Variables for Saving
+CreateListForSaving: Scalar Field 1: vx
+CreateListForSaving: Scalar Field 2: vy
+CreateListForSaving: Scalar Field 3: b
+CreateListForSaving: Scalar Field 4: h
+ResultOutputSolver: Saving in unstructured VTK XML (.vtu) format
+VtuOutputSolver: Saving results in VTK XML format with prefix: readnc
+VtuOutputSolver: Saving number of partitions: 1
+SolverOutputDirectory: Creating directory: ./vtuoutputs
+GenerateSaveMask: Number of active elements 53576 out of 53576
+GenerateSaveMask: Number of geometry nodes 25320 out of 25320
+VtuOutputSolver: Total number of geometry nodes to save: 25320
+VtuOutputSolver: Total number of dof nodes to save: 25320
+VtuOutputSolver: Total number of elements to save: 53576
+VtuOutputSolver: Setting offset for boundary entities: 100
+VtuOutputSolver: Writing the vtu file: ./vtuoutputs/readnc_t0001.vtu
+AscBinWriteInit: Initializing buffered ascii/binary writing
+ResultOutputSolver: -------------------------------------
+Loading user function library: [ResultOutputSolve]...[ResultOutputSolver_post]
+SaveResult: -----------------------------------------
+SaveResult: Saving results to file: ./readnc.result
+SaveResult: Done writing results file
+SaveResult: -----------------------------------------
+ReloadInputFile: Realoading input file
+LoadInputFile: Loading input file:
+ElmerSolver: *** Elmer Solver: ALL DONE ***
+ElmerSolver: The end
+SOLVER TOTAL TIME(CPU,REAL):         0.65        7.69
+ELMER SOLVER FINISHED AT: 2021/09/09 13:25:18

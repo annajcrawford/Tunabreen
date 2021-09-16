@@ -434,7 +434,7 @@ function initbeta(slc)
   return  math.log(dummy)
 end  
 
-function thick(depth, height)
-  thickness = depth + height
+function thick(height, bed)
+  thickness = height - bed
   return thickness
 end

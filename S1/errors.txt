@@ -1,0 +1,21 @@
+######################################
+# Elmer 9.0 ( devel_f5097f1 ) 
+#            environment loaded
+# date:  Fri 16.7.2021 EEST
+# this version includes
+# * Elmer/Ice
+# * Hypre
+# * Mumps
+# * NetCDF (GridDataReader)
+# * MMG
+# * Zoltan
+# * Lua
+# * ScatteredDataInterpolator (CSA,NN)
+#   
+# OpenMP is enabled
+# In case of problems: zwinger@csc.fi
+######################################
+
+The following have been reloaded with a version change:
+  1) openblas/0.3.10 => openblas/0.3.10-omp
+
